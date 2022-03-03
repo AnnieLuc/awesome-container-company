@@ -1,8 +1,2 @@
-/* stylesheets and fonts from the external vendor */
-@import url(./vendor/normalize.css);
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap');
-
-/* stylesheets for theme */
-@import url(./theme.css);
-
-/* stylesheets for the block - page */
+@import url('./tailwind.output.css');
