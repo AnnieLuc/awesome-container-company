@@ -1,11 +1,11 @@
 import React                from 'react';
 import PropTypes            from 'prop-types';
-import classnames           from "classnames";
+import classnames           from 'classnames';
 
 function SectionPara(props){
   const { children, align, color } = props;
-  const textAlignClass = `text-${align}`;
-  const textColorClass = `text-${color}`;
+  const textAlignClass             = `text-${align}`;
+  const textColorClass             = `text-${color}`;
 
   return (
     <p className={classnames("sec-para", textAlignClass, textColorClass)}>

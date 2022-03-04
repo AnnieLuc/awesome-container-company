@@ -1,6 +1,6 @@
-import React from 'react';
-import SustainabilitySection from './SustainabilitySection';
-import PricingSection from './PricingSection';
+import React                  from 'react';
+import SustainabilitySection  from './SustainabilitySection';
+import PricingSection         from './PricingSection';
 
 function App() {
   return (

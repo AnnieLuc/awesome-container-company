@@ -1,4 +1,5 @@
-import React from 'react';
+import React                from 'react';
+import PropTypes            from 'prop-types';
 
 function PricingCard({noOfOrders, approxCost}){
   return (
@@ -9,5 +10,10 @@ function PricingCard({noOfOrders, approxCost}){
     </article>
   );
 }
+
+PricingCard.propTypes = {
+  noOfOrders: PropTypes.string.isRequired,
+  approxCost: PropTypes.string.isRequired,
+};
 
 export default PricingCard;
