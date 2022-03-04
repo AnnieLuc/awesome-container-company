@@ -18,7 +18,10 @@ module.exports = {
           100: '#ffffff',
           200: '#f4f4f4',
         },
-        highlight: '#ff9820',
+        highlight: {
+          100: '#ff9820',
+          200: '#e78819',
+        },
       },
       fontFamily: {
         serif: ['Spline Sans', 'sans-serif']

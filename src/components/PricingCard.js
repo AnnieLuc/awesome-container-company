@@ -1,11 +1,11 @@
 import React from 'react';
 
-function PricingCard(){
+function PricingCard({noOfOrders, approxCost}){
   return (
     <article className="price-card">
-      <p className="text-center">10–50 orders / day</p>
+      <p className="text-center">{noOfOrders} orders / day</p>
       <div className="price-card-down-arrow"></div>
-      <p className="text-center">$500–$1000 / month</p>
+      <p className="text-center">{approxCost} / month</p>
     </article>
   );
 }

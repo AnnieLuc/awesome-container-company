@@ -4,8 +4,8 @@ import classnames           from "classnames";
 
 function SectionHeading(props){
   const { children, align, color } = props;
-  const textAlignClass = `sec-heading-${align}`;
-  const textColorClass = `sec-heading-${color}`;
+  const textAlignClass = `text-${align}`;
+  const textColorClass = `text-${color}`;
 
   return (
     <h2 className={classnames("sec-heading", textAlignClass, textColorClass)}>
@@ -17,7 +17,7 @@ function SectionHeading(props){
 SectionHeading.propTypes = {
   children: PropTypes.any.isRequired,
   align: PropTypes.oneOf(['center', 'left', 'right']),
-  color: PropTypes.oneOf(['primary', 'secondary']),
+  color: PropTypes.oneOf(['primary', 'secondary-100']),
 };
 
 export default SectionHeading;

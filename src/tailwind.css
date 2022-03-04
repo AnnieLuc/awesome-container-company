@@ -14,22 +14,10 @@
   @apply text-xl font-normal leading-10;
 }
 
-.sec-heading-center {
-  @apply text-center;
+.sec-para {
+  @apply text-base font-normal leading-5;
 }
 
-.sec-heading-left {
-  @apply text-left;
-}
-
-.sec-heading-right {
-  @apply text-right;
-}
-
-.sec-heading-primary {
-  @apply text-primary;
-}
-
-.sec-heading-secondary {
-  @apply text-secondary-100;
+.button {
+  @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
 }
