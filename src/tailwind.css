@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .price-card {
-  @apply flex flex-col items-center max-w-[289px] px-[32px] py-[28px] bg-primary text-secondary-100 rounded-[20px] text-lg leading-7;
+  @apply flex flex-col items-center max-w-[289px] px-[32px] py-[28px] bg-primary text-secondary-100 rounded-[20px] shadow text-lg leading-7;
 }
 
 .price-card-down-arrow {
