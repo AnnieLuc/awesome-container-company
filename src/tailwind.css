@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.price-card {
+  @apply flex flex-col items-center max-w-[289px] px-[32px] py-[28px] bg-primary text-secondary-100 rounded-[20px] text-lg leading-7;
+}
+
+.price-card-down-arrow {
+  @apply my-[20px] w-[17px] h-[26px] bg-[url('./images/down-arrow.svg')] bg-no-repeat bg-center bg-contain;
+}
+
+.sec-heading {
+  @apply text-xl font-normal leading-10;
+}
+
+.sec-heading-center {
+  @apply text-center;
+}
+
+.sec-heading-left {
+  @apply text-left;
+}
+
+.sec-heading-right {
+  @apply text-right;
+}
+
+.sec-heading-primary {
+  @apply text-primary;
+}
+
+.sec-heading-secondary {
+  @apply text-secondary-100;
+}

@@ -1,8 +1,11 @@
 import React from 'react';
+import PricingSection from './PricingSection';
 
 function App() {
   return (
-    <h1 className="text-highlight font-serif">App</h1>
+    <div className="font-serif text-base font-normal leading-5">
+      <PricingSection />
+    </div>
   );
 }
 

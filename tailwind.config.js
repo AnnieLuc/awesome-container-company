@@ -4,9 +4,16 @@ module.exports = {
     'public/**/*.html',
   ],
   theme: {
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      base: '18px',
+      lg: '24px',
+      xl: '44px'
+    },
     extend: {
       colors: {
-        primary: '#1c383',
+        primary: '#1c383c',
         secondary: {
           100: '#ffffff',
           200: '#f4f4f4',
@@ -15,13 +22,6 @@ module.exports = {
       },
       fontFamily: {
         serif: ['Spline Sans', 'sans-serif']
-      },
-      fontSize: {
-        xs: '12px',
-        sm: '14px',
-        base: '18px',
-        lg: '24px',
-        xl: '44px'
       },
       lineHeight: {
         '3': '14.22px',
@@ -32,7 +32,7 @@ module.exports = {
         '8': '30px',
         '9': '48px',
         '10': '52.14px'
-      }
+      },
     },
   },
   plugins: [],
