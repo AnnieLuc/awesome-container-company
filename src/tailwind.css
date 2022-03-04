@@ -34,6 +34,10 @@
   @apply text-secondary-100;
 }
 
+.sec-para {
+  @apply text-base font-normal leading-5;
+}
+
 .button {
   @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
 }

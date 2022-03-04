@@ -1,5 +1,6 @@
 import React            from 'react';
 import SectionHeading   from './SectionHeading';
+import SectionPara      from './SectionPara';
 import PricingCard      from './PricingCard';
 import Button           from './Button';
 import pricing          from '../utils/pricing';
@@ -14,6 +15,11 @@ function PricingSection(){
           {pricing.map((price, index) => <PricingCard key={index} {...price} />)}
         </div>
         <Button>Work with us</Button>
+        <div className="mt-[32px] max-w-[618px]">
+          <SectionPara align="center" color="primary">
+            Leave your contacts and request, and our manager will reach out to you to establish our further partnership!
+          </SectionPara>
+        </div>
       </div>
     </section>
   );
