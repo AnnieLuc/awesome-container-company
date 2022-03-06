@@ -1,6 +1,7 @@
 import React                  from 'react';
 import SustainabilitySection  from './SustainabilitySection';
 import PricingSection         from './PricingSection';
+import Footer                 from './Footer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <main>
         <SustainabilitySection />
         <PricingSection />
+        <Footer />
       </main>
     </div>
   );
