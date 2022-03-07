@@ -3,12 +3,13 @@ import PropTypes            from 'prop-types';
 import classnames           from 'classnames';
 
 function SectionPara(props){
-  const { children, align, color } = props;
-  const textAlignClass             = `text-${align}`;
-  const textColorClass             = `text-${color}`;
+  const { children, align, color, lineHeight } = props;
+  const textAlignClass             = `sec-text-${align}`;
+  const textColorClass             = `sec-text-${color}`;
+  const lineHeightClass            = `sec-text-leading-${lineHeight}`;
 
   return (
-    <p className={classnames("sec-para", textAlignClass, textColorClass)}>
+    <p className={classnames("sec-para", textAlignClass, textColorClass, lineHeightClass)}>
       {children}
     </p>
   );
@@ -17,7 +18,8 @@ function SectionPara(props){
 SectionPara.propTypes = {
   children:   PropTypes.any.isRequired,
   align:      PropTypes.oneOf(['center', 'left', 'right']),
-  color:      PropTypes.oneOf(['primary', 'secondary-100']),
+  color:      PropTypes.oneOf(['primary', 'secondary']),
+  lineHeight: PropTypes.oneOf(['5', '6']),
 };
 
 export default SectionPara;
