@@ -16,7 +16,7 @@ function PricingSection(){
         </div>
         <Button>Work with us</Button>
         <div className="mt-[32px] max-w-[618px]">
-          <SectionPara align="center" color="primary">
+          <SectionPara align="center" color="primary" lineHeight="5">
             Leave your contacts and request, and our manager will reach out to you to establish our further partnership!
           </SectionPara>
         </div>
