@@ -3,7 +3,7 @@ import BadEffects             from './BadEffects';
 import SustainabilitySection  from './SustainabilitySection';
 import PricingSection         from './PricingSection';
 import Footer                 from './Footer';
-import AwesomeTeam            from './AwesomeTeam';
+import AwesomePartners            from './AwesomePartners';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <BadEffects />
         <SustainabilitySection />
         <PricingSection />
-        <AwesomeTeam />
+        <AwesomePartners />
         <Footer />
       </main>
     </div>

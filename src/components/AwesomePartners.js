@@ -1,12 +1,12 @@
 import React from 'react';
-import awesomeTeam from '../utils/awesome-team';
+import awesomePartners from '../utils/awesome-partners';
 import SectionHeading from './SectionHeading';
 
 // create a function that renders all the images
 
 function AwesomeTeam() {
 	const renderImages = () => {
-		return awesomeTeam.map(({ image }, index) => {
+		return awesomePartners.map(({ image }, index) => {
 			return (
 				<img key={index} src={image} alt='partner' className='object-contain flex items-center justify-center object-center' />
 			);
