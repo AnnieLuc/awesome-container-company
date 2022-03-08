@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionHeading from './SectionHeading';
-import SectionPara from './SectionPara';
 import awesomeTeam from '../utils/awesome-team';
 import linkedInImg from '../images/social-links/linkedin.svg';
 
@@ -12,7 +11,7 @@ function AwesomeTeam() {
 					<img src={image} alt={image} className='object-cover' />
 					<figcaption className='pt-[15px] text-2xl sec-text-primary leading-7 text-center'>
 						{name}
-						<span className='block'>{title}</span>
+						<span className='block whitespace-nowrap'>{title}</span>
 						<a href={linkedIn} className=''>
 							<img
 								src={linkedInImg}
@@ -33,7 +32,6 @@ function AwesomeTeam() {
       </SectionHeading>
 			<div className='mx-auto py-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center'>
 				<div className='w-full flex justify-between'>{renderImages()}</div>
-				<div></div>
 			</div>
 		</section>
 	);
