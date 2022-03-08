@@ -2,8 +2,10 @@ import React                  from 'react';
 import HeroSection            from './HeroSection';
 import BadEffects             from './BadEffects';
 import SustainabilitySection  from './SustainabilitySection';
+import CompetitionSection     from './CompetitionSection';
 import PricingSection         from './PricingSection';
 import Footer                 from './Footer';
+import AwesomeTeam            from './AwesomeTeam';
 
 function App() {
   return (
@@ -11,8 +13,10 @@ function App() {
       <main>
         <HeroSection />
         <BadEffects />
+        <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
+        <AwesomeTeam />
         <Footer />
       </main>
     </div>

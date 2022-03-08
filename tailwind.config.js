@@ -22,6 +22,7 @@ module.exports = {
           100: '#ff9820',
           200: '#e78819',
         },
+        gridLine: '#b6b6b6',
       },
       fontFamily: {
         serif: ['Spline Sans', 'sans-serif']
