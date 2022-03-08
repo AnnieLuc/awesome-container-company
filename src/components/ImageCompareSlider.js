@@ -1,0 +1,74 @@
+import React from 'react';
+import foodInContainer from '../images/food-with-awesome-container.png';
+import foodWaste from '../images/food-waste.png';
+
+
+function ImageCompareSlider() {
+  const [imageRevealFraction, setImageRevealFraction] = React.useState(0.75);
+  const imageContainer = React.useRef();
+
+  React.useEffect(() => {
+    const imageSliderElement = document.querySelector('#imageSlider');
+    imageSliderElement.addEventListener('mousedown', handleMouseDown);
+    return () => {
+      imageSliderElement.removeEventListener('mousedown', handleMouseDown);
+      imageSliderElement.removeEventListener('mousemove', handleMouseMove);
+    };
+  });
+
+  const slide = (xPosition) => {
+    const containerBoundingRect = imageContainer.current.getBoundingClientRect();
+    setImageRevealFraction(() => {
+      if(xPosition < containerBoundingRect.left){
+        return 0;
+      } else if(xPosition > containerBoundingRect.right){
+        return 1;
+      } else {
+        return (
+          (xPosition - containerBoundingRect.left) / containerBoundingRect.width
+        );
+      }
+    });
+  }
+
+  const handleTouchMove = (e) => {
+    slide(e.touches.item(0).clientX);
+  }
+
+  const handleMouseMove = (e) => {
+    slide(e.clientX);
+  }
+
+  const handleMouseDown = () => {
+    document.querySelector('#imageSlider').addEventListener('mousemove', handleMouseMove);
+  }
+
+  return (
+    <div ref={imageContainer} id="imageSlider" className="border border-primary max-w-[626px] w-full rounded-[20px] relative select-none overflow-clip">
+      <img
+        src={foodWaste}
+        alt="food waste"
+        className="max-w-[626px] h-[418px] object-cover w-full rounded-[20px] pointer-events-none" />
+      <img
+        src={foodInContainer}
+        alt="food in awesome container company's containers"
+        style={{
+          clipPath: `polygon(0 0, ${imageRevealFraction * 100}% 0, ${imageRevealFraction * 100}% 100%, 0 100%)`,
+        }}
+        className="max-w-[626px] h-[418px] object-cover w-full rounded-[20px] absolute inset-0 pointer-events-none" />
+      <div style={{ left: `${imageRevealFraction * 100}%` }} className="absolute inset-y-0">
+        <div className="relative h-full">
+          <div className="absolute inset-y-0 bg-highlight-100 w-[3px] -ml-[1.5px]"></div>
+          <div
+            style={{ touchAction: "none"}}
+            onMouseDown={handleMouseDown}
+            onTouchMove={handleTouchMove}
+            className="image-slider-handler">
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default ImageCompareSlider;

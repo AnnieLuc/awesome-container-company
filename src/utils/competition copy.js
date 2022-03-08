@@ -1,0 +1,68 @@
+const competition = [
+  {
+    col1: 'Image',
+    col2: 'Awesome Container Company',
+    col3: 'Deliver Zero',
+    col4: 'Logistics Company',
+    col5: 'Washing Facility',
+    col6: 'Single-use plastics',
+  },
+  {
+    col1: 'Save over 50% on supply costs',
+    col2: true,
+    col3: false,
+    col4: false,
+    col5: false,
+    col6: false,
+  },
+  {
+    col1: 'Save real estate storage costs',
+    col2: true,
+    col3: true,
+    col4: false,
+    col5: false,
+    col6: false,
+  },
+  {
+    col1: 'Inventory management',
+    col2: true,
+    col3: false,
+    col4: false,
+    col5: false,
+    col6: false,
+  },
+  {
+    col1: 'Never reorder supplies',
+    col2: true,
+    col3: false,
+    col4: false,
+    col5: false,
+    col6: false,
+  },
+  {
+    col1: 'Easy pickup and delivery',
+    col2: true,
+    col3: false,
+    col4: true,
+    col5: true,
+    col6: true,
+  },
+  {
+    col1: 'Sustainable products',
+    col2: true,
+    col3: false,
+    col4: false,
+    col5: true,
+    col6: false,
+  },
+  {
+    col1: 'App for tracking and reporting',
+    col2: true,
+    col3: false,
+    col4: true,
+    col5: false,
+    col6: false,
+  },
+];
+
+export default competition;

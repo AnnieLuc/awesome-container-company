@@ -1,0 +1,47 @@
+
+> awesome-container-company@0.1.0 start
+> npm-run-all build:tailwind --parallel watch:tailwind start:react
+
+
+> awesome-container-company@0.1.0 build:tailwind
+> tailwind build src/tailwind.css -o src/tailwind.output.css
+
+
+> awesome-container-company@0.1.0 watch:tailwind
+> chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/tailwind.output.css -c 'npm run build:tailwind'
+
+
+> awesome-container-company@0.1.0 start:react
+> react-scripts start
+
+Starting the development server...
+
+Compiled successfully!
+
+You can now view awesome-container-company in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.16:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+assets by path static/ 1.56 MiB
+  asset static/js/bundle.js 1.56 MiB [emitted] (name: main) 1 related asset
+  asset static/media/esg-care.8074f5e1c5b08216b9fdafca87ebc7a0.svg 2.95 KiB [emitted] (auxiliary name: main)
+  asset static/media/down-arrow.951cd493122a0bda639e.svg 192 bytes [emitted] [immutable] [from: src/images/down-arrow.svg] (auxiliary name: main)
+asset index.html 1.67 KiB [emitted]
+asset asset-manifest.json 374 bytes [emitted]
+cached modules 1.39 MiB (javascript) 192 bytes (asset) [cached] 114 modules
+runtime modules 28.2 KiB 13 modules
+javascript modules 45.6 KiB
+  modules by path ./src/components/*.js 13.5 KiB
+    ./src/components/App.js 2.05 KiB [built] [code generated]
+    ./src/components/SustainabilitySection.js 4.28 KiB [built] [code generated]
+    ./src/components/PricingSection.js 3.33 KiB [built] [code generated]
+    ./src/components/SectionHeading.js 1.95 KiB [built] [code generated]
+    ./src/components/SectionPara.js 1.93 KiB [built] [code generated]
+  modules by path ./src/*.css 32 KiB
+    ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/index.css 953 bytes [built]
+    ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./src/tailwind.output.css 31.1 KiB [built] [code generated]
+webpack 5.69.1 compiled successfully in 5231 ms

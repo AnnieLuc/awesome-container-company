@@ -49,3 +49,7 @@
 .button {
   @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
 }
+
+.image-slider-handler {
+  @apply h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2 bg-[url('./images/slider-handler.svg')] bg-no-repeat bg-center bg-contain;
+}
