@@ -50,6 +50,10 @@
   @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
 }
 
+.button-header {
+  @apply py-[13px] px-[24px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-sm leading-4;
+}
+
 .image-slider-handler {
   @apply h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2 bg-[url('./images/slider-handler.svg')] bg-no-repeat bg-center bg-contain;
 }
@@ -103,4 +107,12 @@
 
 .chat-admin {
   @apply w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')] bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px];
+}
+
+.nav-item {
+  @apply flex items-center;
+}
+
+.nav-link {
+  @apply px-3 py-2 flex items-center text-xs font-normal leading-4 text-primary hover:opacity-75;
 }
