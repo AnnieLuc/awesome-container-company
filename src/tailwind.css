@@ -76,3 +76,31 @@
 .bullet-highlight {
   @apply w-[20px] h-[20px] rounded-full bg-highlight-100;
 }
+
+.chat-bubble-left {
+  @apply px-[12px] py-[10px] rounded-[10px] inline-block rounded-tl-none;
+}
+
+.chat-bubble-right {
+  @apply px-[12px] py-[10px] rounded-[10px] inline-block rounded-br-none;
+}
+
+.chat-bubble-default {
+  @apply bg-secondary-300 text-chat;
+}
+
+.chat-bubble-primary {
+  @apply bg-primary text-secondary-100;
+}
+
+.chat-bubble-highlight {
+  @apply bg-highlight-100 text-secondary-100;
+}
+
+.chat-guest {
+  @apply w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')] bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px];
+}
+
+.chat-admin {
+  @apply w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')] bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px];
+}

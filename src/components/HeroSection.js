@@ -16,7 +16,7 @@ function HeroSection() {
           <div className="max-w-[626px] w-full rounded-[20px] object-cover">
             <ImageCompareSlider />
           </div>
-          <div className="max-w-[491px] w-full border border-black">
+          <div className="max-w-[491px] w-full">
             <Chat />
           </div>
         </div>
