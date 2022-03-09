@@ -2,8 +2,6 @@ import React from 'react';
 import awesomePartners from '../utils/awesome-partners';
 import SectionHeading from './SectionHeading';
 
-// create a function that renders all the images
-
 function AwesomeTeam() {
 	const renderImages = () => {
 		return awesomePartners.map(({ image }, index) => {
@@ -19,14 +17,12 @@ function AwesomeTeam() {
 				And Awesome Partners
 			</SectionHeading>
 			<div className='mx-auto py-[120px] max-w-[772px] flex flex-col items-center'>
-        {/* render the items in a grid where the first row was 3 columns and 1 row, and the second has 2 columns and 1 row */}
         <div className='grid grid-cols-3 grid-rows-2'>
           {renderImages()}
         </div>
-				<div></div>
 			</div>
 		</section>
 	);
 }
 
-export default AwesomeTeam;
+export default awesomePartners;

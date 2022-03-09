@@ -17,11 +17,14 @@ module.exports = {
         secondary: {
           100: '#ffffff',
           200: '#f4f4f4',
+          300: '#e3e3e3',
         },
         highlight: {
           100: '#ff9820',
           200: '#e78819',
         },
+        gridLine: '#b6b6b6',
+        chat: '#161616',
       },
       fontFamily: {
         serif: ['Spline Sans', 'sans-serif']
