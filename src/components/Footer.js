@@ -8,7 +8,7 @@ function Footer() {
 		<footer className='bg-primary text-secondary-100 pt-[80px] pb-[60px]'>
 			<div className='flex justify-between max-w-[1440px] mx-auto px-[80px]'>
 				<div className=' flex flex-col'>
-					<SectionHeading align='left' color='secondary-100'>
+					<SectionHeading align='left' color='secondary'>
 						Let's get in touch
 					</SectionHeading>
 					<div className='flex flex-col pt-[40px]'>
@@ -22,7 +22,7 @@ function Footer() {
 					</div>
 				</div>
 				<div className='flex flex-col'>
-					<SectionHeading align='left' color='secondary-100'>
+					<SectionHeading align='left' color='secondary'>
 						Follow us
 					</SectionHeading>
 					<ul className='pt-[40px]'>
@@ -55,7 +55,7 @@ function Footer() {
 					</ul>
 				</div>
 				<div className='flex flex-col'>
-					<SectionHeading align='left' color='secondary-100'>
+					<SectionHeading align='left' color='secondary'>
 						Where we work
 					</SectionHeading>
 					<div className='flex flex-col pt-[40px]'>

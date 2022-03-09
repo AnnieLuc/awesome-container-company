@@ -30,7 +30,7 @@ function AwesomeTeam() {
       <SectionHeading align='center' color='primary'>
         An Awesome Team
       </SectionHeading>
-			<div className='mx-auto py-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center'>
+			<div className='mx-auto pt-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center'>
 				<div className='w-full flex justify-between'>{renderImages()}</div>
 			</div>
 		</section>
