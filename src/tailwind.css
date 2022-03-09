@@ -21,3 +21,14 @@
 .button {
   @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
 }
+
+.grid-card {
+  @apply grid grid-cols-2 gap-[40px] justify-items-center mx-auto;
+}
+.impact-card {
+  @apply flex flex-col text-center items-center max-w-[660px] shadow-sm bg-secondary-100 rounded-[20px];
+}
+
+.impact-card-bullet {
+  @apply pt-5 pb-5 bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center;
+}
