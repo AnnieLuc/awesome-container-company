@@ -4,7 +4,7 @@ import goaGoa from '../images/partners/goa-goa.svg';
 import ninjaVan from '../images/partners/ninja-van.svg';
 import stewardsSolution from '../images/partners/stewards-solution.svg';
 
-const awesomePartners = [
+const awesomePartnersFirstRow = [
 	{
 		image: chefAtWork,
 	},
@@ -14,6 +14,9 @@ const awesomePartners = [
 	{
 		image: ninjaVan,
 	},
+];
+
+const awesomePartnersSecondRow = [
 	{
 		image: creatella,
 	},
@@ -22,4 +25,4 @@ const awesomePartners = [
 	},
 ];
 
-export default awesomePartners;
+export { awesomePartnersFirstRow, awesomePartnersSecondRow };

@@ -1,12 +1,33 @@
 import React from 'react';
-import awesomePartners from '../utils/awesome-partners';
+import {
+	awesomePartnersFirstRow,
+	awesomePartnersSecondRow,
+} from '../utils/awesome-partners';
 import SectionHeading from './SectionHeading';
 
-function AwesomeTeam() {
-	const renderImages = () => {
-		return awesomePartners.map(({ image }, index) => {
+function AwesomePartners() {
+	const renderFirstRow = () => {
+		return awesomePartnersFirstRow.map(({ image }, index) => {
 			return (
-				<img key={index} src={image} alt='partner' className='object-contain flex items-center justify-center object-center' />
+				<img
+					key={index}
+					src={image}
+					alt='partner'
+					className='object-contain flex items-center justify-between object-center'
+				/>
+			);
+		});
+	};
+
+	const renderSecondRow = () => {
+		return awesomePartnersSecondRow.map(({ image }, index) => {
+			return (
+				<img
+					key={index}
+					src={image}
+					alt='partner'
+					className='object-contain flex items-center justify-between object-center'
+				/>
 			);
 		});
 	};
@@ -16,13 +37,12 @@ function AwesomeTeam() {
 			<SectionHeading align='center' color='primary'>
 				And Awesome Partners
 			</SectionHeading>
-			<div className='mx-auto py-[120px] max-w-[772px] flex flex-col items-center'>
-        <div className='grid grid-cols-3 grid-rows-2'>
-          {renderImages()}
-        </div>
+			<div className='mx-auto pt-[100px] pb-[130px] max-w-[772px] flex items-center flex-col'>
+				<div className='flex justify-between w-full'>{renderFirstRow()}</div>
+				<div className='flex justify-between w-[56%]'>{renderSecondRow()}</div>
 			</div>
 		</section>
 	);
 }
 
-export default awesomePartners;
+export default AwesomePartners;
