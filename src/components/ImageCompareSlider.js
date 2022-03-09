@@ -45,13 +45,15 @@ function ImageCompareSlider() {
 
   return (
     <div ref={imageContainer} id="imageSlider" className="border border-primary max-w-[626px] w-full rounded-[20px] relative select-none overflow-clip">
-      <img
-        src={foodWaste}
-        alt="food waste"
-        className="max-w-[626px] h-[418px] object-cover w-full rounded-[20px] pointer-events-none" />
+      {/* First Image */}
       <img
         src={foodInContainer}
         alt="food in awesome container company's containers"
+        className="max-w-[626px] h-[418px] object-cover w-full rounded-[20px] pointer-events-none" />
+      {/* Second Image */}
+      <img
+        src={foodWaste}
+        alt="food waste"
         style={{
           clipPath: `polygon(0 0, ${imageRevealFraction * 100}% 0, ${imageRevealFraction * 100}% 100%, 0 100%)`,
         }}
