@@ -15,9 +15,9 @@ function App() {
       <main>
         <HeroSection />
         <BadEffects />
+        <ImpactSection />
         <CompetitionSection />
         <SustainabilitySection />
-        <ImpactSection />
         <PricingSection />
         <AwesomeTeam />
         <Footer />

@@ -5,6 +5,7 @@ const impacts = [
       "Save at least 50% on supply cost",
       "Save 50-60 hours per week of manager's labor cost: no inventory management, no reordering, no restocking",
       "Save real estate cost for storage",
+      "Government helps Subsidize Up to 70%",
     ],
   },
   {

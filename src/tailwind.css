@@ -54,15 +54,25 @@
   @apply grid grid-cols-2 gap-[40px] justify-items-center mx-auto;
 }
 .impact-card {
-  @apply flex flex-col text-center items-center max-w-[660px] shadow-sm bg-secondary-100 rounded-[20px];
+  @apply flex flex-col text-center items-center max-w-[660px] shadow-sm bg-secondary-100;
 }
 
 .impact-card-bullet {
   @apply pt-5 pb-5 bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center;
 }
+
+.impact-rectangles {
+  @apply bg-[url('./images/rectangles-impact.svg')] bg-no-repeat;
+}
+
+.impact-ovals {
+  @apply bg-[url('./images/ovals-impact.svg')];
+}
+
 .image-slider-handler {
   @apply h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2 bg-[url('./images/slider-handler.svg')] bg-no-repeat bg-center bg-contain;
 }
+
 .table {
   @apply w-full min-h-[656px] bg-gridLine shadow rounded-[20px] grid grid-cols-6 auto-rows-fr gap-px;
 }
