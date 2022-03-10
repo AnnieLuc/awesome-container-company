@@ -5,7 +5,7 @@ import Button from './Button';
 function NavBar() {
 
   return (
-    <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap  items-center justify-between mb-3 fixed top-0 right-0 left-0 z-10">
+    <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-10">
       <div className="w-full max-w-[1440px] pl-[24px] pr-[40px] mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between w-auto static block justify-start">
           <a
