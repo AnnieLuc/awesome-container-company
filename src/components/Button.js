@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Button({children}){
+function Button({children, isHeader}){
+  const buttonClass = (isHeader === 'true') ? 'button-header' : 'button';
   return (
-    <button className="button">
+    <button className={buttonClass}>
       {children}
     </button>
   );

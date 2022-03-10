@@ -1,4 +1,5 @@
 import React                  from 'react';
+import NavBar                 from './NavBar';
 import HeroSection            from './HeroSection';
 import BadEffects             from './BadEffects';
 import SustainabilityDeliveredSection from './SustainabilityDeliveredSection';
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="font-serif text-base font-normal leading-5">
       <main>
+        <NavBar />
         <HeroSection />
         <BadEffects />
         <SustainabilityDeliveredSection />
