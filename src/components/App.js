@@ -6,13 +6,13 @@ import CompetitionSection     from './CompetitionSection';
 import PricingSection         from './PricingSection';
 import Footer                 from './Footer';
 import AwesomeTeam            from './AwesomeTeam';
-import Navbar                 from './Navbar';
+import NavBar                 from './Navbar';
 
 function App() {
   return (
     <div className="font-serif text-base font-normal leading-5">
       <main>
-        <Navbar />
+        <NavBar />
         <HeroSection />
         <BadEffects />
         <CompetitionSection />

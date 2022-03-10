@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from './Logo';
 import Button from './Button';
 
-function Navbar() {
+function NavBar() {
 
   return (
     <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-10">
@@ -47,4 +47,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
