@@ -6,7 +6,7 @@ import CompetitionSection     from './CompetitionSection';
 import PricingSection         from './PricingSection';
 import Footer                 from './Footer';
 import AwesomeTeam            from './AwesomeTeam';
-import Navbar from './Navbar';
+import Navbar                 from './Navbar';
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
       <main>
         <Navbar />
         <HeroSection />
-        <CompetitionSection />
         <BadEffects />
         <CompetitionSection />
         <SustainabilitySection />
