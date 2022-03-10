@@ -1,12 +1,13 @@
 import React                  from 'react';
+import NavBar                 from './NavBar';
 import HeroSection            from './HeroSection';
 import BadEffects             from './BadEffects';
-import SustainabilitySection  from './SustainabilitySection';
+import SustainabilityDeliveredSection from './SustainabilityDeliveredSection';
 import CompetitionSection     from './CompetitionSection';
+import SustainabilitySection  from './SustainabilitySection';
 import PricingSection         from './PricingSection';
-import Footer                 from './Footer';
 import AwesomeTeam            from './AwesomeTeam';
-import NavBar                 from './NavBar';
+import Footer                 from './Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavBar />
         <HeroSection />
         <BadEffects />
+        <SustainabilityDeliveredSection />
         <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
