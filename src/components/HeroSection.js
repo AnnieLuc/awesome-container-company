@@ -6,7 +6,7 @@ import Chat from './Chat';
 function HeroSection() {
   return (
     <section>
-      <div className="mx-auto px-[40px] pt-[74px] pb-[40px] max-w-[1440px] flex flex-col">
+      <div className="mx-auto px-[40px] pt-[144px] pb-[40px] max-w-[1440px] flex flex-col">
         <div className="max-w-[859px]">
           <SectionHeading align="left" color="primary">
             Help our environment by eliminating single-use plastics from your delivery with <span className="text-highlight-100">Awesome Container Company</span>
