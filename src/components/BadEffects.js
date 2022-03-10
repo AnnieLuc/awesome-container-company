@@ -22,7 +22,7 @@ function BadEffects() {
 
   return (
     <section className="bg-primary">
-      <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col gap-y-[80px] items-center">
+      <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
         <div className="w-full flex gap-x-[73px]">
           <div className="max-w-[347px] rounded-[20px]">
             <img className="object-cover" src={chart} alt="donut chart to show single-use plastics wastage" />
@@ -42,7 +42,7 @@ function BadEffects() {
             </div>
           </div>
         </div>
-        <div className="w-full flex justify-between">
+        <div className="mt-[80px] w-full flex justify-between">
           {renderImages()}
         </div>
         <div></div>
