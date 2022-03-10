@@ -1,11 +1,12 @@
 import React                  from 'react';
 import HeroSection            from './HeroSection';
 import BadEffects             from './BadEffects';
-import SustainabilitySection  from './SustainabilitySection';
+import SustainabilityDeliveredSection from './SustainabilityDeliveredSection';
 import CompetitionSection     from './CompetitionSection';
+import SustainabilitySection  from './SustainabilitySection';
 import PricingSection         from './PricingSection';
-import Footer                 from './Footer';
 import AwesomeTeam            from './AwesomeTeam';
+import Footer                 from './Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <HeroSection />
         <BadEffects />
+        <SustainabilityDeliveredSection />
         <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
