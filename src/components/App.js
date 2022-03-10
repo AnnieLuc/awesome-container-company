@@ -6,7 +6,7 @@ import CompetitionSection     from './CompetitionSection';
 import PricingSection         from './PricingSection';
 import Footer                 from './Footer';
 import AwesomeTeam            from './AwesomeTeam';
-import NavBar                 from './Navbar';
+import NavBar                 from './NavBar';
 
 function App() {
   return (
