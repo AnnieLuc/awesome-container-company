@@ -1,15 +1,15 @@
-import React                  from 'react';
-import NavBar                 from './NavBar';
-import HeroSection            from './HeroSection';
-import BadEffects             from './BadEffects';
-import SustainabilityDeliveredSection from './SustainabilityDeliveredSection';
-import CompetitionSection     from './CompetitionSection';
-import SustainabilitySection  from './SustainabilitySection';
-import PricingSection         from './PricingSection';
-import AwesomeTeam            from './AwesomeTeam';
-import AwesomePartners        from './AwesomePartners';
-import Footer                 from './Footer';
-
+import React from "react";
+import NavBar from "./Navbar";
+import HeroSection from "./HeroSection";
+import BadEffects from "./BadEffects";
+import SustainabilityDeliveredSection from "./SustainabilityDeliveredSection";
+import ImpactSection from "./ImpactSection";
+import CompetitionSection from "./CompetitionSection";
+import SustainabilitySection from "./SustainabilitySection";
+import PricingSection from "./PricingSection";
+import AwesomeTeam from "./AwesomeTeam";
+import AwesomePartners from "./AwesomePartners";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <HeroSection />
         <BadEffects />
         <SustainabilityDeliveredSection />
+        <ImpactSection />
         <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
