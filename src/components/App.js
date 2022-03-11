@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "./Navbar";
 import HeroSection from "./HeroSection";
 import BadEffects from "./BadEffects";
 import SustainabilityDeliveredSection from "./SustainabilityDeliveredSection";
@@ -18,8 +18,8 @@ function App() {
         <NavBar />
         <HeroSection />
         <BadEffects />
-        <ImpactSection />
         <SustainabilityDeliveredSection />
+        <ImpactSection />
         <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
