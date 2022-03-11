@@ -3,6 +3,7 @@ import NavBar                         from './NavBar';
 import HeroSection                    from './HeroSection';
 import BadEffectsSection              from './BadEffectsSection';
 import SustainabilityDeliveredSection from './SustainabilityDeliveredSection';
+import ImpactSection                  from "./ImpactSection";
 import CompetitionSection             from './CompetitionSection';
 import SustainabilitySection          from './SustainabilitySection';
 import PricingSection                 from './PricingSection';
@@ -26,6 +27,7 @@ function App() {
         <HeroSection />
         <BadEffectsSection />
         <SustainabilityDeliveredSection />
+        <ImpactSection />
         <CompetitionSection />
         <SustainabilitySection />
         <PricingSection />
