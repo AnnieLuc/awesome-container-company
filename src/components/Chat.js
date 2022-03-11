@@ -1,5 +1,5 @@
-import React from 'react';
-import ChatBubble from './ChatBubble';
+import React        from 'react';
+import ChatBubble   from './ChatBubble';
 import chatMessages from '../utils/chat-messages';
 
 function Chat() {

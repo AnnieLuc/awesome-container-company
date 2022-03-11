@@ -1,7 +1,6 @@
-import React from 'react';
+import React 					from 'react';
 import SectionHeading from './SectionHeading';
-import Instagram from '../images/social-links/instagram.svg';
-import Twitter from '../images/social-links/twitter.svg';
+import Instagram 			from '../images/social-links/instagram.svg';
 
 function Footer() {
 	return (

@@ -1,10 +1,10 @@
-import React from 'react';
-import SectionHeading from './SectionHeading';
-import SectionPara from './SectionPara';
-import Carousel from './Carousel';
-import logisticsSupportImage from '../images/backend-logistics-support.svg';
-import saveCostImage from '../images/save-costs.svg';
-import saveStorageImage from '../images/save-storage.svg';
+import React                  from 'react';
+import SectionHeading         from './SectionHeading';
+import SectionPara            from './SectionPara';
+import Carousel               from './Carousel';
+import logisticsSupportImage  from '../images/backend-logistics-support.svg';
+import saveCostImage          from '../images/save-costs.svg';
+import saveStorageImage       from '../images/save-storage.svg';
 
 function SustainabilityDeliveredSection() {
   return (

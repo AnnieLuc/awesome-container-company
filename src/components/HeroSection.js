@@ -1,5 +1,5 @@
-import React from 'react';
-import SectionHeading from './SectionHeading';
+import React              from 'react';
+import SectionHeading     from './SectionHeading';
 import ImageCompareSlider from './ImageCompareSlider';
 import Chat from './Chat';
 

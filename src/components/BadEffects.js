@@ -1,7 +1,7 @@
-import React from 'react';
-import SectionHeading from './SectionHeading';
-import SectionPara from './SectionPara';
-import chart from '../images/single-use-plastics-chart.png';
+import React              from 'react';
+import SectionHeading     from './SectionHeading';
+import SectionPara        from './SectionPara';
+import chart              from '../images/single-use-plastics-chart.png';
 import plasticsBadEffects from '../utils/plastics-bad-effects';
 
 function BadEffects() {

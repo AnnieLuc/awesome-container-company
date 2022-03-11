@@ -1,6 +1,6 @@
-import React from 'react';
-import CarouselSlide from './CarouselSlide';
-import features from '../utils/features';
+import React          from 'react';
+import CarouselSlide  from './CarouselSlide';
+import features       from '../utils/features';
 
 function Carousel() {
   const renderSlide = () => {

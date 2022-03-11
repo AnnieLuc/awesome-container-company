@@ -1,6 +1,6 @@
-import React from 'react';
-import awesomePartners from '../utils/awesome-partners';
-import SectionHeading from './SectionHeading';
+import React 						from 'react';
+import awesomePartners 	from '../utils/awesome-partners';
+import SectionHeading 	from './SectionHeading';
 
 function AwesomePartners() {
 	const renderImage = ({ image }, index) => {

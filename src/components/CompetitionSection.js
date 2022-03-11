@@ -1,6 +1,6 @@
-import React from 'react';
-import SectionHeading from './SectionHeading';
-import CompetitionTable from './CompetitionTable';
+import React              from 'react';
+import SectionHeading     from './SectionHeading';
+import CompetitionTable   from './CompetitionTable';
 
 function CompetitionSection() {
   return (

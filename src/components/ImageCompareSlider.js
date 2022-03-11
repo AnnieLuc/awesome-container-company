@@ -1,6 +1,6 @@
-import React from 'react';
-import foodInContainer from '../images/food-with-awesome-container.png';
-import foodWaste from '../images/food-waste.png';
+import React            from 'react';
+import foodInContainer  from '../images/food-with-awesome-container.png';
+import foodWaste        from '../images/food-waste.png';
 
 
 function ImageCompareSlider() {

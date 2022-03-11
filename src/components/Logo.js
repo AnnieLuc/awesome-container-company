@@ -1,4 +1,4 @@
-import React from 'react';
+import React   from 'react';
 import accLogo from '../images/logo.svg';
 
 function Logo(){

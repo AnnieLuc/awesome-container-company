@@ -1,7 +1,7 @@
-import React from 'react';
+import React 					from 'react';
 import SectionHeading from './SectionHeading';
-import awesomeTeam from '../utils/awesome-team';
-import linkedInImg from '../images/social-links/linkedin.svg';
+import awesomeTeam 		from '../utils/awesome-team';
+import linkedInImg 		from '../images/social-links/linkedin.svg';
 
 function AwesomeTeam() {
 	const renderImages = () => {
