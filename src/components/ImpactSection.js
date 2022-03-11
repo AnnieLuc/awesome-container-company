@@ -12,8 +12,8 @@ function ImpactSection() {
         <SectionHeading align="center" color="primary">
           Impact
         </SectionHeading>
-        {/* <div className="impact-rectangles h-[118px] w-[249px]"></div> */}
-        <div>
+
+        <div className="impact-figures">
           <img src={Rectangles} alt="" />
           <img src={Ovals} alt="" />
         </div>
