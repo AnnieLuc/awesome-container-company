@@ -1,5 +1,9 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "public/**/*.html"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "public/**/*.html",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     fontSize: {
       xs: "12px",
@@ -38,9 +42,9 @@ module.exports = {
       },
       boxShadow: {
         sm: "0px 2px 10px rgba(0, 0, 0, 0.2)",
-        DEFAULT: "0px 2px rgba(0, 0, 0, 0.2)",
+        DEFAULT: "0px 2px 10px rgba(0, 0, 0, 0.2)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 };

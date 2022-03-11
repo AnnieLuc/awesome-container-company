@@ -12,12 +12,10 @@ function Footer() {
 						Let's get in touch
 					</SectionHeading>
 					<div className='flex flex-col pt-[40px]'>
-						<span className='pb-[10px]'>hello@acc.com</span>
-						<span className='pb-[40px]'>+65 0123 4567</span>
+						<span className='pb-[40px]'>Hello@AwesomeContainer.com</span>
 						<address className='text-sm not-italic'>
-							<span className='block'>Blk 35 Mandalay Road # 13-37</span>
-							<span className='block'>Mandalay Towers</span>
-							<span className='block'>Singapore 308215</span>
+							<span className='block'>Address: 71 UBI Road 1, #08-42,</span>
+							<span className='block'>Oxley Bizhub, Singapore 408732</span>
 						</address>
 					</div>
 				</div>
@@ -36,20 +34,7 @@ function Footer() {
 									alt='instagram'
 									className='object-contain pr-[12px]'
 								/>
-								instagram
-							</a>
-						</li>
-						<li>
-							<a
-								href='https://www.twitter.com/tailwing/'
-								className='flex flex-row'
-							>
-								<img
-									src={Twitter}
-									alt='twitter'
-									className='object-contain pr-[12px]'
-								/>
-								twitter
+								AwesomeContainers
 							</a>
 						</li>
 					</ul>
