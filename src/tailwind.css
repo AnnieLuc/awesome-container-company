@@ -125,5 +125,5 @@
 }
 
 .nav-link {
-  @apply px-3 py-2 flex items-center text-xs font-normal leading-4 text-primary hover:opacity-75;
+  @apply px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75;
 }
