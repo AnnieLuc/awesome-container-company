@@ -6,6 +6,12 @@ import logisticsSupportImage  from '../images/backend-logistics-support.svg';
 import saveCostImage          from '../images/save-costs.svg';
 import saveStorageImage       from '../images/save-storage.svg';
 
+/**
+ * The **SustainabilityDeliveredSection** component discusses replaces how the company replaces single-use packaging with reusable stainless steel containers.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function SustainabilityDeliveredSection() {
   return (
     <section className="bg-secondary-200">

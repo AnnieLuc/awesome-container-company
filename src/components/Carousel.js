@@ -2,6 +2,12 @@ import React          from 'react';
 import CarouselSlide  from './CarouselSlide';
 import features       from '../utils/features';
 
+/**
+ * The **Carousel** component makes use of 'Tailwind Elements' library to make a gallery.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function Carousel() {
   const renderSlide = () => {
     return (

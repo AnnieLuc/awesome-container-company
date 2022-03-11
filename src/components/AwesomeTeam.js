@@ -3,6 +3,12 @@ import SectionHeading from './SectionHeading';
 import awesomeTeam 		from '../utils/awesome-team';
 import linkedInImg 		from '../images/social-links/linkedin.svg';
 
+/**
+ * The **AwesomeTeam** component representing the list of team members of the company.
+ *
+ * @version 1.0.0
+ * @author [Alec Drosu](https://github.com/AlecDrosu)
+ */
 function AwesomeTeam() {
 	const renderImages = () => {
 		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {

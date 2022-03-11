@@ -2,6 +2,12 @@ import React              from 'react';
 import SectionHeading     from './SectionHeading';
 import CompetitionTable   from './CompetitionTable';
 
+/**
+ * The **CompetitionSection** component represents the competition details of the company.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function CompetitionSection() {
   return (
     <section className=" bg-secondary-200">

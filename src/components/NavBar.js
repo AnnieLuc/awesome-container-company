@@ -2,6 +2,12 @@ import React  from 'react';
 import Logo   from './Logo';
 import Button from './Button';
 
+/**
+ * The **NavBar** component represents the main menu of the page.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function NavBar() {
 
   return (

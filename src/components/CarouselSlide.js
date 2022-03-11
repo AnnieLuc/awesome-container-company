@@ -1,5 +1,11 @@
 import React from 'react';
 
+/**
+ * The **CarouselSlide** component represents slide of Carousel.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function CarouselSlide({slide}) {
   const { image, features, sizing } = slide;
 

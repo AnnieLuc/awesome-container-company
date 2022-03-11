@@ -10,7 +10,7 @@ module.exports = {
       sm: '14px',
       base: '18px',
       lg: '24px',
-      xl: '44px',
+      xl: '44px'
     },
     extend: {
       colors: {
@@ -38,7 +38,7 @@ module.exports = {
         '7': '28.44px',
         '8': '30px',
         '9': '48px',
-        '10': '52.14px',
+        '10': '52.14px'
       },
       boxShadow: {
         DEFAULT: '0px 2px 10px rgba(0, 0, 0, 0.2)',

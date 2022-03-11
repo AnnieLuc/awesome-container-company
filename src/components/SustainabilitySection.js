@@ -3,6 +3,12 @@ import SectionHeading   from './SectionHeading';
 import SectionPara      from './SectionPara';
 import esgCareImg       from '../images/esg-care.svg';
 
+/**
+ * The **SustainabilitySection** component highlights the company to be an ESG company.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function SustainabilitySection() {
 
   return (

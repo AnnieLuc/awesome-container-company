@@ -2,6 +2,12 @@ import React 						from 'react';
 import awesomePartners 	from '../utils/awesome-partners';
 import SectionHeading 	from './SectionHeading';
 
+/**
+ * The **AwesomePartners** component representing the list of partners of the company.
+ *
+ * @version 1.0.0
+ * @author [Alec Drosu](https://github.com/AlecDrosu)
+ */
 function AwesomePartners() {
 	const renderImage = ({ image }, index) => {
 		return (

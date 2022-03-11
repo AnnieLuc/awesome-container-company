@@ -2,6 +2,12 @@ import React                from 'react';
 import PropTypes            from 'prop-types';
 import classnames           from "classnames";
 
+/**
+ * The **SectionHeading** component represents the heading of all the sections.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function SectionHeading(props){
   const { children, align, color }  = props;
   const textAlignClass              = `sec-text-${align}`;

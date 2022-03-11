@@ -4,6 +4,12 @@ import SectionPara      from './SectionPara';
 import Button           from './Button';
 import pricingContainer from '../images/pricing-section-container.svg';
 
+/**
+ * The **PricingSection** component represents the section where the company pricing details have been discussed.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function PricingSection(){
 
   return (

@@ -2,7 +2,12 @@ import React            from 'react';
 import foodInContainer  from '../images/food-with-awesome-container.png';
 import foodWaste        from '../images/food-waste.png';
 
-
+/**
+ * The **ImageCompareSlider** component represents a custom slider to compare two images.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function ImageCompareSlider() {
   const [imageRevealFraction, setImageRevealFraction] = React.useState(0.75);
   const imageContainer = React.useRef();

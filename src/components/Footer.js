@@ -2,6 +2,12 @@ import React 					from 'react';
 import SectionHeading from './SectionHeading';
 import Instagram 			from '../images/social-links/instagram.svg';
 
+/**
+ * The **Footer** component representing the footer socials links and contacts.
+ *
+ * @version 1.0.0
+ * @author [Alec Drosu](https://github.com/AlecDrosu)
+ */
 function Footer() {
 	return (
 		<footer className='bg-primary text-secondary-100 pt-[80px] pb-[60px]'>

@@ -2,6 +2,12 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import classnames from 'classnames';
 
+/**
+ * The **ChatBubble** component represents each chat bubble in the Chat component.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function ChatBubble({ sender, color, message }) {
   const chatBubbleClass = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
   const chatBubbleColorClass = `chat-bubble-${color}`

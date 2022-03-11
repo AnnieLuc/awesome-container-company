@@ -1,6 +1,12 @@
 import React  from 'react';
 import Logo   from './Logo';
 
+/**
+ * The **CompetitionTable** component lays out the comparison between the company and its competitors.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function CompetitionTable() {
   return (
     <article className="table">

@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.price-card {
-  @apply flex flex-col items-center max-w-[289px] px-[32px] py-[28px] bg-primary text-secondary-100 rounded-[20px] shadow text-lg leading-7;
-}
-
-.price-card-down-arrow {
-  @apply my-[20px] w-[17px] h-[26px] bg-[url('./images/down-arrow.svg')] bg-no-repeat bg-center bg-contain;
-}
-
 .sec-heading {
   @apply text-xl font-normal leading-10;
 }

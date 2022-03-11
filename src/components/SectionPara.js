@@ -2,6 +2,12 @@ import React                from 'react';
 import PropTypes            from 'prop-types';
 import classnames           from 'classnames';
 
+/**
+ * The **SectionPara** component represents the paragraphs of all the sections.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function SectionPara(props){
   const { children, align, color, lineHeight } = props;
   const textAlignClass             = `sec-text-${align}`;
