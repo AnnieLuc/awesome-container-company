@@ -10,7 +10,7 @@ import Instagram 			from '../images/social-links/instagram.svg';
  */
 function Footer() {
 	return (
-		<footer className='bg-primary text-secondary-100 pt-[80px] pb-[60px]'>
+		<footer id="footer" className='bg-primary text-secondary-100 pt-[80px] pb-[60px]'>
 			<div className='flex justify-between max-w-[1440px] mx-auto px-[80px]'>
 				<div className=' flex flex-col'>
 					<SectionHeading align='left' color='secondary'>

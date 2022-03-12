@@ -22,9 +22,9 @@ import Footer                         from './Footer';
 function App() {
   return (
     <div className="font-serif text-base font-normal leading-5">
+      <NavBar />
+      <HeroSection />
       <main>
-        <NavBar />
-        <HeroSection />
         <BadEffectsSection />
         <SustainabilityDeliveredSection />
         <ImpactSection />
@@ -33,8 +33,8 @@ function App() {
         <PricingSection />
         <AwesomeTeam />
         <AwesomePartners />
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }

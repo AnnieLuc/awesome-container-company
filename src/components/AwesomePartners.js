@@ -21,7 +21,7 @@ function AwesomePartners() {
 	};
 
 	return (
-		<section className='pt-[126px]'>
+		<section id="awesome-partners" className='pt-[126px]'>
 			<SectionHeading align='center' color='primary'>
 				And Awesome Partners
 			</SectionHeading>

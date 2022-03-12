@@ -13,7 +13,7 @@ import pricingContainer from '../images/pricing-section-container.svg';
 function PricingSection(){
 
   return (
-    <section>
+    <section id="pricing">
       <div className="mx-auto px-[82px] max-w-[1440px] flex flex-col items-center">
         <div className="mx-auto w-full max-w-[800px]">
           <SectionHeading align="center" color="primary">Get in touch with us to calculate prices for your business</SectionHeading>

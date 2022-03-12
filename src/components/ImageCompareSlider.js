@@ -70,7 +70,8 @@ function ImageCompareSlider() {
             style={{ touchAction: "none"}}
             onMouseDown={handleMouseDown}
             onTouchMove={handleTouchMove}
-            className="image-slider-handler">
+            className="h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2
+            bg-[url('./images/slider-handler.svg')] bg-no-repeat bg-center bg-contain">
           </div>
         </div>
       </div>

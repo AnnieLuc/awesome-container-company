@@ -32,7 +32,7 @@ function AwesomeTeam() {
 	};
 
 	return (
-		<section className='pt-[180px]'>
+		<section  id="awesome-team" className='pt-[180px]'>
       <SectionHeading align='center' color='primary'>
         An Awesome Team
       </SectionHeading>

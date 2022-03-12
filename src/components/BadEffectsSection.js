@@ -27,7 +27,7 @@ function BadEffectsSection() {
   }
 
   return (
-    <section className="bg-primary">
+    <section id="bad-effects" className="bg-primary">
       <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
         <div className="w-full flex gap-x-[73px]">
           <div className="max-w-[347px] rounded-[20px]">
