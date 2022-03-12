@@ -13,7 +13,7 @@ import Rectangles           from '../images/rectangles-impact.svg';
  */
 function ImpactSection() {
   return (
-    <section>
+    <section id="impact">
       <div className=" bg-secondary-200 pt-[120px] mx-auto flex flex-col items-center">
         <SectionHeading align="center" color="primary">
           Impact

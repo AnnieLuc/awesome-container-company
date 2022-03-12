@@ -12,7 +12,7 @@ import esgCareImg       from '../images/esg-care.svg';
 function SustainabilitySection() {
 
   return (
-    <section>
+    <section id="sustainability">
       <div className="mx-auto px-[100px] max-w-[1440px] pt-[64.54px] pb-[180px] flex">
         <div className="max-w-[780px]">
           <div className="mt-[187.46px]">

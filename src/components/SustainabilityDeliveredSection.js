@@ -14,7 +14,7 @@ import saveStorageImage       from '../images/save-storage.svg';
  */
 function SustainabilityDeliveredSection() {
   return (
-    <section className="bg-secondary-200">
+    <section id="sustainability-delivered" className="bg-secondary-200">
       <div className="mx-auto py-[120px] px-[50px] max-w-[1440px]">
         <div className="flex flex-col items-center">
           <SectionHeading align="center" color="primary">Sustainability Delivered</SectionHeading>
