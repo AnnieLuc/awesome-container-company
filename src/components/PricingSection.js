@@ -10,7 +10,7 @@ import pricingContainer from '../images/pricing-section-container.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function PricingSection(){
+function PricingSection(props){
 
   return (
     <section id="pricing">
@@ -28,7 +28,7 @@ function PricingSection(){
             </p>
           </div>
         </div>
-        <Button isHeader="false">Work with us</Button>
+        <Button isHeader="false" onButtonClick={props.onButtonClick}>Work with us</Button>
         <div className="mt-[32px] max-w-[618px]">
           <SectionPara align="center" color="primary" lineHeight="5">
             Leave your contacts and request, and our manager will reach out to you to establish our further partnership!

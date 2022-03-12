@@ -9,7 +9,7 @@ import Button from './Button';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function NavBar() {
+function NavBar(props) {
 
   return (
     <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-50">
@@ -58,7 +58,8 @@ function NavBar() {
                 spy={true}
                 smooth={true}
                 offset={-30}
-                duration={500}>
+                duration={500}
+                >
                   Impact
               </Link>
             </li>
@@ -95,7 +96,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="flex items-center ml-[20px]">
-              <Button isHeader="true">Work with us</Button>
+              <Button isHeader="true" onButtonClick={props.onButtonClick}>Work with us</Button>
             </li>
           </ul>
         </div>

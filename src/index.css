@@ -47,6 +47,10 @@
   @apply py-[13px] px-[24px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-sm leading-4;
 }
 
+.button-form {
+  @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
+}
+
 .table {
   @apply w-full min-h-[656px] bg-gridLine shadow rounded-[20px] grid grid-cols-6 auto-rows-fr gap-px;
 }
@@ -101,4 +105,24 @@
 
 .list-icon {
   @apply mr-[10px] w-[10px] h-[10px] bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center bg-contain;
+}
+
+.form-popup {
+  @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500
+}
+
+.form-open {
+  @apply opacity-100 z-[10000]
+}
+
+.form-close {
+  @apply w-[16.5px] h-[16.5px] bg-[url('./images/form-close.svg')] bg-no-repeat bg-center bg-contain border-none relative top-[24px] right-[-640px] cursor-pointer;
+}
+
+.labels {
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px]
+}
+
+.inputs {
+  @apply border-transparent outline-none p-[2px] w-full
 }

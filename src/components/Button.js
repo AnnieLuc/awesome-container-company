@@ -6,10 +6,11 @@ import React from 'react';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Button({children, isHeader}){
+
+function Button({children, isHeader, onButtonClick}) {
   const buttonClass = (isHeader === 'true') ? 'button-header' : 'button';
   return (
-    <button className={buttonClass}>
+    <button className={buttonClass} onClick={onButtonClick}>
       {children}
     </button>
   );
