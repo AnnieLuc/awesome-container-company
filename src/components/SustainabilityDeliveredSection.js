@@ -43,7 +43,7 @@ function SustainabilityDeliveredSection() {
             </div>
           </div>
           <div className="flex">
-            <div className="flex flex-col items-center max-w-[543px]">
+            <div className="ml-[150px] flex flex-col items-center max-w-[543px]">
               <div className="w-full max-w-[152.73px]">
                 <img src={saveStorageImage} alt="save storage" className="w-full object-contain object-center" />
               </div>
