@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/awesome-container-company/static/css/main.ed3eda8a.css",
-    "main.js": "/awesome-container-company/static/js/main.c11bba23.js",
+    "main.css": "/awesome-container-company/static/css/main.3370cb1e.css",
+    "main.js": "/awesome-container-company/static/js/main.532ea838.js",
     "static/media/food-waste.png": "/awesome-container-company/static/media/food-waste.963d9adaa301bb5b0563.png",
     "static/media/goa-goa.svg": "/awesome-container-company/static/media/goa-goa.bbef42d06ab64ebf9187e5c2485b9dca.svg",
     "static/media/food-with-awesome-container.png": "/awesome-container-company/static/media/food-with-awesome-container.1ad3efc1318b7c2daa4a.png",
@@ -36,12 +36,13 @@
     "static/media/slider-handler.svg": "/awesome-container-company/static/media/slider-handler.2b14fdc08e7bd4bdb697.svg",
     "static/media/carousel-back.svg": "/awesome-container-company/static/media/carousel-back.26890b18db7cb957fb5b.svg",
     "static/media/carousel-forward.svg": "/awesome-container-company/static/media/carousel-forward.76bbe8735684aa65ed8c.svg",
+    "static/media/form-close.svg": "/awesome-container-company/static/media/form-close.b45f7bb27b392a7c93c0.svg",
     "static/media/bullet-points.svg": "/awesome-container-company/static/media/bullet-points.b7c7988a4991119065b1.svg",
-    "main.ed3eda8a.css.map": "/awesome-container-company/static/css/main.ed3eda8a.css.map",
-    "main.c11bba23.js.map": "/awesome-container-company/static/js/main.c11bba23.js.map"
+    "main.3370cb1e.css.map": "/awesome-container-company/static/css/main.3370cb1e.css.map",
+    "main.532ea838.js.map": "/awesome-container-company/static/js/main.532ea838.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed3eda8a.css",
-    "static/js/main.c11bba23.js"
+    "static/css/main.3370cb1e.css",
+    "static/js/main.532ea838.js"
   ]
 }
