@@ -11,7 +11,7 @@ import Button from './Button';
 function NavBar() {
 
   return (
-    <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-10">
+    <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-50">
       <div className="w-full max-w-[1440px] pl-[24px] pr-[40px] mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between w-auto static block justify-start">
           <a
@@ -25,25 +25,25 @@ function NavBar() {
           className="flex flex-grow items-center"
           id="example-navbar-danger">
           <ul className="flex flex-row list-none ml-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">The Problem</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">The Problem</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Sustainable Solution</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">Sustainable Solution</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Impact</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">Impact</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">Pricing</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Team</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">Team</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contacts</a>
+            <li className="flex items-center">
+              <a className="px-3 py-2 flex items-center text-sm font-normal leading-4 text-primary hover:opacity-75" href="#">Contacts</a>
             </li>
-            <li className="nav-item ml-[20px]">
+            <li className="flex items-center ml-[20px]">
               <Button isHeader="true">Work with us</Button>
             </li>
           </ul>

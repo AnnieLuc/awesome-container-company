@@ -10,7 +10,7 @@ import Chat               from './Chat';
  */
 function HeroSection() {
   return (
-    <section>
+    <header>
       <div className="mx-auto px-[40px] pt-[144px] pb-[40px] max-w-[1440px] flex flex-col">
         <div className="max-w-[859px] text-[44px]">
           <h1 className="sec-heading sec-text-left sec-text-primary">
@@ -30,7 +30,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
 

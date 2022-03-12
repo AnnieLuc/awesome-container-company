@@ -15,7 +15,8 @@ function Chat() {
         if (index === 0) {
           return (
             <div key={index}>
-              <div className="chat-guest"></div>
+              <div className="w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')]
+              bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
               <ChatBubble {...chat} />
             </div>
           );
@@ -24,7 +25,8 @@ function Chat() {
           <ChatBubble key={index} {...chat} />
         )
       })}
-      <div className="chat-admin"></div>
+      <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
+      bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
     </div>
   );
 }
