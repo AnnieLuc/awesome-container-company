@@ -2,6 +2,7 @@
   "name": "awesome-container-company",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://5hraddha.github.io/awesome-container-company",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
