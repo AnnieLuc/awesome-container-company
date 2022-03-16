@@ -1,5 +1,5 @@
 import React 						from 'react';
-import awesomePartners 	from '../utils/awesome-partners';
+import PropTypes  			from 'prop-types';
 import SectionHeading 	from './SectionHeading';
 
 /**
@@ -8,7 +8,7 @@ import SectionHeading 	from './SectionHeading';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomePartners() {
+function AwesomePartners({awesomePartners}) {
 	const renderImage = ({ image }, index) => {
 		return (
 			<img
@@ -38,5 +38,9 @@ function AwesomePartners() {
 		</section>
 	);
 }
+
+AwesomePartners.propTypes = {
+  awesomePartners:    PropTypes.array.isRequired,
+};
 
 export default AwesomePartners;

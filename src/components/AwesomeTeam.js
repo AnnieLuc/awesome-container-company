@@ -1,7 +1,7 @@
-import React 					from 'react';
-import SectionHeading from './SectionHeading';
-import awesomeTeam 		from '../utils/awesome-team';
-import linkedInImg 		from '../images/social-links/linkedin.svg';
+import React 						from 'react';
+import PropTypes  			from 'prop-types';
+import SectionHeading 	from './SectionHeading';
+import linkedInImg 			from '../images/social-links/linkedin.svg';
 
 /**
  * The **AwesomeTeam** component representing the list of team members of the company.
@@ -9,7 +9,7 @@ import linkedInImg 		from '../images/social-links/linkedin.svg';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomeTeam() {
+function AwesomeTeam({awesomeTeam}) {
 	const renderImages = () => {
 		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {
 			return (
@@ -42,5 +42,9 @@ function AwesomeTeam() {
 		</section>
 	);
 }
+
+AwesomeTeam.propTypes = {
+  awesomeTeam:    PropTypes.array.isRequired,
+};
 
 export default AwesomeTeam;

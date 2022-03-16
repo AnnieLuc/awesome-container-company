@@ -12,6 +12,13 @@ import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
 import PopupWithForm                    from './PopupWithForm';
 
+// Import constants
+import awesomePartners 									from '../constants/awesome-partners';
+import awesomeTeam 											from '../constants/awesome-team';
+import plasticsBadEffects 							from '../constants/plastics-bad-effects';
+import features       									from '../constants/features';
+import impacts              						from '../constants/impacts';
+
 /**
  * The main React **App** component.
  *
@@ -48,14 +55,14 @@ function App() {
 			<NavBar onButtonClick={handleButtonClick} />
 			<HeroSection />
 			<main>
-				<BadEffectsSection />
-				<SustainabilityDeliveredSection />
-				<ImpactSection />
+				<BadEffectsSection plasticsBadEffects={plasticsBadEffects} />
+				<SustainabilityDeliveredSection features={features} />
+				<ImpactSection impacts={impacts} />
 				<CompetitionSection />
 				<SustainabilitySection />
 				<PricingSection onButtonClick={handleButtonClick} />
-				<AwesomeTeam />
-				<AwesomePartners />
+				<AwesomeTeam awesomeTeam={awesomeTeam} />
+				<AwesomePartners awesomePartners={awesomePartners} />
 			</main>
 			<PopupWithForm onClose={closePopup} isOpen={isPopupOpen} />
 			<Footer />

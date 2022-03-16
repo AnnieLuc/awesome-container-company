@@ -1,4 +1,5 @@
 import React            from 'react';
+import PropTypes        from 'prop-types';
 import SectionHeading   from './SectionHeading';
 import SectionPara      from './SectionPara';
 import Button           from './Button';
@@ -10,7 +11,7 @@ import pricingContainer from '../images/pricing-section-container.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function PricingSection(props){
+function PricingSection({onButtonClick}){
 
   return (
     <section id="pricing">
@@ -28,7 +29,7 @@ function PricingSection(props){
             </p>
           </div>
         </div>
-        <Button isHeader="false" onButtonClick={props.onButtonClick}>Work with us</Button>
+        <Button isHeader="false" onButtonClick={onButtonClick}>Work with us</Button>
         <div className="mt-[32px] max-w-[618px]">
           <SectionPara align="center" color="primary" lineHeight="5">
             Leave your contacts and request, and our manager will reach out to you to establish our further partnership!
@@ -38,5 +39,9 @@ function PricingSection(props){
     </section>
   );
 }
+
+PricingSection.propTypes = {
+  onButtonClick:  PropTypes.func.isRequired,
+};
 
 export default PricingSection;

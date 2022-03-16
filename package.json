@@ -10,6 +10,7 @@
     "classnames": "^2.3.1",
     "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
+    "react-compare-slider": "^2.2.0",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.6",

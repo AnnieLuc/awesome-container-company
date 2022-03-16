@@ -1,4 +1,5 @@
 import React                  from 'react';
+import PropTypes  			      from 'prop-types';
 import SectionHeading         from './SectionHeading';
 import SectionPara            from './SectionPara';
 import Carousel               from './Carousel';
@@ -12,7 +13,7 @@ import saveStorageImage       from '../images/save-storage.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SustainabilityDeliveredSection() {
+function SustainabilityDeliveredSection({features}) {
   return (
     <section id="sustainability-delivered" className="bg-secondary-200">
       <div className="mx-auto py-[120px] px-[50px] max-w-[1440px]">
@@ -24,7 +25,7 @@ function SustainabilityDeliveredSection() {
             </SectionPara>
           </div>
         </div>
-        <Carousel />
+        <Carousel features={features} />
         <div className="mt-[100px] px-[100px]">
           <div className="flex">
             <div className="flex flex-col items-center">
@@ -55,5 +56,9 @@ function SustainabilityDeliveredSection() {
     </section>
   );
 }
+
+SustainabilityDeliveredSection.propTypes = {
+  features:    PropTypes.array.isRequired,
+};
 
 export default SustainabilityDeliveredSection;
