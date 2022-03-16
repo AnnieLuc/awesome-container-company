@@ -2,7 +2,6 @@ import React              from 'react';
 import SectionHeading     from './SectionHeading';
 import SectionPara        from './SectionPara';
 import chart              from '../images/single-use-plastics-chart.png';
-import plasticsBadEffects from '../utils/plastics-bad-effects';
 
 /**
  * The **BadEffectsSection** component highlights the bad effects of single-use packaging.
@@ -10,7 +9,7 @@ import plasticsBadEffects from '../utils/plastics-bad-effects';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function BadEffectsSection() {
+function BadEffectsSection({plasticsBadEffects}) {
   const renderImages = () => {
     return (
       plasticsBadEffects.map(({caption, image}, index) => {

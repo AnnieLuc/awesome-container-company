@@ -1,5 +1,4 @@
 import React 						from 'react';
-import awesomePartners 	from '../utils/awesome-partners';
 import SectionHeading 	from './SectionHeading';
 
 /**
@@ -8,7 +7,7 @@ import SectionHeading 	from './SectionHeading';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomePartners() {
+function AwesomePartners({awesomePartners}) {
 	const renderImage = ({ image }, index) => {
 		return (
 			<img

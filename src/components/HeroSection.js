@@ -1,6 +1,7 @@
 import React              from 'react';
 import ImageCompareSlider from './ImageCompareSlider';
-import Chat               from './Chat';
+import ChatBubble         from './ChatBubble';
+import chatMessages       from '../constants/chat-messages';
 
 /**
  * The **HeroSection** component represents the main section of the page where the motto of the company is displayed.
@@ -9,6 +10,29 @@ import Chat               from './Chat';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function HeroSection() {
+  const renderChat = () => {
+    return (
+      <div className="px-[50px] flex flex-col gap-[16px]">
+        {chatMessages.map((chat, index) => {
+          if (index === 0) {
+            return (
+              <div key={index}>
+                <div className="w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')]
+                bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
+                <ChatBubble {...chat} />
+              </div>
+            );
+          }
+          return (
+            <ChatBubble key={index} {...chat} />
+          )
+        })}
+        <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
+        bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
+      </div>
+    );
+  }
+
   return (
     <header id="hero">
       <div className="mx-auto px-[40px] pt-[144px] pb-[40px] max-w-[1440px] flex flex-col">
@@ -26,7 +50,7 @@ function HeroSection() {
             </div>
           </div>
           <div className="max-w-[491px] w-full">
-            <Chat />
+            {renderChat()}
           </div>
         </div>
       </div>

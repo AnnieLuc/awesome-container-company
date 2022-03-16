@@ -1,7 +1,7 @@
-import React  from 'react';
-import { Link } from 'react-scroll';
-import Logo   from './Logo';
-import Button from './Button';
+import React      from 'react';
+import { Link }   from 'react-scroll';
+import Logo       from './Logo';
+import Button     from './Button';
 
 /**
  * The **NavBar** component represents the main menu of the page.
