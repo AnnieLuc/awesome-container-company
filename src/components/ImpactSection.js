@@ -1,6 +1,5 @@
 import React                from 'react';
 import SectionHeading       from './SectionHeading';
-import impacts              from '../constants/impacts';
 import Ovals                from '../images/ovals-impact.svg';
 import Rectangles           from '../images/rectangles-impact.svg';
 
@@ -10,11 +9,11 @@ import Rectangles           from '../images/rectangles-impact.svg';
  * @version 1.0.0
  * @author [Ekaterina Cratcha](https://github.com/cratcha)
  */
-function ImpactSection() {
+function ImpactSection({impacts}) {
   const renderCards = () => (
-    impacts.map((cardData) => (
+    impacts.map((cardData, index) => (
         <article className="mt-[60px] flex flex-col items-center
-        text-center max-w-[660px] shadow-sm bg-secondary-100 z-20">
+        text-center max-w-[660px] shadow-sm bg-secondary-100 z-20" key={index}>
           <div className="mb-[60px] pr-[32px] pl-[32px]">
             {/* Card Header */}
             <h2 className="text-lg pt-10 text-highlight-100">

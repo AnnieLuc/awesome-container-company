@@ -12,7 +12,7 @@ function CompetitionTable() {
     <article className="table">
       {/* Row # 1 */}
       <div className="table-top-header rounded-tl-[20px]">
-        <Logo />
+        <Logo isHeader={false} />
       </div>
       <div className="table-top-header">
         <p>Awesome Container Company</p>

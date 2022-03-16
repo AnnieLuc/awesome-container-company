@@ -1,4 +1,5 @@
 import React              from 'react';
+import PropTypes  			  from 'prop-types';
 import SectionHeading     from './SectionHeading';
 import SectionPara        from './SectionPara';
 import chart              from '../images/single-use-plastics-chart.png';
@@ -55,5 +56,10 @@ function BadEffectsSection({plasticsBadEffects}) {
     </section>
   );
 }
+
+BadEffectsSection.propTypes = {
+  plasticsBadEffects:    PropTypes.array.isRequired,
+};
+
 
 export default BadEffectsSection;

@@ -17,6 +17,7 @@ import awesomePartners 									from '../constants/awesome-partners';
 import awesomeTeam 											from '../constants/awesome-team';
 import plasticsBadEffects 							from '../constants/plastics-bad-effects';
 import features       									from '../constants/features';
+import impacts              						from '../constants/impacts';
 
 /**
  * The main React **App** component.
@@ -56,7 +57,7 @@ function App() {
 			<main>
 				<BadEffectsSection plasticsBadEffects={plasticsBadEffects} />
 				<SustainabilityDeliveredSection features={features} />
-				<ImpactSection />
+				<ImpactSection impacts={impacts} />
 				<CompetitionSection />
 				<SustainabilitySection />
 				<PricingSection onButtonClick={handleButtonClick} />

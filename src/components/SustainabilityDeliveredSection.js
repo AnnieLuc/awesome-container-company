@@ -1,4 +1,5 @@
 import React                  from 'react';
+import PropTypes  			      from 'prop-types';
 import SectionHeading         from './SectionHeading';
 import SectionPara            from './SectionPara';
 import Carousel               from './Carousel';
@@ -55,5 +56,9 @@ function SustainabilityDeliveredSection({features}) {
     </section>
   );
 }
+
+SustainabilityDeliveredSection.propTypes = {
+  features:    PropTypes.array.isRequired,
+};
 
 export default SustainabilityDeliveredSection;

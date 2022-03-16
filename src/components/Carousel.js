@@ -1,4 +1,5 @@
 import React          from 'react';
+import PropTypes  		from 'prop-types';
 
 /**
  * The **Carousel** component makes use of 'Tailwind Elements' library to make a gallery.
@@ -19,7 +20,7 @@ function Carousel({features}) {
   const renderCarouselSlide = (slide) => {
     const { image, features, sizing } = slide;
     return (
-      <article className="block w-full w-max-[1212px] pt-[45px] pb-[35px] bg-secondary-100 flex">
+      <article className="w-full w-max-[1212px] pt-[45px] pb-[35px] bg-secondary-100 flex">
         <div className="w-full max-w-[520px]">
           <img src={image} alt="container" className="w-full object-contain object-center" />
         </div>
@@ -85,5 +86,9 @@ function Carousel({features}) {
     </div>
   );
 }
+
+Carousel.propTypes = {
+  features:    PropTypes.array.isRequired,
+};
 
 export default Carousel;

@@ -1,6 +1,7 @@
-import React 					from 'react';
-import SectionHeading from './SectionHeading';
-import linkedInImg 		from '../images/social-links/linkedin.svg';
+import React 						from 'react';
+import PropTypes  			from 'prop-types';
+import SectionHeading 	from './SectionHeading';
+import linkedInImg 			from '../images/social-links/linkedin.svg';
 
 /**
  * The **AwesomeTeam** component representing the list of team members of the company.
@@ -41,5 +42,9 @@ function AwesomeTeam({awesomeTeam}) {
 		</section>
 	);
 }
+
+AwesomeTeam.propTypes = {
+  awesomeTeam:    PropTypes.array.isRequired,
+};
 
 export default AwesomeTeam;

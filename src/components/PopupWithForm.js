@@ -1,12 +1,13 @@
-import React from 'react';
+import React 				from 'react';
+import PropTypes  	from 'prop-types';
 
-function PopupWithForm(props) {
+function PopupWithForm({isOpen, onClose}) {
 	return (
-		<section className={`form-popup ${props.isOpen ? 'form-open' : ''}`}>
+		<section className={`form-popup ${isOpen ? 'form-open' : ''}`}>
 			<div className='w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm'>
 				<button
 					type='button'
-					onClick={props.onClose}
+					onClick={onClose}
 					className='form-close'
 				></button>
 				<h2 className='text-lg text-primary pt-[40.5px] leading-8 pb-[50px]'>
@@ -36,5 +37,10 @@ function PopupWithForm(props) {
 		</section>
 	);
 }
+
+PopupWithForm.propTypes = {
+	isOpen:		PropTypes.bool.isRequired,
+  onClose:  PropTypes.func.isRequired,
+};
 
 export default PopupWithForm;

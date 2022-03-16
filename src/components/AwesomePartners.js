@@ -1,4 +1,5 @@
 import React 						from 'react';
+import PropTypes  			from 'prop-types';
 import SectionHeading 	from './SectionHeading';
 
 /**
@@ -37,5 +38,9 @@ function AwesomePartners({awesomePartners}) {
 		</section>
 	);
 }
+
+AwesomePartners.propTypes = {
+  awesomePartners:    PropTypes.array.isRequired,
+};
 
 export default AwesomePartners;

@@ -1,4 +1,5 @@
 import React      from 'react';
+import PropTypes  from 'prop-types';
 import { Link }   from 'react-scroll';
 import Logo       from './Logo';
 import Button     from './Button';
@@ -9,7 +10,7 @@ import Button     from './Button';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function NavBar(props) {
+function NavBar({onButtonClick}) {
 
   return (
     <nav className="pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 fixed top-0 right-0 left-0 z-50">
@@ -22,7 +23,7 @@ function NavBar(props) {
             smooth={true}
             offset={-70}
             duration={500}>
-              <Logo />
+              <Logo isHeader={true} />
               <p className="ml-[5px]">Awesome Container Company</p>
           </Link>
         </div>
@@ -96,7 +97,7 @@ function NavBar(props) {
               </Link>
             </li>
             <li className="flex items-center ml-[20px]">
-              <Button isHeader="true" onButtonClick={props.onButtonClick}>Work with us</Button>
+              <Button isHeader="true" onButtonClick={onButtonClick}>Work with us</Button>
             </li>
           </ul>
         </div>
@@ -104,5 +105,9 @@ function NavBar(props) {
     </nav>
   );
 }
+
+NavBar.propTypes = {
+  onButtonClick:  PropTypes.func.isRequired,
+};
 
 export default NavBar;
