@@ -10,16 +10,6 @@ function PopupWithForm(props) {
   } = useForm({ mode: "onChange" });
   const onSubmit = (data) => console.log(data);
 
-  // const isValid = () => {
-  //   return (
-  //     !errors.company &&
-  //     !errors.email
-  //   );
-  // };
-
-
-  console.log(isValid)
-
   return (
     <section className={`form-popup ${props.isOpen ? "form-open" : ""}`}>
       <form
@@ -85,9 +75,7 @@ function PopupWithForm(props) {
         <Link to="/thanks">
           <button
             type="submit"
-            className={`${
-              !isValid ? "button-invalid" : "button-form"
-            }`}
+            className={`${!isValid ? "button-invalid" : "button-form"}`}
             disabled={!isValid}
           >
             Send
