@@ -6,9 +6,19 @@ function PopupWithForm(props) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { errors, isValid },
+  } = useForm({ mode: "onChange" });
   const onSubmit = (data) => console.log(data);
+
+  // const isValid = () => {
+  //   return (
+  //     !errors.company &&
+  //     !errors.email
+  //   );
+  // };
+
+
+  console.log(isValid)
 
   return (
     <section className={`form-popup ${props.isOpen ? "form-open" : ""}`}>
@@ -57,10 +67,11 @@ function PopupWithForm(props) {
             className={`h-[60px] ${errors.email ? "labels-invalid" : "labels"}`}
           >
             <input
-              type="text"
+              type="email"
               className="inputs"
               {...register("email", {
                 required: true,
+                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
               })}
             />
           </label>
@@ -75,9 +86,9 @@ function PopupWithForm(props) {
           <button
             type="submit"
             className={`${
-              errors.email && errors.company ? "button-invalid" : "button-form"
+              !isValid ? "button-invalid" : "button-form"
             }`}
-            disabled={errors.email && errors.company}
+            disabled={!isValid}
           >
             Send
           </button>
