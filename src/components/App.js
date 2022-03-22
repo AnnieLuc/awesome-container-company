@@ -1,5 +1,4 @@
 import React                            from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar                           from './NavBar';
 import HeroSection                      from './HeroSection';
 import BadEffectsSection                from './BadEffectsSection';
@@ -11,7 +10,7 @@ import PricingSection                   from './PricingSection';
 import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
-import {PopupWithForm, PopupWithThanks} from './PopupWithForm';
+import PopupWithForm 					from './PopupWithForm';
 
 
 /**
@@ -59,12 +58,7 @@ function App() {
 				<AwesomeTeam />
 				<AwesomePartners />
 			</main>
-			<BrowserRouter>
-				<Routes>
-					<Route path='/' element={<PopupWithForm onClose={closePopup} isOpen={isPopupOpen} />} />
-					<Route path='/thanks' element={<PopupWithThanks onClose={closePopup} isOpen={isPopupOpen} />} />
-				</Routes>
-			</BrowserRouter>
+			<PopupWithForm onClose={closePopup} isOpen={isPopupOpen} />
 			<Footer />
 		</div>
 	);
