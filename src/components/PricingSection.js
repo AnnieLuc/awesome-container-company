@@ -1,9 +1,11 @@
-import React            from 'react';
-import PropTypes        from 'prop-types';
-import SectionHeading   from './SectionHeading';
-import SectionPara      from './SectionPara';
-import Button           from './Button';
-import pricingContainer from '../images/pricing-section-container.svg';
+import React                from 'react';
+import PropTypes            from 'prop-types';
+import { motion }           from 'framer-motion';
+import SectionHeading       from './SectionHeading';
+import SectionPara          from './SectionPara';
+import Button               from './Button';
+import { sectionVariants }  from '../utils/animationVariants';
+import pricingContainer     from '../images/pricing-section-container.svg';
 
 /**
  * The **PricingSection** component represents the section where the company pricing details have been discussed.
@@ -14,7 +16,12 @@ import pricingContainer from '../images/pricing-section-container.svg';
 function PricingSection({onButtonClick}){
 
   return (
-    <section id="pricing">
+    <motion.section
+      id="pricing"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2}}>
       <div className="mx-auto px-[82px] max-w-[1440px] flex flex-col items-center">
         <div className="mx-auto w-full max-w-[800px]">
           <SectionHeading align="center" color="primary">Get in touch with us to calculate prices for your business</SectionHeading>
@@ -36,7 +43,7 @@ function PricingSection({onButtonClick}){
           </SectionPara>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

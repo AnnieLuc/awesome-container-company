@@ -1,8 +1,10 @@
 import React                  from 'react';
 import PropTypes  			      from 'prop-types';
+import { motion }             from 'framer-motion';
 import SectionHeading         from './SectionHeading';
 import SectionPara            from './SectionPara';
 import Carousel               from './Carousel';
+import { sectionVariants }    from '../utils/animationVariants';
 import logisticsSupportImage  from '../images/backend-logistics-support.svg';
 import saveCostImage          from '../images/save-costs.svg';
 import saveStorageImage       from '../images/save-storage.svg';
@@ -15,7 +17,13 @@ import saveStorageImage       from '../images/save-storage.svg';
  */
 function SustainabilityDeliveredSection({features}) {
   return (
-    <section id="sustainability-delivered" className="bg-secondary-200">
+    <motion.section
+      id="sustainability-delivered"
+      className="bg-secondary-200"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2}}>
       <div className="mx-auto py-[120px] px-[50px] max-w-[1440px]">
         <div className="flex flex-col items-center">
           <SectionHeading align="center" color="primary">Sustainability Delivered</SectionHeading>
@@ -53,7 +61,7 @@ function SustainabilityDeliveredSection({features}) {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,5 +1,8 @@
 import React                from 'react';
+import PropTypes  			    from 'prop-types';
+import { motion }           from 'framer-motion';
 import SectionHeading       from './SectionHeading';
+import { sectionVariants }  from '../utils/animationVariants';
 import Ovals                from '../images/ovals-impact.svg';
 import Rectangles           from '../images/rectangles-impact.svg';
 
@@ -31,7 +34,12 @@ function ImpactSection({impacts}) {
       )));
 
   return (
-    <section id="impact">
+    <motion.section
+      id="impact"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2}}>
       <div className=" bg-secondary-200 pt-[120px] mx-auto flex flex-col items-center">
         <SectionHeading align="center" color="primary">
           Impact
@@ -45,8 +53,12 @@ function ImpactSection({impacts}) {
           {renderCards()}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
+
+ImpactSection.propTypes = {
+  impacts:    PropTypes.array.isRequired,
+};
 
 export default ImpactSection;
