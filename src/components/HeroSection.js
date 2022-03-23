@@ -1,7 +1,9 @@
-import React              from 'react';
-import ImageCompareSlider from './ImageCompareSlider';
-import ChatBubble         from './ChatBubble';
-import chatMessages       from '../constants/chat-messages';
+import React                from 'react';
+import { motion }           from 'framer-motion'
+import ImageCompareSlider   from './ImageCompareSlider';
+import Chat                 from './chat/Chat';
+import { sectionVariants }  from '../utils/animationVariants';
+import chatMessages         from '../constants/chat-messages';
 
 /**
  * The **HeroSection** component represents the main section of the page where the motto of the company is displayed.
@@ -10,31 +12,13 @@ import chatMessages       from '../constants/chat-messages';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function HeroSection() {
-  const renderChat = () => {
-    return (
-      <div className="px-[50px] flex flex-col gap-[16px]">
-        {chatMessages.map((chat, index) => {
-          if (index === 0) {
-            return (
-              <div key={index}>
-                <div className="w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')]
-                bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
-                <ChatBubble {...chat} />
-              </div>
-            );
-          }
-          return (
-            <ChatBubble key={index} {...chat} />
-          )
-        })}
-        <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
-        bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
-      </div>
-    );
-  }
-
   return (
-    <header id="hero">
+    <motion.header
+      id="hero"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.3}}>
       <div className="mx-auto px-[40px] pt-[144px] pb-[40px] max-w-[1440px] flex flex-col">
         <div className="max-w-[859px] text-[44px]">
           <h1 className="sec-heading sec-text-left sec-text-primary">
@@ -49,12 +33,16 @@ function HeroSection() {
                 <p>With Awesome Containers</p>
             </div>
           </div>
-          <div className="max-w-[491px] w-full">
-            {renderChat()}
+          <div className="max-w-[491px] w-full flex flex-col justify-end">
+            <div className="px-[50px] flex flex-col gap-[16px]">
+              <Chat chatMessages={chatMessages} />
+              <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
+              bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
 
