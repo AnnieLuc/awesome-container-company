@@ -24,7 +24,7 @@ function Hero({chatMessages}) {
             Help our environment by eliminating single-use plastics from your delivery with <span className="text-highlight-100">Awesome Container Company</span>
           </h1>
         </div>
-        <div className="mt-[85px] w-full flex justify-between">
+        <div className="mt-[85px] w-full flex justify-between md:flex-col md:items-center ">
           <div className="max-w-[626px] w-full rounded-[20px] object-cover">
             <ImageCompareSlider />
             <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4">

@@ -5,6 +5,12 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
+    screens: {
+      'xl': {'max': '1440px'},
+      'lg': {'max': '1024px'},
+      'md': {'max': '768px'},
+      'sm': {'max': '375px'},
+    },
     fontSize: {
       xs: '12px',
       sm: '14px',
