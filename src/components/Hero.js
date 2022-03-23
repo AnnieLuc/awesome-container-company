@@ -3,15 +3,14 @@ import { motion }           from 'framer-motion'
 import ImageCompareSlider   from './ImageCompareSlider';
 import Chat                 from './chat/Chat';
 import { sectionVariants }  from '../utils/animationVariants';
-import chatMessages         from '../constants/chat-messages';
 
 /**
- * The **HeroSection** component represents the main section of the page where the motto of the company is displayed.
+ * The **Hero** component represents the main section of the page where the motto of the company is displayed.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function HeroSection() {
+function Hero({chatMessages}) {
   return (
     <motion.header
       id="hero"
@@ -46,4 +45,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default Hero;

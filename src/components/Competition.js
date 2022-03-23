@@ -1,16 +1,16 @@
 import React                from 'react';
 import { motion }           from 'framer-motion';
-import SectionHeading       from './SectionHeading';
-import CompetitionTable     from './CompetitionTable';
+import SectionHeading       from './section-heading/SectionHeading';
+import CompetitionTable     from './competition-table/CompetitionTable';
 import { sectionVariants }  from '../utils/animationVariants';
 
 /**
- * The **CompetitionSection** component represents the competition details of the company.
+ * The **Competition** component represents the competition details of the company.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function CompetitionSection() {
+function Competition() {
   return (
     <motion.section
       id="competition"
@@ -29,4 +29,4 @@ function CompetitionSection() {
   );
 }
 
-export default CompetitionSection;
+export default Competition;

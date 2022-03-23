@@ -1,21 +1,21 @@
 import React                  from 'react';
 import PropTypes  			      from 'prop-types';
 import { motion }             from 'framer-motion';
-import SectionHeading         from './SectionHeading';
-import SectionPara            from './SectionPara';
-import Carousel               from './Carousel';
+import SectionHeading         from './section-heading/SectionHeading';
+import SectionPara            from './section-para/SectionPara';
+import Carousel               from './carousel/Carousel';
 import { sectionVariants }    from '../utils/animationVariants';
 import logisticsSupportImage  from '../images/backend-logistics-support.svg';
 import saveCostImage          from '../images/save-costs.svg';
 import saveStorageImage       from '../images/save-storage.svg';
 
 /**
- * The **SustainabilityDeliveredSection** component discusses replaces how the company replaces single-use packaging with reusable stainless steel containers.
+ * The **SustainabilityDelivered** component discusses replaces how the company replaces single-use packaging with reusable stainless steel containers.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SustainabilityDeliveredSection({features}) {
+function SustainabilityDelivered({features}) {
   return (
     <motion.section
       id="sustainability-delivered"
@@ -65,8 +65,8 @@ function SustainabilityDeliveredSection({features}) {
   );
 }
 
-SustainabilityDeliveredSection.propTypes = {
+SustainabilityDelivered.propTypes = {
   features:    PropTypes.array.isRequired,
 };
 
-export default SustainabilityDeliveredSection;
+export default SustainabilityDelivered;

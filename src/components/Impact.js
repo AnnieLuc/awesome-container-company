@@ -1,18 +1,18 @@
 import React                from 'react';
 import PropTypes  			    from 'prop-types';
 import { motion }           from 'framer-motion';
-import SectionHeading       from './SectionHeading';
+import SectionHeading       from './section-heading/SectionHeading';
 import { sectionVariants }  from '../utils/animationVariants';
 import Ovals                from '../images/ovals-impact.svg';
 import Rectangles           from '../images/rectangles-impact.svg';
 
 /**
- * The **ImpactSection** component highlights the impacts for businesses and users.
+ * The **Impact** component highlights the impacts for businesses and users.
  *
  * @version 1.0.0
  * @author [Ekaterina Cratcha](https://github.com/cratcha)
  */
-function ImpactSection({impacts}) {
+function Impact({impacts}) {
   const renderCards = () => (
     impacts.map((cardData, index) => (
         <article className="mt-[60px] flex flex-col items-center
@@ -57,8 +57,8 @@ function ImpactSection({impacts}) {
   );
 }
 
-ImpactSection.propTypes = {
+Impact.propTypes = {
   impacts:    PropTypes.array.isRequired,
 };
 
-export default ImpactSection;
+export default Impact;

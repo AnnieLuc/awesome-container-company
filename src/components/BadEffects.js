@@ -1,18 +1,18 @@
 import React                from 'react';
 import PropTypes  			    from 'prop-types';
 import { motion }           from 'framer-motion';
-import SectionHeading       from './SectionHeading';
-import SectionPara          from './SectionPara';
+import SectionHeading       from './section-heading/SectionHeading';
+import SectionPara          from './section-para/SectionPara';
 import { sectionVariants }  from '../utils/animationVariants';
 import chart                from '../images/single-use-plastics-chart.png';
 
 /**
- * The **BadEffectsSection** component highlights the bad effects of single-use packaging.
+ * The **BadEffects** component highlights the bad effects of single-use packaging.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function BadEffectsSection({plasticsBadEffects}) {
+function BadEffects({plasticsBadEffects}) {
   const renderImages = () => {
     return (
       plasticsBadEffects.map(({caption, image}, index) => {
@@ -65,8 +65,8 @@ function BadEffectsSection({plasticsBadEffects}) {
   );
 }
 
-BadEffectsSection.propTypes = {
+BadEffects.propTypes = {
   plasticsBadEffects:    PropTypes.array.isRequired,
 };
 
-export default BadEffectsSection;
+export default BadEffects;

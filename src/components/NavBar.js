@@ -2,7 +2,7 @@ import React      from 'react';
 import PropTypes  from 'prop-types';
 import { Link }   from 'react-scroll';
 import Logo       from './Logo';
-import Button     from './Button';
+import Button     from './button/Button';
 
 /**
  * The **NavBar** component represents the main menu of the page.

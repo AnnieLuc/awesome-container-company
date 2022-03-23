@@ -1,17 +1,17 @@
 import React                from 'react';
 import { motion }           from 'framer-motion';
-import SectionHeading       from './SectionHeading';
-import SectionPara          from './SectionPara';
+import SectionHeading       from './section-heading/SectionHeading';
+import SectionPara          from './section-para/SectionPara';
 import { sectionVariants }  from '../utils/animationVariants';
 import esgCareImg           from '../images/esg-care.svg';
 
 /**
- * The **SustainabilitySection** component highlights the company to be an ESG company.
+ * The **Sustainability** component highlights the company to be an ESG company.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SustainabilitySection() {
+function Sustainability() {
 
   return (
     <motion.section
@@ -44,4 +44,4 @@ function SustainabilitySection() {
   );
 }
 
-export default SustainabilitySection;
+export default Sustainability;

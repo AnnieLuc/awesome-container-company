@@ -1,0 +1,23 @@
+.sec-heading {
+  @apply text-xl font-normal leading-10;
+}
+
+.sec-text-center {
+  @apply text-center;
+}
+
+.sec-text-left {
+  @apply text-left;
+}
+
+.sec-text-right {
+  @apply text-right;
+}
+
+.sec-text-primary {
+  @apply text-primary;
+}
+
+.sec-text-secondary {
+  @apply text-secondary-100;
+}

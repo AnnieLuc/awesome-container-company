@@ -1,19 +1,19 @@
 import React                from 'react';
 import PropTypes            from 'prop-types';
 import { motion }           from 'framer-motion';
-import SectionHeading       from './SectionHeading';
-import SectionPara          from './SectionPara';
-import Button               from './Button';
+import SectionHeading       from './section-heading/SectionHeading';
+import SectionPara          from './section-para/SectionPara';
+import Button               from './button/Button';
 import { sectionVariants }  from '../utils/animationVariants';
 import pricingContainer     from '../images/pricing-section-container.svg';
 
 /**
- * The **PricingSection** component represents the section where the company pricing details have been discussed.
+ * The **Pricing** component represents the section where the company pricing details have been discussed.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function PricingSection({onButtonClick}){
+function Pricing({onButtonClick}){
 
   return (
     <motion.section
@@ -47,8 +47,8 @@ function PricingSection({onButtonClick}){
   );
 }
 
-PricingSection.propTypes = {
+Pricing.propTypes = {
   onButtonClick:  PropTypes.func.isRequired,
 };
 
-export default PricingSection;
+export default Pricing;

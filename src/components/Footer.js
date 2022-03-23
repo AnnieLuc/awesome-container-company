@@ -1,6 +1,6 @@
 import React 								from "react";
 import { motion }           from 'framer-motion';
-import SectionHeading 			from "./SectionHeading";
+import SectionHeading 			from "./section-heading/SectionHeading";
 import { sectionVariants }  from '../utils/animationVariants';
 import Instagram 						from "../images/social-links/instagram.svg";
 

@@ -1,12 +1,12 @@
 import React                            from 'react';
 import NavBar                           from './NavBar';
-import HeroSection                      from './HeroSection';
-import BadEffectsSection                from './BadEffectsSection';
-import SustainabilityDeliveredSection   from './SustainabilityDeliveredSection';
-import ImpactSection                    from './ImpactSection';
-import CompetitionSection               from './CompetitionSection';
-import SustainabilitySection            from './SustainabilitySection';
-import PricingSection                   from './PricingSection';
+import Hero                      				from './Hero';
+import BadEffects                				from './BadEffects';
+import SustainabilityDelivered   				from './SustainabilityDelivered';
+import Impact														from './Impact';
+import Competition			                from './Competition';
+import Sustainability            				from './Sustainability';
+import Pricing                   				from './Pricing';
 import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
@@ -18,6 +18,7 @@ import awesomeTeam 											from '../constants/awesome-team';
 import plasticsBadEffects 							from '../constants/plastics-bad-effects';
 import features       									from '../constants/features';
 import impacts              						from '../constants/impacts';
+import chatMessages         						from '../constants/chat-messages';
 
 /**
  * The main React **App** component.
@@ -53,14 +54,14 @@ function App() {
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
 			<NavBar onButtonClick={handleButtonClick} />
-			<HeroSection />
+			<Hero chatMessages={chatMessages} />
 			<main>
-				<BadEffectsSection plasticsBadEffects={plasticsBadEffects} />
-				<SustainabilityDeliveredSection features={features} />
-				<ImpactSection impacts={impacts} />
-				<CompetitionSection />
-				<SustainabilitySection />
-				<PricingSection onButtonClick={handleButtonClick} />
+				<BadEffects plasticsBadEffects={plasticsBadEffects} />
+				<SustainabilityDelivered features={features} />
+				<Impact impacts={impacts} />
+				<Competition />
+				<Sustainability />
+				<Pricing onButtonClick={handleButtonClick} />
 				<AwesomeTeam awesomeTeam={awesomeTeam} />
 				<AwesomePartners awesomePartners={awesomePartners} />
 			</main>
