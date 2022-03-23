@@ -1,7 +1,9 @@
-import React 						from 'react';
-import PropTypes  			from 'prop-types';
-import SectionHeading 	from './SectionHeading';
-import linkedInImg 			from '../images/social-links/linkedin.svg';
+import React 								from 'react';
+import PropTypes  					from 'prop-types';
+import { motion }       		from 'framer-motion';
+import SectionHeading 			from './section-heading/SectionHeading';
+import { sectionVariants }  from '../utils/animationVariants';
+import linkedInImg 					from '../images/social-links/linkedin.svg';
 
 /**
  * The **AwesomeTeam** component representing the list of team members of the company.
@@ -13,16 +15,16 @@ function AwesomeTeam({awesomeTeam}) {
 	const renderImages = () => {
 		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {
 			return (
-				<figure className='max-w-[146px]' key={index}>
-					<img src={image} alt={image} className='object-cover' />
-					<figcaption className='pt-[15px] text-2xl sec-text-primary leading-7 text-center'>
+				<figure className="max-w-[146px]" key={index}>
+					<img src={image} alt={image} className="object-cover" />
+					<figcaption className="pt-[15px] text-2xl sec-text-primary leading-7 text-center">
 						{name}
-						<span className='block whitespace-nowrap'>{title}</span>
-						<a href={linkedIn} className=''>
+						<span className="block whitespace-nowrap">{title}</span>
+						<a href={linkedIn} className="">
 							<img
 								src={linkedInImg}
 								alt={name}
-								className='mx-[auto] mt-[20px]'
+								className="mx-[auto] mt-[20px]"
 							/>
 						</a>
 					</figcaption>
@@ -32,14 +34,20 @@ function AwesomeTeam({awesomeTeam}) {
 	};
 
 	return (
-		<section  id="awesome-team" className='pt-[180px]'>
-      <SectionHeading align='center' color='primary'>
+		<motion.section
+			id="awesome-team"
+			className="pt-[180px]"
+			variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2}}>
+      <SectionHeading align="center" color="primary">
         An Awesome Team
       </SectionHeading>
-			<div className='mx-auto pt-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center'>
-				<div className='w-full flex justify-between'>{renderImages()}</div>
+			<div className="mx-auto pt-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center">
+				<div className="w-full flex justify-between">{renderImages()}</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
 

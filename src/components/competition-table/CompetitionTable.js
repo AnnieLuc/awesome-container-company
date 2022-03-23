@@ -1,5 +1,6 @@
 import React  from 'react';
-import Logo   from './Logo';
+import Logo   from '../Logo';
+import './CompetitionTable.css';
 
 /**
  * The **CompetitionTable** component lays out the comparison between the company and its competitors.

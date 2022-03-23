@@ -1,16 +1,18 @@
-import React              from 'react';
-import PropTypes  			  from 'prop-types';
-import SectionHeading     from './SectionHeading';
-import SectionPara        from './SectionPara';
-import chart              from '../images/single-use-plastics-chart.png';
+import React                from 'react';
+import PropTypes  			    from 'prop-types';
+import { motion }           from 'framer-motion';
+import SectionHeading       from './section-heading/SectionHeading';
+import SectionPara          from './section-para/SectionPara';
+import { sectionVariants }  from '../utils/animationVariants';
+import chart                from '../images/single-use-plastics-chart.png';
 
 /**
- * The **BadEffectsSection** component highlights the bad effects of single-use packaging.
+ * The **BadEffects** component highlights the bad effects of single-use packaging.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function BadEffectsSection({plasticsBadEffects}) {
+function BadEffects({plasticsBadEffects}) {
   const renderImages = () => {
     return (
       plasticsBadEffects.map(({caption, image}, index) => {
@@ -27,7 +29,13 @@ function BadEffectsSection({plasticsBadEffects}) {
   }
 
   return (
-    <section id="bad-effects" className="bg-primary">
+    <motion.section
+      id="bad-effects"
+      className="bg-primary"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.4}}>
       <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
         <div className="w-full flex gap-x-[73px]">
           <div className="max-w-[347px] rounded-[20px]">
@@ -53,13 +61,12 @@ function BadEffectsSection({plasticsBadEffects}) {
         </div>
         <div></div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
-BadEffectsSection.propTypes = {
+BadEffects.propTypes = {
   plasticsBadEffects:    PropTypes.array.isRequired,
 };
 
-
-export default BadEffectsSection;
+export default BadEffects;

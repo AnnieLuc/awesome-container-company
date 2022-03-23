@@ -2,7 +2,7 @@ import React            from 'react';
 import {
   ReactCompareSlider,
   ReactCompareSliderImage
-} from 'react-compare-slider';
+}                       from 'react-compare-slider';
 import foodInContainer  from '../images/food-with-awesome-container.png';
 import foodWaste        from '../images/food-waste.png';
 

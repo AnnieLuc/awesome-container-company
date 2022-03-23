@@ -1,18 +1,25 @@
-import React            from 'react';
-import SectionHeading   from './SectionHeading';
-import SectionPara      from './SectionPara';
-import esgCareImg       from '../images/esg-care.svg';
+import React                from 'react';
+import { motion }           from 'framer-motion';
+import SectionHeading       from './section-heading/SectionHeading';
+import SectionPara          from './section-para/SectionPara';
+import { sectionVariants }  from '../utils/animationVariants';
+import esgCareImg           from '../images/esg-care.svg';
 
 /**
- * The **SustainabilitySection** component highlights the company to be an ESG company.
+ * The **Sustainability** component highlights the company to be an ESG company.
  *
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SustainabilitySection() {
+function Sustainability() {
 
   return (
-    <section id="sustainability">
+    <motion.section
+      id="sustainability"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2}}>
       <div className="mx-auto px-[100px] max-w-[1440px] pt-[64.54px] pb-[180px] flex">
         <div className="max-w-[780px]">
           <div className="mt-[187.46px]">
@@ -33,8 +40,8 @@ function SustainabilitySection() {
           <img src={esgCareImg} alt="a sapling coming out of a container" className="object-contain" />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
-export default SustainabilitySection;
+export default Sustainability;

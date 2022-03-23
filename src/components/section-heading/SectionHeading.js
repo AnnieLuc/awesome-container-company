@@ -1,6 +1,7 @@
 import React                from 'react';
 import PropTypes            from 'prop-types';
 import classnames           from 'classnames';
+import './SectionHeading.css';
 
 /**
  * The **SectionHeading** component represents the heading of all the sections.
