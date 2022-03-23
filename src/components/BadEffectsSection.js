@@ -35,7 +35,7 @@ function BadEffectsSection({plasticsBadEffects}) {
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2}}>
+      viewport={{ once: true, amount: 0.4}}>
       <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
         <div className="w-full flex gap-x-[73px]">
           <div className="max-w-[347px] rounded-[20px]">
