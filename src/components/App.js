@@ -30,6 +30,7 @@ import chatMessages         						from '../constants/chat-messages';
  */
 function App() {
 	const [isPopupOpen, setPopupOpen] = React.useState(false);
+	const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
 
 	const closePopup = () => {
 		setPopupOpen(false);
@@ -51,9 +52,24 @@ function App() {
 		};
 	}, []);
 
+	React.useEffect(() => {
+		const closeNavByClick = () => {
+			if(isNavbarOpen){
+				setIsNavbarOpen(false);
+			}
+		}
+		document.addEventListener('click', closeNavByClick);
+		return () => {
+			document.removeEventListener('click', closeNavByClick);
+		}
+	});
+
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
-			<NavBar onButtonClick={handleButtonClick} />
+			<NavBar
+				onButtonClick={handleButtonClick}
+				isNavbarOpen={isNavbarOpen}
+				setIsNavbarOpen={setIsNavbarOpen} />
 			<Hero chatMessages={chatMessages} />
 			<main>
 				<BadEffects plasticsBadEffects={plasticsBadEffects} />
