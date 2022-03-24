@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,11 +8,11 @@
 }
 
 .form-popup {
-  @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500
+  @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500;
 }
 
 .form-open {
-  @apply opacity-100 z-[10000]
+  @apply opacity-100 z-[10000];
 }
 
 .form-close {
@@ -20,9 +20,9 @@
 }
 
 .labels {
-  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px]
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px];
 }
 
 .inputs {
-  @apply border-transparent outline-none p-[2px] w-full
+  @apply border-transparent outline-none p-[2px] w-full;
 }
