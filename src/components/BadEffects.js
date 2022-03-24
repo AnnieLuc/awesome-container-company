@@ -17,8 +17,8 @@ function BadEffects({plasticsBadEffects}) {
     return (
       plasticsBadEffects.map(({caption, image}, index) => {
         return (
-          <figure className="max-w-[346.47px]" key={index}>
-            <img src={image} alt={image} className="object-cover" />
+          <figure className="max-w-[346.47px] lg:max-w-[314px]" key={index}>
+            <img src={image} alt={image} className="object-cover rounded-[3px]" />
             <figcaption className="pt-[20px] text-sm text-secondary-100 leading-4 text-center">
               {caption}
             </figcaption>
@@ -36,9 +36,9 @@ function BadEffects({plasticsBadEffects}) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4}}>
-      <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
+      <div className="mx-auto px-[140px] py-[120px] max-w-[1440px] flex flex-col items-center lg:px-[20px]">
         <div className="w-full flex gap-x-[73px]">
-          <div className="max-w-[347px] rounded-[20px]">
+          <div className="max-w-[347px] rounded-[3px]">
             <img className="object-cover" src={chart} alt="donut chart to show single-use plastics wastage" />
           </div>
           <div className="mt-[56px]">
@@ -59,7 +59,6 @@ function BadEffects({plasticsBadEffects}) {
         <div className="mt-[80px] w-full flex justify-between">
           {renderImages()}
         </div>
-        <div></div>
       </div>
     </motion.section>
   );

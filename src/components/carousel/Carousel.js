@@ -21,8 +21,8 @@ function Carousel({features}) {
   const renderCarouselSlide = (slide) => {
     const { image, features, sizing } = slide;
     return (
-      <article className="w-full w-max-[1212px] pt-[45px] pb-[35px] bg-secondary-100 flex">
-        <div className="w-full max-w-[520px]">
+      <article className="w-full w-max-[1212px] min-h-[600px] pt-[45px] pb-[35px] bg-secondary-100 flex rounded-[3px]">
+        <div className="w-full max-w-[520px] flex justify-center items-center">
           <img src={image} alt="container" className="w-full object-contain object-center" />
         </div>
         <div className="ml-[79px] w-full">
@@ -62,7 +62,7 @@ function Carousel({features}) {
     );
 
   return (
-    <div id="carouselExampleControls" className="max-w-[1212px] mx-auto carousel slide relative shadow rounded-3" data-bs-ride="carousel">
+    <div id="carouselExampleControls" className="max-w-[1212px] mx-auto carousel slide relative shadow rounded-[3px] lg:max-w-[928px]" data-bs-ride="carousel">
       <div className="carousel-inner relative w-full overflow-hidden">
         {renderSlides(features)}
       </div>
@@ -72,7 +72,7 @@ function Carousel({features}) {
         data-bs-target="#carouselExampleControls"
         data-bs-slide="prev"
       >
-        <span className="carousel-back-icon inline-block relative right-[130px]" aria-hidden="true"></span>
+        <span className="carousel-back-icon inline-block relative right-[130px] lg:right-[90px]" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button
@@ -81,7 +81,7 @@ function Carousel({features}) {
         data-bs-target="#carouselExampleControls"
         data-bs-slide="next"
       >
-        <span className="carousel-forward-icon inline-block relative left-[130px]" aria-hidden="true"></span>
+        <span className="carousel-forward-icon inline-block relative left-[130px] lg:left-[90px]" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>

@@ -19,7 +19,7 @@ function Competition() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-      <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center">
+      <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center lg:px-[20px]">
         <SectionHeading align="center" color="primary">The competition is no match</SectionHeading>
         <div className="pt-[60px]">
           <CompetitionTable />

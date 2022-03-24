@@ -31,8 +31,8 @@ function ImageCompareSlider() {
       <ReactCompareSlider
         className="w-full max-w-[626px] max-h-[369px] border border-primary rounded-[20px]"
         handle={renderHandle()}
-        itemOne={<ReactCompareSliderImage src={foodWaste} alt="Food Waste" />}
-        itemTwo={<ReactCompareSliderImage src={foodInContainer} alt="Food in container" />}
+        itemOne={<ReactCompareSliderImage src={foodWaste} style={{ maxHeight: "369px"}} alt="Food Waste" />}
+        itemTwo={<ReactCompareSliderImage src={foodInContainer} style={{ maxHeight: "369px"}} alt="Food in container" />}
       />
     </div>
   );

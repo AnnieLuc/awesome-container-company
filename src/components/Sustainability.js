@@ -20,9 +20,9 @@ function Sustainability() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-      <div className="mx-auto px-[100px] max-w-[1440px] pt-[64.54px] pb-[180px] flex">
+      <div className="mx-auto px-[100px] max-w-[1440px] pt-[64.54px] pb-[180px] flex lg:px-[40px] lg:flex-col lg:flex-col-reverse">
         <div className="max-w-[780px]">
-          <div className="mt-[187.46px]">
+          <div className="mt-[187.46px] lg:mt-[-20px]">
             <SectionHeading align="left" color="primary">
               We are an ESG company:<br/> we care for social and environmental sustainability
             </SectionHeading>
@@ -36,7 +36,7 @@ function Sustainability() {
             </SectionPara>
           </div>
         </div>
-        <div className="max-w-[305.84px]">
+        <div className="max-w-[305.84px] lg:self-end">
           <img src={esgCareImg} alt="a sapling coming out of a container" className="object-contain" />
         </div>
       </div>

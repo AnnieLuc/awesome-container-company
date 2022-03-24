@@ -20,37 +20,39 @@ function Footer() {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
 			<div className="flex justify-between max-w-[1440px] mx-auto px-[80px]">
-				<div className=" flex flex-col">
-					<SectionHeading align="left" color="secondary">
-						Let"s get in touch
-					</SectionHeading>
-					<div className="flex flex-col pt-[40px]">
-						<span className="pb-[40px]">Hello@AwesomeContainer.com</span>
-						<address className="text-sm not-italic">
-							<span className="block">Address: 71 UBI Road 1, #08-42,</span>
-							<span className="block">Oxley Bizhub, Singapore 408732</span>
-						</address>
+				<div className="flex justify-between max-w-[720px] w-full lg:flex-col lg:max-w-[524px]">
+					<div className=" flex flex-col">
+						<SectionHeading align="left" color="secondary">
+							Let's get in touch
+						</SectionHeading>
+						<div className="flex flex-col pt-[40px]">
+							<span className="pb-[40px]">Hello@AwesomeContainer.com</span>
+							<address className="text-sm not-italic">
+								<span className="block">Address: 71 UBI Road 1, #08-42,</span>
+								<span className="block">Oxley Bizhub, Singapore 408732</span>
+							</address>
+						</div>
 					</div>
-				</div>
-				<div className="flex flex-col">
-					<SectionHeading align="left" color="secondary">
-						Follow us
-					</SectionHeading>
-					<ul className="pt-[40px]">
-						<li>
-							<a
-								href="https://www.instagram.com/tailwing/"
-								className="flex flex-row mb-[20px]"
-							>
-								<img
-									src={Instagram}
-									alt="instagram"
-									className="object-contain pr-[12px]"
-								/>
-								AwesomeContainers
-							</a>
-						</li>
-					</ul>
+					<div className="flex flex-col lg:mt-[80px]">
+						<SectionHeading align="left" color="secondary">
+							Follow us
+						</SectionHeading>
+						<ul className="pt-[40px]">
+							<li>
+								<a
+									href="https://www.instagram.com/tailwing/"
+									className="flex flex-row mb-[20px]"
+								>
+									<img
+										src={Instagram}
+										alt="instagram"
+										className="object-contain pr-[12px]"
+									/>
+									AwesomeContainers
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div className="flex flex-col">
 					<SectionHeading align="left" color="secondary">
