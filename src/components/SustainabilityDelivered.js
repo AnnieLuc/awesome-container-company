@@ -24,7 +24,7 @@ function SustainabilityDelivered({features}) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-      <div className="mx-auto py-[120px] px-[50px] max-w-[1440px] lg:px-[30px]">
+      <div className="mx-auto py-[120px] px-[50px] max-w-[1440px] lg:px-[30px] md:py-[80px]">
         <div className="flex flex-col items-center">
           <SectionHeading align="center" color="primary">Sustainability Delivered</SectionHeading>
           <div className="my-[40px] w-full max-w-[598px]">
@@ -34,16 +34,16 @@ function SustainabilityDelivered({features}) {
           </div>
         </div>
         <Carousel features={features} />
-        <div className="mt-[100px] px-[100px] lg:px-[40px]">
-          <div className="flex">
-            <div className="flex flex-col items-center">
+        <div className="mt-[100px] px-[100px] lg:px-[40px] md:mt-[150px]">
+          <div className="flex md:justify-center">
+            <div className="flex flex-col items-center md:max-w-[380px]">
               <div className="w-full max-w-[152.73px]">
                 <img src={logisticsSupportImage} alt="logistics support" className="w-full object-contain object-center text-center" />
               </div>
               <p className="mt-[30px] text-lg font-normal leading-7 text-primary">Backend logistics support</p>
             </div>
           </div>
-          <div className="flex justify-end lg:pt-[40px]">
+          <div className="flex justify-end lg:pt-[40px] md:justify-center md:pt-[80px]">
             <div className="flex flex-col items-center max-w-[380px]">
               <div className="w-full max-w-[152.73px]">
                 <img src={saveCostImage} alt="save cost" className="w-full object-contain object-center" />
@@ -51,8 +51,8 @@ function SustainabilityDelivered({features}) {
               <p className="mt-[30px] text-lg font-normal leading-7 text-primary text-center">Save at least 50% on supply cost and time on inventory tracking / re-orders</p>
             </div>
           </div>
-          <div className="flex lg:pt-[40px]">
-            <div className="ml-[150px] flex flex-col items-center max-w-[543px] lg:ml-[0px]">
+          <div className="flex lg:pt-[40px] md:justify-center md:pt-[80px]">
+            <div className="ml-[150px] flex flex-col items-center max-w-[543px] lg:ml-[0px] md:max-w-[380px]">
               <div className="w-full max-w-[152.73px]">
                 <img src={saveStorageImage} alt="save storage" className="w-full object-contain object-center" />
               </div>

@@ -4,7 +4,7 @@ import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
 import SustainabilityDelivered   				from './SustainabilityDelivered';
 import Impact														from './Impact';
-import Competition			                from './Competition';
+import Competition			                from './competition/Competition';
 import Sustainability            				from './Sustainability';
 import Pricing                   				from './Pricing';
 import AwesomeTeam                      from './AwesomeTeam';
@@ -30,7 +30,7 @@ import chatMessages         						from '../constants/chat-messages';
  */
 function App() {
 	const [isPopupOpen, setPopupOpen] = React.useState(false);
-	const [isNavbarOpen, setIsNavbarOpen] = React.useState(false);
+	const [isNavbarOpen, setIsNavbarOpen] = React.useState(true);
 
 	const closePopup = () => {
 		setPopupOpen(false);
@@ -62,7 +62,7 @@ function App() {
 		return () => {
 			document.removeEventListener('click', closeNavByClick);
 		}
-	});
+	}, [isNavbarOpen]);
 
 	return (
 		<div className='font-serif text-base font-normal leading-5'>

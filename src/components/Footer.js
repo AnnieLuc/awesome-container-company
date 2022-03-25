@@ -2,7 +2,7 @@ import React 								from "react";
 import { motion }           from 'framer-motion';
 import SectionHeading 			from "./section-heading/SectionHeading";
 import { sectionVariants }  from '../utils/animationVariants';
-import Instagram 						from "../images/social-links/instagram.svg";
+import instagram 						from "../images/social-links/instagram.svg";
 
 /**
  * The **Footer** component representing the footer socials links and contacts.
@@ -19,59 +19,54 @@ function Footer() {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-			<div className="flex justify-between max-w-[1440px] mx-auto px-[80px]">
-				<div className="flex justify-between max-w-[720px] w-full lg:flex-col lg:max-w-[524px]">
-					<div className=" flex flex-col">
+				<div className="box-border mx-auto max-w-[1440px] max-h-[512px] px-[80px] 
+					grid overflow-hidden grid-cols-3 grid-rows-2 gap-px 
+					xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
+					md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max">
+					<div className="min-w-full min-h-full md:row-start-1 md:col-start-1">
 						<SectionHeading align="left" color="secondary">
 							Let's get in touch
 						</SectionHeading>
-						<div className="flex flex-col pt-[40px]">
-							<span className="pb-[40px]">Hello@AwesomeContainer.com</span>
-							<address className="text-sm not-italic">
-								<span className="block">Address: 71 UBI Road 1, #08-42,</span>
-								<span className="block">Oxley Bizhub, Singapore 408732</span>
-							</address>
+						<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
+							Hello@AwesomeContaners.com
+						</p>
+						<address className="text-sm not-italic leading-4">
+							Address: 71 UBI Road 1, #08-42,<br/> Oxley Bizhub, Singapore 408732
+						</address>
+					</div>
+					<div className="min-w-full min-h-full pl-[50px] xl:pl-[0px] xl:pt-[80px] 
+					xl:row-start-2 xl:col-start-1 md:row-start-3 md:pt-[0px]">
+						<div className="md:pt-[50px]">
+							<SectionHeading align="left" color="secondary">
+								Follow us
+							</SectionHeading>
+						</div>
+						<a className="py-[40px] md:py-[30px] flex gap-x-[17px]" href="https://www.instagram.com">
+							<img className="" src={instagram} alt="instagram page of awesome container company" />
+							AwesomeContainers
+						</a>
+					</div>
+					<div className="min-w-full min-h-full row-span-2 xl:row-start-1 xl:col-start-2 
+						md:row-start-2 md:col-start-1 md:row-span-1">
+						<SectionHeading align="left" color="secondary">
+							Where we work
+						</SectionHeading>
+						<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
+							We currently operate in:<br/>Singapore
+						</p>
+						<p className="max-w-[386px]">
+							Planning to launch in 2022:<br/>
+							UK, EU, OSEAN, China, Vietnam, Malaysia, Taiwan
+						</p>
+					</div>
+					<div className="min-w-full min-h-full col-span-2 flex items-end md:row-start-4 
+						md:col-start-1 md:col-span-1">
+						<div className="flex justify-between gap-x-[40px] md:flex-col md:gap-y-[16px]">
+							<p className="text-sm leading-4">Awesome Container Company © {new Date().getFullYear()}</p>
+							<p className="text-sm leading-4">Terms of Use</p>
 						</div>
 					</div>
-					<div className="flex flex-col lg:mt-[80px]">
-						<SectionHeading align="left" color="secondary">
-							Follow us
-						</SectionHeading>
-						<ul className="pt-[40px]">
-							<li>
-								<a
-									href="https://www.instagram.com/tailwing/"
-									className="flex flex-row mb-[20px]"
-								>
-									<img
-										src={Instagram}
-										alt="instagram"
-										className="object-contain pr-[12px]"
-									/>
-									AwesomeContainers
-								</a>
-							</li>
-						</ul>
-					</div>
 				</div>
-				<div className="flex flex-col">
-					<SectionHeading align="left" color="secondary">
-						Where we work
-					</SectionHeading>
-					<div className="flex flex-col pt-[40px]">
-						<span>We currently operate in:</span>
-						<span className="pb-[40px]">Singapore</span>
-						<span>Planning to launch in 2022:</span>
-						<span>UK, EU, OSEAN, China, Vietnam, Malaysia,</span>
-						<span>Taiwan</span>
-					</div>
-				</div>
-			</div>
-			<div className="pt-[120px] pl-[80px] mx-auto max-w-[1440px] text-sm">
-				Awesome Container Company{" "}
-				<span className="text-secondary-100">&copy;</span> 2022{" "}
-				<span className="pl-[40px]">Terms of Use</span>
-			</div>
 		</motion.footer>
 	);
 }

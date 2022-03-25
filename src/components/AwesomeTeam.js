@@ -36,7 +36,7 @@ function AwesomeTeam({awesomeTeam}) {
 	return (
 		<motion.section
 			id="awesome-team"
-			className="pt-[180px]"
+			className="pt-[180px] md:pt-[120px]"
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
@@ -44,8 +44,10 @@ function AwesomeTeam({awesomeTeam}) {
       <SectionHeading align="center" color="primary">
         An Awesome Team
       </SectionHeading>
-			<div className="mx-auto pt-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center">
-				<div className="w-full flex justify-between">{renderImages()}</div>
+			<div className="mx-auto pt-[80px] max-w-[746px] md:pt-[44px]">
+				<div className="w-full flex justify-between md:flex-col md:items-center md:gap-y-[44px]">
+					{renderImages()}
+				</div>
 			</div>
 		</motion.section>
 	);

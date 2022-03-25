@@ -29,7 +29,7 @@ function ImageCompareSlider() {
   return (
     <div id="imageSlider" className="w-full">
       <ReactCompareSlider
-        className="w-full max-w-[626px] max-h-[369px] border border-primary rounded-[20px]"
+        className="w-full max-w-[626px] max-h-[369px] border border-primary rounded-[3px] md:max-w-[492px] md:max-h-[289px]"
         handle={renderHandle()}
         itemOne={<ReactCompareSliderImage src={foodWaste} style={{ maxHeight: "369px"}} alt="Food Waste" />}
         itemTwo={<ReactCompareSliderImage src={foodInContainer} style={{ maxHeight: "369px"}} alt="Food in container" />}

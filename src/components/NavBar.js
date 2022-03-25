@@ -16,6 +16,20 @@ function NavBar(props) {
     isNavbarOpen,
     setIsNavbarOpen} = props;
 
+  React.useEffect(() => {
+    const changeScreenWidth = () => {
+      if(window.innerWidth <= 768){
+        setIsNavbarOpen(false);
+      } else {
+        setIsNavbarOpen(true);
+      }
+    }
+    window.addEventListener('resize', changeScreenWidth);
+    return () => {
+      window.removeEventListener('resize', changeScreenWidth);
+    }
+  }, [setIsNavbarOpen]);
+
   const handleHamburgerClick = () => {
     setIsNavbarOpen(!isNavbarOpen);
   }
@@ -26,7 +40,7 @@ function NavBar(props) {
 
   return (
     <nav className={`pt-[10px] pb-[10px] bg-secondary-100 flex flex-wrap items-center justify-between mb-3 
-    fixed top-0 right-0 left-0 z-50 ${(isNavbarOpen) && `md:shadow`}`}>
+    fixed top-0 right-0 left-0 z-50 ${(isNavbarOpen) && `md:shadow-sm`}`}>
       <div className="w-full max-w-[1440px] pl-[24px] pr-[40px] mx-auto flex flex-wrap items-center justify-between lg:px-[20px] md:flex-col md:items-stretch">
         <div className="w-auto relative flex justify-start md:justify-between md:items-center">
           <Link
