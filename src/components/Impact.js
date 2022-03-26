@@ -14,34 +14,34 @@ import Rectangles from "../images/rectangles-impact.svg";
  */
 function Impact({ impacts }) {
   const renderCards = () =>
-    impacts.map((cardData, index, id) => (
-      <>
+    impacts.map((cardData, index) => (
+      <div className="relative">
         <div
-          key={id}
-          className=" sm:grid-cols-1 sm:gap-[520px] place-items-center translate-y-[100px] sm:translate-y-[740px] z-10"
+          key={cardData.id}
+          className="absolute sm:grid-cols-1 sm:gap-[520px] max-w-full sm:max-w-[160px] place-items-center translate-x-[200px] sm:translate-x-[90px] sm:translate-y-[30px] translate-y-[-40px]"
         >
           {cardData.image}
         </div>
         <article
-          className="mt-[60px] flex flex-col items-center
-        text-center max-w-[660px] shadow-sm bg-secondary-100 z-20"
+          className="mt-[60px] sm:mx-[16px] sm:mt-[101px] flex flex-col items-center
+        text-center max-w-[660px] h-full sm:h-fit shadow-sm bg-secondary-100 z-20"
           key={index}
         >
-          <div className="mb-[60px] sm:mb-[40px] pr-[32px] pl-[32px]">
+          <div className=" sm:mb-[40px] pr-[32px] pl-[32px]">
             {/* Card Header */}
             <h2 className="text-lg pt-10 sm:pt-[30px] text-highlight-100">
               {cardData.cardHeader}
             </h2>
             {/* Card Content */}
-            {cardData.cardContent.map((arrItem, index) => (
-              <div key={index}>
+            {cardData.cardContent.map((arrItem) => (
+              <div>
                 <div className="pt-5 pb-5 bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center"></div>
                 <p>{arrItem}</p>
               </div>
             ))}
           </div>
         </article>
-      </>
+      </div>
     ));
 
   return (
@@ -61,7 +61,7 @@ function Impact({ impacts }) {
           <img src={Rectangles} alt="" />
           <img src={Ovals} alt="" />
         </div> */}
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-[40px] sm:gap-[117px] justify-items-center mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-1 gap-[40px] sm:gap-[16px] sm:gap-[117px] justify-items-center  mx-auto">
           {renderCards()}
         </div>
       </div>

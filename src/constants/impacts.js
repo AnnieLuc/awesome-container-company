@@ -3,6 +3,7 @@ import Rectangles from "../images/rectangles-impact.svg";
 
 const impacts = [
   {
+    id: 1,
     image: <img src={Rectangles} alt="" />,
     cardHeader: "For Businesses",
     cardContent: [
@@ -13,6 +14,7 @@ const impacts = [
     ],
   },
   {
+    id: 2,
     image: <img src={Ovals} alt="" />,
     cardHeader: "For Users",
     cardContent: [
