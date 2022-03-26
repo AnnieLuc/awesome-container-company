@@ -7,8 +7,6 @@ const ses = new aws.SES({
   region: "us-west-2",
 });
 
-console.log(aws.config);
-
 router.post("/email", (req, res) => {
   const { email, message, name } = req.body;
   sesTest("alecdrosu@yahoo.com", email, message, name)
@@ -28,11 +26,11 @@ function sesTest(emailTo, emailFrom, message, name) {
     Message: {
       Body: {
         Text: {
-          Data: name + "\n" + message,
+          Data: "Company Name: " + name + "\n\n" + "Request: " + "\n\n" + message,
         },
       },
       Subject: {
-        Data: "Name: " + emailFrom,
+        Data: "For Awesome Container Company: " + emailFrom,
       },
     },
     Source: "drosualec@gmail.com",

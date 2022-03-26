@@ -13,7 +13,6 @@ function PopupWithForm(props) {
 
   const [isFormSubmitted, setFormSubmitted] = React.useState(false);
 
-  // const onSubmit = (data) => console.log(data);
   const onSubmit = (data) => {
     console.log(data);
     axios.post('/email', data)
@@ -22,16 +21,8 @@ function PopupWithForm(props) {
 
   return (
     <section className={`form-popup ${props.isOpen ? "form-open" : ""}`}>
-      <iframe
-        title="hidden_iframe"
-        name="hidden_iframe"
-        id="hidden_iframe"
-        className="hidden"
-        method="POST"
-      ></iframe>
       {!isFormSubmitted && (
         <form
-          target="hidden_iframe"
           className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm"
           noValidate
           method="POST"
@@ -101,7 +92,7 @@ function PopupWithForm(props) {
                 type="text"
                 className="inputs h-[140px] resize-none"
                 {...register("message", {
-                  required: true,
+                  required: false,
                 })}
               />
             </label>
@@ -111,8 +102,6 @@ function PopupWithForm(props) {
             type="submit"
             className={`${!isValid ? "button-invalid" : "button-form"}`}
             disabled={!isValid}
-            // onClick={handleSubmit(onSubmit)}
-            onSubmit={handleSubmit(onSubmit)}
           >
             Send
           </button>
