@@ -25,7 +25,7 @@ function AwesomePartners({awesomePartners}) {
 	return (
 		<motion.section
 			id="awesome-partners"
-			className="pt-[120px] md:pt-[100px]"
+			className="pt-[120px] md:pt-[100px] sm:px-[16px]"
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"

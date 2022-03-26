@@ -14,7 +14,7 @@ function Footer() {
 	return (
 		<motion.footer
 			id="footer"
-			className="bg-primary text-secondary-100 pt-[80px] pb-[60px]"
+			className="bg-primary text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]"
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
@@ -22,7 +22,7 @@ function Footer() {
 				<div className="box-border mx-auto max-w-[1440px] max-h-[512px] px-[80px] 
 					grid overflow-hidden grid-cols-3 grid-rows-2 gap-px 
 					xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
-					md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max">
+					md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max sm:px-[16px]">
 					<div className="min-w-full min-h-full md:row-start-1 md:col-start-1">
 						<SectionHeading align="left" color="secondary">
 							Let's get in touch

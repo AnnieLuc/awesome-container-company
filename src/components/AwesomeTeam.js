@@ -36,7 +36,7 @@ function AwesomeTeam({awesomeTeam}) {
 	return (
 		<motion.section
 			id="awesome-team"
-			className="pt-[180px] md:pt-[120px]"
+			className="pt-[180px] md:pt-[120px] sm:px-[16px]"
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
