@@ -11,7 +11,8 @@ module.exports = {
       'lg': {'max': '1024px'},
       'base': {'max': '900px'},
       'md': {'max': '768px'},
-      'sm': {'max': '375px'},
+      'sm': {'max': '560px'},
+      'xs': {'max': '375px'},
     },
     fontSize: {
       xs: '12px',

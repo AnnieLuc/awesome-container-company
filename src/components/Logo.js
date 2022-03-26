@@ -24,7 +24,7 @@ function Logo({isHeader}){
   }
 
   return (
-    <div className="max-w-[92px]">
+    <div className="max-w-[92px] sm:max-w-[60px]">
       <img
         src={logoImage}
         alt="awesome container company logo"

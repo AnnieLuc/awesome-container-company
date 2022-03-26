@@ -31,6 +31,7 @@ import chatMessages         						from '../constants/chat-messages';
 function App() {
 	const [isPopupOpen, setPopupOpen] = React.useState(false);
 	const [isNavbarOpen, setIsNavbarOpen] = React.useState(true);
+	const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
 
 	const closePopup = () => {
 		setPopupOpen(false);
@@ -64,12 +65,32 @@ function App() {
 		}
 	}, [isNavbarOpen]);
 
+
+  React.useEffect(() => {
+    const changeScreenWidth = () => {
+			setScreenWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', changeScreenWidth);
+    return () => {
+      window.removeEventListener('resize', changeScreenWidth);
+    }
+  }, []);
+
+	React.useEffect(() => {
+		if(screenWidth <= 768){
+				setIsNavbarOpen(false);
+			} else {
+				setIsNavbarOpen(true);
+			}
+	}, [screenWidth]);
+
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
 			<NavBar
 				onButtonClick={handleButtonClick}
 				isNavbarOpen={isNavbarOpen}
-				setIsNavbarOpen={setIsNavbarOpen} />
+				setIsNavbarOpen={setIsNavbarOpen}
+				screenWidth={screenWidth} />
 			<Hero chatMessages={chatMessages} />
 			<main>
 				<BadEffects plasticsBadEffects={plasticsBadEffects} />

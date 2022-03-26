@@ -18,16 +18,18 @@ function Hero({chatMessages}) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.3}}>
-      <div className="mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col lg:px-[20px]">
+      <div className="mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col lg:px-[20px] sm:px-[16px] sm:pt-[100px]">
         <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
-          <h1 className="text-xl font-normal leading-9 text-left text-primary md:text-[42px] md:leading-[48px]">
-            Help our environment by eliminating single-use plastics from your delivery with <span className="text-highlight-100">Awesome Container Company</span>
+          <h1 className="text-xl font-normal leading-9 text-left text-primary md:text-[42px] 
+            md:leading-[48px] sm:text-[28px] sm:leading-[34px] sm:text-center">
+            Help our environment by eliminating single-use plastics from your delivery with 
+            <span className="text-highlight-100"> Awesome Container Company</span>
           </h1>
         </div>
-        <div className="mt-[85px] w-full flex justify-between md:flex-col md:items-center md:mt-[80px]">
-          <div className="max-w-[626px] w-full object-cover md:max-w-[492px] md:max-h-[289px]">
+        <div className="mt-[85px] w-full flex justify-between md:flex-col md:items-center md:mt-[80px] sm:mt-[40px]">
+          <div className="max-w-[626px] w-full object-cover md:max-w-[492px] md:max-h-[289px] sm:max-w-[342px] sm:max-h-[220px]">
             <ImageCompareSlider />
-            <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4">
+            <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
                 <p>Now</p>
                 <p>With Awesome Containers</p>
             </div>
