@@ -89,7 +89,8 @@ function App() {
 			<NavBar
 				onButtonClick={handleButtonClick}
 				isNavbarOpen={isNavbarOpen}
-				setIsNavbarOpen={setIsNavbarOpen} />
+				setIsNavbarOpen={setIsNavbarOpen}
+				screenWidth={screenWidth} />
 			<Hero chatMessages={chatMessages} />
 			<main>
 				<BadEffects plasticsBadEffects={plasticsBadEffects} />

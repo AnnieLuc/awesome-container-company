@@ -15,7 +15,8 @@ function NavBar(props) {
   const {
     onButtonClick,
     isNavbarOpen,
-    setIsNavbarOpen } = props;
+    setIsNavbarOpen,
+    screenWidth } = props;
 
   // Classes for JSX Elements
   const navSectionClass          = `box-border py-[5px] bg-secondary-100 flex flex-wrap items-center 
@@ -48,7 +49,7 @@ function NavBar(props) {
           </Link>
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} />
-            <div className="sm:hidden">
+            <div className="hidden base:block sm:hidden">
               <Button isHeader='true' onButtonClick={onButtonClick}>
                 Work with us
               </Button>
@@ -90,7 +91,7 @@ function NavBar(props) {
               </Link>
             </li>
             <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
-              <Button isHeader='false' onButtonClick={onButtonClick}>
+              <Button isHeader={`${(screenWidth <= 560) ? `false` : `true`}`} onButtonClick={onButtonClick}>
                 Work with us
               </Button>
             </li>
@@ -105,6 +106,7 @@ NavBar.propTypes = {
   onButtonClick:    PropTypes.func.isRequired,
   isNavbarOpen:     PropTypes.bool.isRequired,
   setIsNavbarOpen:  PropTypes.func.isRequired,
+  screenWidth:      PropTypes.number.isRequired,
 };
 
 export default NavBar;
