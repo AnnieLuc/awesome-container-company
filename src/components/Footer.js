@@ -11,18 +11,24 @@ import instagram 						from "../images/social-links/instagram.svg";
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
 function Footer() {
+
+	// Classes for JSX Elements
+	const footerSectionClass 					= `bg-primary text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]`;
+	const footerSectionContainerClass = `box-border mx-auto max-w-[1440px] max-h-[512px] px-[80px] 
+		grid overflow-hidden grid-cols-3 grid-rows-2 gap-px 
+		xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
+		md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max 
+		sm:px-[16px]`;
+
 	return (
 		<motion.footer
 			id="footer"
-			className="bg-primary text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]"
+			className={footerSectionClass}
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-				<div className="box-border mx-auto max-w-[1440px] max-h-[512px] px-[80px] 
-					grid overflow-hidden grid-cols-3 grid-rows-2 gap-px 
-					xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
-					md:px-[60px] md:max-h-[850px] md:grid-cols-1 md:auto-rows-max sm:px-[16px]">
+				<div className={footerSectionContainerClass}>
 					<div className="min-w-full min-h-full md:row-start-1 md:col-start-1">
 						<SectionHeading align="left" color="secondary">
 							Let's get in touch
@@ -35,7 +41,7 @@ function Footer() {
 						</address>
 					</div>
 					<div className="min-w-full min-h-full pl-[50px] xl:pl-[0px] xl:pt-[80px] 
-					xl:row-start-2 xl:col-start-1 md:row-start-3 md:pt-[0px]">
+						xl:row-start-2 xl:col-start-1 md:row-start-3 md:pt-[0px]">
 						<div className="md:pt-[50px]">
 							<SectionHeading align="left" color="secondary">
 								Follow us

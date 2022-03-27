@@ -1,4 +1,5 @@
 import React          from 'react';
+import PropTypes  	  from 'prop-types';
 import accLogo        from '../images/logo.svg';
 import accLogoTilted  from '../images/logoTilted.svg';
 
@@ -34,5 +35,9 @@ function Logo({isHeader}){
     </div>
   );
 }
+
+Logo.propTypes = {
+  isHeader:    PropTypes.bool.isRequired,
+};
 
 export default Logo;

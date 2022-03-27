@@ -13,6 +13,7 @@ import linkedInImg 					from '../images/social-links/linkedin.svg';
  */
 function AwesomeTeam({awesomeTeam}) {
 	const renderImages = () => {
+		// Function to render the images of team members
 		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {
 			return (
 				<figure className="max-w-[146px]" key={index}>
@@ -20,12 +21,8 @@ function AwesomeTeam({awesomeTeam}) {
 					<figcaption className="pt-[15px] text-2xl sec-text-primary leading-7 text-center">
 						{name}
 						<span className="block whitespace-nowrap">{title}</span>
-						<a href={linkedIn} className="">
-							<img
-								src={linkedInImg}
-								alt={name}
-								className="mx-[auto] mt-[20px]"
-							/>
+						<a href={linkedIn}>
+							<img src={linkedInImg} alt={name} className="mx-[auto] mt-[20px]" />
 						</a>
 					</figcaption>
 				</figure>

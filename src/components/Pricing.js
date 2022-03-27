@@ -15,6 +15,16 @@ import pricingContainer     from '../images/pricing-section-container.svg';
  */
 function Pricing({onButtonClick}){
 
+  // Classes for JSX Elements
+  const pricingSectionContainerClass = `mx-auto px-[82px] max-w-[1440px] flex flex-col items-center 
+    lg:px-[40px] md:px-[20px] sm:px-[16px]`;
+  const pricingCalloutClass          = `ml-[31px] px-[42px] py-[37px] w-full min-h-[158px] 
+    bg-[url('./images/pricing-section-callout.svg')] bg-no-repeat bg-center bg-contain 
+    flex justify-center items-center md:ml-[0px] md:bg-[url('./images/pricing-section-callout-tablet.svg')] 
+    md:min-h-[350px] sm:min-h-[192px]`;
+  const pricingCalloutTextClass      = `text-[20px] font-normal leading-[23.7px] text-center 
+    md:max-w-[344px] sm:text-base sm:leading-[21.33px] sm:max-w-[244px]`;
+
   return (
     <motion.section
       id="pricing"
@@ -22,8 +32,7 @@ function Pricing({onButtonClick}){
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
-      <div className="mx-auto px-[82px] max-w-[1440px] flex flex-col items-center 
-        lg:px-[40px] md:px-[20px] sm:px-[16px]">
+      <div className={pricingSectionContainerClass}>
         <div className="mx-auto w-full max-w-[800px]">
           <SectionHeading align="center" color="primary">
             Get in touch with us to calculate prices for your business
@@ -33,12 +42,8 @@ function Pricing({onButtonClick}){
           <div className="w-full max-w-[195px] pt-[100px] md:pt-[26px] sm:max-w-[130px]">
             <img src={pricingContainer} className="object-cover object-center" alt="pricing container" />
           </div>
-          <div className="ml-[31px] px-[42px] py-[37px] w-full min-h-[158px] 
-          bg-[url('./images/pricing-section-callout.svg')] bg-no-repeat bg-center bg-contain 
-          flex justify-center items-center md:ml-[0px] md:bg-[url('./images/pricing-section-callout-tablet.svg')] 
-          md:min-h-[350px] sm:min-h-[192px]">
-            <p className="text-[20px] font-normal leading-[23.7px] text-center 
-              md:max-w-[344px] sm:text-base sm:leading-[21.33px] sm:max-w-[244px]">
+          <div className={pricingCalloutClass}>
+            <p className={pricingCalloutTextClass}>
               We calculate our prices according to the amount of containers and deliveries made by your business monthly.
             </p>
           </div>

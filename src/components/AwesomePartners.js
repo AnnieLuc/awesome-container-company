@@ -11,21 +11,24 @@ import { sectionVariants }  from '../utils/animationVariants';
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
 function AwesomePartners({awesomePartners}) {
+
+	// Classes for JSX Elements
+	const partnerImageClass 										= `object-contain flex items-center justify-between object-center`;
+	const awesomePartnersSectionClass 					= `pt-[120px] md:pt-[100px] sm:px-[16px]`;
+	const awesomePartnersSectionContainerClass 	= `mx-auto pt-[100px] pb-[130px] max-w-[772px] 
+		flex items-center flex-col md:pt-[40px] md:pb-[60px]`;
+
+	// Function to render the images of partners
 	const renderImage = ({ image }, index) => {
 		return (
-			<img
-				key={index}
-				src={image}
-				alt="partner"
-				className="object-contain flex items-center justify-between object-center"
-			/>
+			<img key={index} src={image} alt="partner" className={partnerImageClass} />
 		);
 	};
 
 	return (
 		<motion.section
 			id="awesome-partners"
-			className="pt-[120px] md:pt-[100px] sm:px-[16px]"
+			className={awesomePartnersSectionClass}
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
@@ -33,7 +36,7 @@ function AwesomePartners({awesomePartners}) {
 			<SectionHeading align="center" color="primary">
 				And Awesome Partners
 			</SectionHeading>
-			<div className="mx-auto pt-[100px] pb-[130px] max-w-[772px] flex items-center flex-col md:pt-[40px] md:pb-[60px]">
+			<div className={awesomePartnersSectionContainerClass}>
 				<div className="flex justify-between w-full md:flex-col md:max-w-[200px] md:gap-y-[40px]">
 					{awesomePartners.filter((_, index) => index < 3).map(renderImage)}
 				</div>

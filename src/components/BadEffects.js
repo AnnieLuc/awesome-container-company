@@ -13,6 +13,11 @@ import chart                from '../images/single-use-plastics-chart.png';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function BadEffects({plasticsBadEffects}) {
+  // Classes for JSX Elements
+  const BadEffectsContainerClass = `mx-auto px-[140px] py-[120px] max-w-[1440px] flex flex-col 
+    items-center lg:px-[20px] md:py-[80px] sm:px-[16px] sm:pt-[40px]`;
+
+  // Function to render the images
   const renderImages = () => {
     return (
       plasticsBadEffects.map(({caption, image}, index) => {
@@ -36,7 +41,7 @@ function BadEffects({plasticsBadEffects}) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.4}}>
-      <div className="mx-auto px-[140px] py-[120px] max-w-[1440px] flex flex-col items-center lg:px-[20px] md:py-[80px] sm:px-[16px] sm:pt-[40px]">
+      <div className={BadEffectsContainerClass}>
         <div className="w-full flex gap-x-[73px] md:flex-col-reverse md:gap-y-[40px]">
           <div className="max-w-[347px] rounded-[3px] md:self-center md:max-w-[229px]">
             <img className="object-cover" src={chart} alt="donut chart to show single-use plastics wastage" />
