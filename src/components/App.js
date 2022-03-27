@@ -77,7 +77,7 @@ function App() {
   }, []);
 
 	React.useEffect(() => {
-		if(screenWidth <= 768){
+		if(screenWidth <= 930){
 				setIsNavbarOpen(false);
 			} else {
 				setIsNavbarOpen(true);

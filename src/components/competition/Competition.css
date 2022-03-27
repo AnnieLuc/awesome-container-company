@@ -2,6 +2,7 @@
   scrollbar-width: thin;
   scrollbar-color: #1c383c #e1e1e1;
 }
+
 .competition::-webkit-scrollbar {
   width: 8px;
 }

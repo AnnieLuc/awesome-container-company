@@ -51,8 +51,8 @@ function SustainabilityDelivered({features}) {
               <p className="mt-[30px] text-lg font-normal leading-7 text-primary text-center">Save at least 50% on supply cost and time on inventory tracking / re-orders</p>
             </div>
           </div>
-          <div className="flex lg:pt-[40px] md:justify-center md:pt-[80px] sm:pt-[70px]">
-            <div className="ml-[150px] flex flex-col items-center max-w-[543px] lg:ml-[0px] md:max-w-[380px]">
+          <div className="flex lg:pt-[40px] md:justify-center md:pt-[80px] sm:pt-[70px] ">
+            <div className="ml-[150px] flex flex-col items-center max-w-[543px] xl:ml-[20px] lg:ml-[0px] md:max-w-[380px]">
               <div className="w-full max-w-[152.73px]">
                 <img src={saveStorageImage} alt="save storage" className="w-full object-contain object-center" />
               </div>
