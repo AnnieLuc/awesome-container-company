@@ -26,7 +26,7 @@ function NavBar(props) {
   const logoLinkContainerClass   = `flex items-center text-sm font-bold leading-4 text-primary mr-4 py-2 
     whitespace-nowrap hover:cursor-pointer sm:text-xs sm:leading-3`;
   const navLinkClass             = `flex items-center text-sm font-normal leading-4 text-primary 
-    hover:opacity-75 hover:cursor-pointer base:p-[8px] base:m-[-8px] sm:text-[20px] sm:leading-[23.7px]`;
+    hover:opacity-75 hover:cursor-pointer base:p-[8px] base:m-[-8px] base:text-[20px] base:leading-[23.7px]`;
   const hamburgerButtonClass     = `w-[44px] h-[44px] 
     ${(isNavbarOpen) ? `bg-[url('./images/hamburger-close.svg')]` : `bg-[url('./images/hamburger-bars.svg')]`}
     bg-no-repeat bg-center bg-contain border-none hidden base:block`;
