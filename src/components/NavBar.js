@@ -15,8 +15,7 @@ function NavBar(props) {
   const {
     onButtonClick,
     isNavbarOpen,
-    setIsNavbarOpen,
-    screenWidth } = props;
+    setIsNavbarOpen } = props;
 
   // Classes for JSX Elements
   const navSectionClass          = `box-border py-[5px] bg-secondary-100 flex flex-wrap items-center 
@@ -47,12 +46,19 @@ function NavBar(props) {
             <Logo isHeader={true} />
             <p className="ml-[5px] sm:ml-[8px]">Awesome Container Company</p>
           </Link>
-          <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} />
+          <div className="flex gap-x-[30px]">
+            <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} />
+            <div className="sm:hidden">
+              <Button isHeader='true' onButtonClick={onButtonClick}>
+                Work with us
+              </Button>
+            </div>
+          </div>
         </div>
         <div
           className={`max-w-[721px] flex flex-grow items-center lg:max-w-[651px] base:max-w-[100%] ${isNavbarOpen ? ` flex` : ` hidden`}`}
           id="example-navbar-danger">
-          <ul className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px]">
+          <ul className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px] base:pb-[60px]">
             <li className="flex items-center base:py-[12px]">
               <Link className={navLinkClass} onClick={handleLinkClick} to="bad-effects" spy={true} smooth={true} offset={-70} duration={500}>
                 The Problem
@@ -83,8 +89,8 @@ function NavBar(props) {
                 Contacts
               </Link>
             </li>
-            <li className="flex items-center ml-[40px] lg:ml-[20px] base:ml-[0px] base:pt-[111px] base:pb-[60px]">
-              <Button isHeader={`${(screenWidth <= 768) ? `false` : `true`}`} onButtonClick={onButtonClick}>
+            <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
+              <Button isHeader='false' onButtonClick={onButtonClick}>
                 Work with us
               </Button>
             </li>
@@ -99,7 +105,6 @@ NavBar.propTypes = {
   onButtonClick:    PropTypes.func.isRequired,
   isNavbarOpen:     PropTypes.bool.isRequired,
   setIsNavbarOpen:  PropTypes.func.isRequired,
-  screenWidth:      PropTypes.number.isRequired,
 };
 
 export default NavBar;
