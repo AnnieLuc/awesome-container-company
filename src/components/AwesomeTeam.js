@@ -13,6 +13,7 @@ import linkedInImg 					from '../images/social-links/linkedin.svg';
  */
 function AwesomeTeam({awesomeTeam}) {
 	const renderImages = () => {
+		// Function to render the images of team members
 		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {
 			return (
 				<figure className="max-w-[146px]" key={index}>
@@ -20,12 +21,8 @@ function AwesomeTeam({awesomeTeam}) {
 					<figcaption className="pt-[15px] text-2xl sec-text-primary leading-7 text-center">
 						{name}
 						<span className="block whitespace-nowrap">{title}</span>
-						<a href={linkedIn} className="">
-							<img
-								src={linkedInImg}
-								alt={name}
-								className="mx-[auto] mt-[20px]"
-							/>
+						<a href={linkedIn}>
+							<img src={linkedInImg} alt={name} className="mx-[auto] mt-[20px]" />
 						</a>
 					</figcaption>
 				</figure>
@@ -36,7 +33,7 @@ function AwesomeTeam({awesomeTeam}) {
 	return (
 		<motion.section
 			id="awesome-team"
-			className="pt-[180px]"
+			className="pt-[180px] md:pt-[120px] sm:px-[16px]"
 			variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
@@ -44,8 +41,10 @@ function AwesomeTeam({awesomeTeam}) {
       <SectionHeading align="center" color="primary">
         An Awesome Team
       </SectionHeading>
-			<div className="mx-auto pt-[80px] max-w-[746px] flex flex-col gap-y-[80px] items-center">
-				<div className="w-full flex justify-between">{renderImages()}</div>
+			<div className="mx-auto pt-[80px] max-w-[746px] md:pt-[44px]">
+				<div className="w-full flex justify-between md:flex-col md:items-center md:gap-y-[44px]">
+					{renderImages()}
+				</div>
 			</div>
 		</motion.section>
 	);

@@ -1,4 +1,5 @@
 import React          from 'react';
+import PropTypes  	  from 'prop-types';
 import accLogo        from '../images/logo.svg';
 import accLogoTilted  from '../images/logoTilted.svg';
 
@@ -24,7 +25,7 @@ function Logo({isHeader}){
   }
 
   return (
-    <div className="max-w-[92px]">
+    <div className="max-w-[92px] sm:max-w-[60px]">
       <img
         src={logoImage}
         alt="awesome container company logo"
@@ -34,5 +35,9 @@ function Logo({isHeader}){
     </div>
   );
 }
+
+Logo.propTypes = {
+  isHeader:    PropTypes.bool.isRequired,
+};
 
 export default Logo;
