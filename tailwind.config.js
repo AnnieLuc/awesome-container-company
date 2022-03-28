@@ -6,10 +6,13 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'xl': {'max': '1440px'},
+      'xxl': {'max': '1440px'},
+      'xl': {'max': '1330px'},
       'lg': {'max': '1024px'},
+      'base': {'max': '930px'},
       'md': {'max': '768px'},
-      'sm': {'max': '375px'},
+      'sm': {'max': '560px'},
+      'xs': {'max': '375px'},
     },
     fontSize: {
       xs: '12px',
@@ -49,6 +52,9 @@ module.exports = {
       boxShadow: {
         sm: "0px 2px 10px rgba(0, 0, 0, 0.2)",
         DEFAULT: "0px 2px 10px rgba(0, 0, 0, 0.2)",
+      },
+      gridTemplateColumns: {
+        '3': 'minmax(344px, 1fr) minmax(172px, 1fr) minmax(386px, 1fr)',
       },
     },
   },

@@ -5,13 +5,14 @@ import BadEffects                				from './BadEffects';
 import SustainabilityDelivered   				from './SustainabilityDelivered';
 import HowItWorks 											from './HowItWorks';
 import Impact														from './Impact';
-import Competition			                from './Competition';
+import Competition			                from './competition/Competition';
 import Sustainability            				from './Sustainability';
 import Pricing                   				from './Pricing';
 import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
-import PopupWithForm                    from './PopupWithForm';
+import PopupWithForm 					from './PopupWithForm';
+
 
 // Import constants
 import awesomePartners 									from '../constants/awesome-partners';
@@ -31,6 +32,8 @@ import chatMessages         						from '../constants/chat-messages';
  */
 function App() {
 	const [isPopupOpen, setPopupOpen] = React.useState(false);
+	const [isNavbarOpen, setIsNavbarOpen] = React.useState(true);
+	const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
 
 	const closePopup = () => {
 		setPopupOpen(false);
@@ -52,9 +55,44 @@ function App() {
 		};
 	}, []);
 
+	React.useEffect(() => {
+		const closeNavByClick = () => {
+			if(isNavbarOpen){
+				setIsNavbarOpen(false);
+			}
+		}
+		document.addEventListener('click', closeNavByClick);
+		return () => {
+			document.removeEventListener('click', closeNavByClick);
+		}
+	}, [isNavbarOpen]);
+
+
+  React.useEffect(() => {
+    const changeScreenWidth = () => {
+			setScreenWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', changeScreenWidth);
+    return () => {
+      window.removeEventListener('resize', changeScreenWidth);
+    }
+  }, []);
+
+	React.useEffect(() => {
+		if(screenWidth <= 930){
+				setIsNavbarOpen(false);
+			} else {
+				setIsNavbarOpen(true);
+			}
+	}, [screenWidth]);
+
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
-			<NavBar onButtonClick={handleButtonClick} />
+			<NavBar
+				onButtonClick={handleButtonClick}
+				isNavbarOpen={isNavbarOpen}
+				setIsNavbarOpen={setIsNavbarOpen}
+				screenWidth={screenWidth} />
 			<Hero chatMessages={chatMessages} />
 			<main>
 				<BadEffects plasticsBadEffects={plasticsBadEffects} />
