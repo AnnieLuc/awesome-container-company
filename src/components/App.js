@@ -3,6 +3,7 @@ import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
 import SustainabilityDelivered   				from './SustainabilityDelivered';
+import HowItWorks 											from './HowItWorks';
 import Impact														from './Impact';
 import Competition			                from './Competition';
 import Sustainability            				from './Sustainability';
@@ -58,6 +59,7 @@ function App() {
 			<main>
 				<BadEffects plasticsBadEffects={plasticsBadEffects} />
 				<SustainabilityDelivered features={features} />
+				<HowItWorks onButtonClick={handleButtonClick} />
 				<Impact impacts={impacts} />
 				<Competition />
 				<Sustainability />
