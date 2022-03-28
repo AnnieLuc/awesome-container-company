@@ -50,7 +50,12 @@ module.exports = {
         sm: "0px 2px 10px rgba(0, 0, 0, 0.2)",
         DEFAULT: "0px 2px 10px rgba(0, 0, 0, 0.2)",
       },
+      backgroundImage: {
+        "ovals-image": "url('/src/images/ovals-impact.svg')",
+        "rectangles-image": "url('/src/images/rectangles-impact.svg')",
+      },
     },
   },
+
   plugins: [require("tw-elements/dist/plugin")],
 };

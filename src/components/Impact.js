@@ -14,27 +14,29 @@ import Rectangles from "../images/rectangles-impact.svg";
  */
 function Impact({ impacts }) {
   const renderCards = () =>
-    impacts.map((cardData, index) => (
-      <div className="relative">
-        <div
+    impacts.map((cardData) => (
+      <div key={cardData.id}>
+        {/* <div
           key={cardData.id}
           className="absolute sm:grid-cols-1 sm:gap-[520px] max-w-full sm:max-w-[160px] place-items-center translate-x-[200px] sm:translate-x-[90px] sm:translate-y-[30px] translate-y-[-40px]"
         >
           {cardData.image}
-        </div>
+        </div> */}
         <article
           className="mt-[60px] sm:mx-[16px] sm:mt-[101px] flex flex-col items-center
-        text-center max-w-[660px] h-full sm:h-fit shadow-sm bg-secondary-100 z-20"
-          key={index}
+        text-center max-w-[660px] h-full sm:h-fit shadow-sm bg-secondary-100 z-[1]"
         >
-          <div className=" sm:mb-[40px] pr-[32px] pl-[32px]">
+          <div
+            className=" relative sm:mb-[40px] pr-[32px] pl-[32px]
+          before:absolute before:top-[-100px] before:left-[210px] before:bg-rectangles-image before:-z-[1] before:w-[241px] before:h-[143px] "
+          >
             {/* Card Header */}
             <h2 className="text-lg pt-10 sm:pt-[30px] text-highlight-100">
               {cardData.cardHeader}
             </h2>
             {/* Card Content */}
             {cardData.cardContent.map((arrItem) => (
-              <div>
+              <div key={arrItem.toString()}>
                 <div className="pt-5 pb-5 bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center"></div>
                 <p>{arrItem}</p>
               </div>
@@ -57,11 +59,7 @@ function Impact({ impacts }) {
           Impact
         </SectionHeading>
 
-        {/* <div className="grid grid-cols-2 sm:grid-cols-1 gap-[440px] sm:gap-[520px] place-items-center translate-y-[100px] sm:translate-y-[740px] z-10">
-          <img src={Rectangles} alt="" />
-          <img src={Ovals} alt="" />
-        </div> */}
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-[40px] sm:gap-[16px] sm:gap-[117px] justify-items-center  mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-1 gap-[40px] z-[0] sm:gap-[16px] justify-items-center  mx-auto">
           {renderCards()}
         </div>
       </div>
