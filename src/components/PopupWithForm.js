@@ -1,26 +1,35 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import axios from 'axios';
+import React              from 'react';
+import PropTypes          from 'prop-types';
+import { useForm }        from 'react-hook-form';
+import axios              from 'axios';
 
 function PopupWithForm(props) {
   const {
+    onClose,
+    isOpen,
+    isFormSubmitted,
+    setFormSubmitted
+  } = props;
+
+  const {
     register,
     handleSubmit,
+    reset,
     formState: { isValid, errors },
-  } = useForm({
-    mode: "onChange",
-  });
+  } = useForm({ mode: "onChange", });
 
-  const [isFormSubmitted, setFormSubmitted] = React.useState(false);
+  React.useEffect(() => {
+    reset();
+  }, [isOpen]);
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post('/email', data)
+    axios.post('/email', data);
     setFormSubmitted(true);
   };
 
   return (
-    <section className={`form-popup ${props.isOpen ? "form-open" : ""}`}>
+    <section className={`form-popup ${isOpen ? "form-open" : ""}`}>
       {!isFormSubmitted && (
         <form
           className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm"
@@ -30,7 +39,7 @@ function PopupWithForm(props) {
         >
           <button
             type="button"
-            onClick={props.onClose}
+            onClick={onClose}
             className="form-close"
           ></button>
           <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px]">
@@ -111,7 +120,7 @@ function PopupWithForm(props) {
         <form className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm flex">
           <button
             type="button"
-            onClick={props.onClose}
+            onClick={onClose}
             className="form-close"
           ></button>
           <h2 className="text-lg m-auto">

@@ -8,7 +8,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use(Router);
+app.options('*', cors());
+app.use('/', Router);
 
 app.use(express.static("public"));
 app.use(express.static("../build"));

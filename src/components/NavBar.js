@@ -36,7 +36,9 @@ function NavBar(props) {
   }
 
   const handleLinkClick = () => {
-    setIsNavbarOpen(false);
+    if(screenWidth <= 930){
+      setIsNavbarOpen(false);
+    }
   }
 
   return (
@@ -50,7 +52,7 @@ function NavBar(props) {
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} />
             <div className="hidden base:block sm:hidden">
-              <Button isHeader='true' onButtonClick={onButtonClick}>
+              <Button isHeader="true" onButtonClick={onButtonClick}>
                 Work with us
               </Button>
             </div>

@@ -31,12 +31,14 @@ import chatMessages         						from '../constants/chat-messages';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function App() {
-	const [isPopupOpen, setPopupOpen] = React.useState(false);
-	const [isNavbarOpen, setIsNavbarOpen] = React.useState(true);
-	const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
+	const [isPopupOpen, setPopupOpen] 					= React.useState(false);
+	const [isNavbarOpen, setIsNavbarOpen] 			= React.useState(true);
+	const [screenWidth, setScreenWidth] 				= React.useState(window.innerWidth);
+	const [isFormSubmitted, setFormSubmitted] 	= React.useState(false);
 
 	const closePopup = () => {
 		setPopupOpen(false);
+		setFormSubmitted(false);
 	};
 
 	const handleButtonClick = () => {
@@ -44,31 +46,6 @@ function App() {
 	};
 
 	React.useEffect(() => {
-		const closeByEsc = (e) => {
-			if (e.keyCode === 27) {
-				closePopup();
-			}
-		};
-		document.addEventListener('keydown', closeByEsc);
-		return () => {
-			document.removeEventListener('keydown', closeByEsc);
-		};
-	}, []);
-
-	React.useEffect(() => {
-		const closeNavByClick = () => {
-			if(isNavbarOpen){
-				setIsNavbarOpen(false);
-			}
-		}
-		document.addEventListener('click', closeNavByClick);
-		return () => {
-			document.removeEventListener('click', closeNavByClick);
-		}
-	}, [isNavbarOpen]);
-
-
-  React.useEffect(() => {
     const changeScreenWidth = () => {
 			setScreenWidth(window.innerWidth);
     }
@@ -85,6 +62,31 @@ function App() {
 				setIsNavbarOpen(true);
 			}
 	}, [screenWidth]);
+
+	React.useEffect(() => {
+		const closeByClick = e => {
+      if(e.target.classList.contains('form-open')) {
+        closePopup();
+      }
+			if(screenWidth <= 930 && isNavbarOpen){
+				setIsNavbarOpen(false);
+			}
+    }
+		const closeByEsc = (e) => {
+			if (e.keyCode === 27) {
+				closePopup();
+			}
+		};
+
+		document.addEventListener('click', closeByClick);
+		document.addEventListener('keydown', closeByEsc);
+
+		return () => {
+			document.removeEventListener('click', closeByClick);
+			document.removeEventListener('keydown', closeByEsc);
+		};
+	}, [isPopupOpen, isNavbarOpen, screenWidth]);
+
 
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
@@ -105,7 +107,11 @@ function App() {
 				<AwesomeTeam awesomeTeam={awesomeTeam} />
 				<AwesomePartners awesomePartners={awesomePartners} />
 			</main>
-			<PopupWithForm onClose={closePopup} isOpen={isPopupOpen} />
+			<PopupWithForm
+				onClose={closePopup}
+				isOpen={isPopupOpen}
+				isFormSubmitted={isFormSubmitted}
+				setFormSubmitted={setFormSubmitted} />
 			<Footer />
 		</div>
 	);
