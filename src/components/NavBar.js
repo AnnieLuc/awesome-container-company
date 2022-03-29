@@ -1,8 +1,10 @@
-import React      from 'react';
-import PropTypes  from 'prop-types';
-import { Link }   from 'react-scroll';
-import Logo       from './Logo';
-import Button     from './button/Button';
+import React                   from 'react';
+import PropTypes              from 'prop-types';
+import { motion }             from "framer-motion";
+import { Link }               from 'react-scroll';
+import Logo                   from './Logo';
+import Button                 from './button/Button';
+import { navBarVariants }     from  '../utils/animationVariants'
 
 /**
  * The **NavBar** component represents the main menu of the page.
@@ -11,7 +13,6 @@ import Button     from './button/Button';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function NavBar(props) {
-
   const {
     onButtonClick,
     isNavbarOpen,
@@ -61,7 +62,10 @@ function NavBar(props) {
         <div
           className={`max-w-[721px] flex flex-grow items-center lg:max-w-[651px] base:max-w-[100%] ${isNavbarOpen ? ` flex` : ` hidden`}`}
           id="example-navbar-danger">
-          <ul className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px] base:pb-[60px]">
+          <motion.ul
+            animate={(isNavbarOpen) ? "onscreen" : "offscreen"}
+            variants={navBarVariants}
+            className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px] base:pb-[60px]">
             <li className="flex items-center base:py-[12px]">
               <Link className={navLinkClass} onClick={handleLinkClick} to="bad-effects" spy={true} smooth={true} offset={-70} duration={500}>
                 The Problem
@@ -97,7 +101,7 @@ function NavBar(props) {
                 Work with us
               </Button>
             </li>
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </nav>

@@ -52,3 +52,20 @@ export const howItWorksItemVariants = {
     }
   }
 };
+
+export const navBarVariants = {
+  offscreen: {
+    opacity: 0,
+    y: "-15%"
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 125,
+      mass: 0.2,
+      damping: 20,
+    }
+  }
+}
