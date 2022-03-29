@@ -15,11 +15,11 @@ module.exports = {
       'xs': {'max': '375px'},
     },
     fontSize: {
-      xs: '12px',
-      sm: '14px',
-      base: '18px',
-      lg: '24px',
-      xl: '44px',
+      xs: "12px",
+      sm: "14px",
+      base: "18px",
+      lg: "24px",
+      xl: "44px",
     },
     extend: {
       colors: {
@@ -40,14 +40,14 @@ module.exports = {
         serif: ["Spline Sans", "sans-serif"],
       },
       lineHeight: {
-        '3': '14.22px',
-        '4': '16.59px',
-        '5': '21.33px',
-        '6': '24px',
-        '7': '28.44px',
-        '8': '30px',
-        '9': '48px',
-        '10': '52.14px',
+        3: "14.22px",
+        4: "16.59px",
+        5: "21.33px",
+        6: "24px",
+        7: "28.44px",
+        8: "30px",
+        9: "48px",
+        10: "52.14px",
       },
       boxShadow: {
         sm: "0px 2px 10px rgba(0, 0, 0, 0.2)",
@@ -58,5 +58,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [require("tw-elements/dist/plugin")],
 };
