@@ -18,7 +18,9 @@ function HowItWorks({onButtonClick}){
       viewport={{ once: true, amount: 0.3}}>
       <div className="mx-auto px-[80px] pt-[80px] pb-[100px] max-w-[1440px] base:px-[20px] sm:px-[16px] sm:py-[60px]">
         <SectionHeading align="left" color="primary">
-          How it works?
+          <span className="base:block base:text-center">
+            How it works?
+          </span>
         </SectionHeading>
         <div className="mt-[40px] mb-[80px] grid grid-cols-5 gap-px base:my-[60px] base:grid-cols-1 base:gap-[40px]">
           <div className="col-start-2 bg-[url('./images/how-it-works-arrow-41.svg')] bg-no-repeat 

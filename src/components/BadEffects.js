@@ -49,7 +49,7 @@ function BadEffects({plasticsBadEffects}) {
           <div className="mt-[56px] md:mt-[0px] md:flex md:flex-col md:items-center">
             <div className="max-w-[708px] md:max-w-[647px]">
               <SectionHeading align="left" color="secondary">
-                <span className="md:inline-block md:text-center">
+                <span className="md:block md:text-center">
                   Single-use packaging: <span className="block md:inline">bad for the planet, bad for business</span>
                 </span>
               </SectionHeading>
