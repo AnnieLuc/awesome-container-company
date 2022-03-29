@@ -28,3 +28,27 @@ export const chatVariants = {
     }
   }
 }
+
+export const howItWorksContainerVariants = {
+  offscreen: { opacity: 1, scale: 0 },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.3
+    }
+  }
+};
+
+export const howItWorksItemVariants = {
+  offscreen: { y: 10, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      ease: "easeOut",
+      duration: 0.3
+    }
+  }
+};
