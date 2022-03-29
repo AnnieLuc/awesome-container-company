@@ -1,14 +1,21 @@
-import React          from 'react';
-import SectionHeading from './section-heading/SectionHeading';
-import Button         from './button/Button';
-import HowItWorksImg1 from '../images/how-it-works-1.svg';
-import HowItWorksImg2 from '../images/how-it-works-2.svg';
-import HowItWorksImg3 from '../images/how-it-works-3.svg';
-import HowItWorksImg4 from '../images/how-it-works-4.svg';
+import React                from 'react';
+import { motion }           from 'framer-motion';
+import SectionHeading       from './section-heading/SectionHeading';
+import Button               from './button/Button';
+import { sectionVariants }  from '../utils/animationVariants';
+import HowItWorksImg1       from '../images/how-it-works-1.svg';
+import HowItWorksImg2       from '../images/how-it-works-2.svg';
+import HowItWorksImg3       from '../images/how-it-works-3.svg';
+import HowItWorksImg4       from '../images/how-it-works-4.svg';
 
 function HowItWorks({onButtonClick}){
   return (
-    <section id="how-it-works">
+    <motion.section
+      id="how-it-works"
+      variants={sectionVariants}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.3}}>
       <div className="mx-auto px-[80px] pt-[80px] pb-[100px] max-w-[1440px] base:px-[20px] sm:px-[16px] sm:py-[60px]">
         <SectionHeading align="left" color="primary">
           How it works?
@@ -71,7 +78,7 @@ function HowItWorks({onButtonClick}){
           <Button isHeader="false" onButtonClick={onButtonClick}>Work with us</Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
