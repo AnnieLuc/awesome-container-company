@@ -1,4 +1,5 @@
 import React                            from 'react';
+import { Helmet } 											from 'react-helmet';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
@@ -90,6 +91,13 @@ function App() {
 
 	return (
 		<div className='font-serif text-base font-normal leading-5'>
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>Awesome Container Company</title>
+				<meta name="description" content="Help our environment by eliminating single-use plastics from your delivery with Awesome Container Company" />
+				<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
+				<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
+			</Helmet>
 			<NavBar
 				onButtonClick={handleButtonClick}
 				isNavbarOpen={isNavbarOpen}
