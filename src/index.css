@@ -68,11 +68,11 @@
 }
 
 .labels {
-  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px]
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px];
 }
 
 .labels-invalid {
-  @apply border-[1px] border-[#E30613] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px]
+  @apply border-[1px] border-[#E30613] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px];
 }
 
 .inputs {
