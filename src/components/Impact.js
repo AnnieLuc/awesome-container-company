@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import classnames from "classnames";
 import SectionHeading from "./section-heading/SectionHeading";
 import { sectionVariants } from "../utils/animationVariants";
-import Ovals from "../images/ovals-impact.svg";
-import Rectangles from "../images/rectangles-impact.svg";
 
 /**
  * The **Impact** component highlights the impacts for businesses and users.
@@ -13,39 +12,38 @@ import Rectangles from "../images/rectangles-impact.svg";
  * @author [Ekaterina Cratcha](https://github.com/cratcha)
  */
 function Impact({ impacts }) {
-  const renderCards = () =>
-    impacts.map((cardData) => (
-      <div key={cardData.id}>
-        {/* <div
-          key={cardData.id}
-          className="absolute sm:grid-cols-1 sm:gap-[520px] max-w-full sm:max-w-[160px] place-items-center translate-x-[200px] sm:translate-x-[90px] sm:translate-y-[30px] translate-y-[-40px]"
-        >
-          {cardData.image}
-        </div> */}
+  const renderCards = () => {
+    return impacts.map((cardData, index) => {
+      const imgUrlClass =
+        index === 0
+          ? `before:bg-[url('./images/rectangles-impact.svg')]`
+          : `before:bg-[url('./images/ovals-impact.svg')]`;
+      const impactCardClass = `relative py-[40px] px-[15px] min-h-[433px] w-full bg-secondary-100 rounded-[3px] shadow 
+    before:absolute before:top-[-22%] before:left-[30%] before:w-full before:max-w-[40%] before:min-h-[143px] 
+    before:-z-[1] before:bg-contain before:bg-center before:bg-no-repeat`;
+
+      return (
         <article
-          className="mt-[60px] sm:mx-[16px] sm:mt-[101px] flex flex-col items-center
-        text-center max-w-[660px] h-full sm:h-fit shadow-sm bg-secondary-100 z-[1]"
+          key={cardData.id}
+          className={classnames(impactCardClass, imgUrlClass)}
         >
-          <div
-            className=" relative sm:mb-[40px] pr-[32px] pl-[32px]
-          before:absolute before:top-[-100px] before:left-[210px] before:bg-rectangles-image before:-z-[1] before:w-[241px] before:h-[143px] "
-          >
-            {/* Card Header */}
-            <h2 className="text-lg pt-10 sm:pt-[30px] text-highlight-100">
-              {cardData.cardHeader}
-            </h2>
-            {/* Card Content */}
-            {cardData.cardContent.map((arrItem) => (
-              <div key={arrItem.toString()}>
-                <div className="pt-5 pb-5 bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center"></div>
-                <p>{arrItem}</p>
+          {/* Card Header */}
+          <h2 className="mb-[20px] text-lg leading-7 text-highlight-100 text-center md:mb-[50px]">
+            {cardData.cardHeader}
+          </h2>
+          {/* Card Content */}
+          <div className="flex flex-col gap-[20px]">
+            {cardData.cardContent.map((arrItem, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div className="mb-[20px] w-[10px] h-[10px] bg-[url('./images/bullet-points.svg')] bg-no-repeat bg-center bg-cover"></div>
+                <p className="text-center">{arrItem}</p>
               </div>
             ))}
           </div>
         </article>
-      </div>
-    ));
-
+      );
+    });
+  };
   return (
     <motion.section
       id="impact"
@@ -54,12 +52,12 @@ function Impact({ impacts }) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className=" bg-secondary-200 pt-[120px] mx-auto flex flex-col items-center">
+      <div className=" mx-auto py-[120px] px-[34px] max-w-[1440px] flex flex-col items-center bg-secondary-200">
         <SectionHeading align="center" color="primary">
           Impact
         </SectionHeading>
 
-        <div className="grid grid-cols-2 sm:grid-cols-1 gap-[40px] z-[0] sm:gap-[16px] justify-items-center  mx-auto">
+        <div className="w-full mt-[60px] grid grid-cols-2 gap-[40px] base:mt-[120px] base:grid-cols-1 base:gap-[117px] z-10">
           {renderCards()}
         </div>
       </div>
