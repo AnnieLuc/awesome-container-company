@@ -47,13 +47,14 @@ function Impact({ impacts }) {
   return (
     <motion.section
       id="impact"
+      className="bg-secondary-200"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className=" mx-auto py-[120px] px-[34px] max-w-[1440px] flex flex-col items-center 
-        bg-secondary-200 lg:px-[20px] base:pt-[60px] base:pb-[0px] sm:px-[16px]">
+        lg:px-[20px] base:pt-[60px] base:pb-[0px] sm:px-[16px]">
         <SectionHeading align="center" color="primary">
           Impact
         </SectionHeading>
