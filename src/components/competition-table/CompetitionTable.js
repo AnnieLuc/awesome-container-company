@@ -12,11 +12,11 @@ function CompetitionTable() {
   return (
     <article className="table">
       {/* Row # 1 */}
-      <div className="table-top-header rounded-tl-[20px]">
+      <div className="table-top-header rounded-tl-[3px]">
         <Logo isHeader={false} />
       </div>
       <div className="table-top-header">
-        <p>Awesome Container Company</p>
+        <p className="text-highlight-100">Awesome Container Company</p>
       </div>
       <div className="table-top-header">
         <p>Deliver Zero</p>
@@ -27,7 +27,7 @@ function CompetitionTable() {
       <div className="table-top-header">
         <p>Washing Facility</p>
       </div>
-      <div className="table-top-header rounded-tr-[20px]">
+      <div className="table-top-header rounded-tr-[3px]">
         <p>Single-use plastics</p>
       </div>
       {/* Row # 2 */}
@@ -126,7 +126,7 @@ function CompetitionTable() {
       <div className="table-cell">
       </div>
       {/* Row # 8 */}
-      <div className="table-left-header rounded-bl-[20px]">
+      <div className="table-left-header rounded-bl-[3px]">
         <p>App for tracking and reporting</p>
       </div>
       <div className="table-cell">
@@ -139,7 +139,7 @@ function CompetitionTable() {
       </div>
       <div className="table-cell">
       </div>
-      <div className="table-cell rounded-br-[20px]">
+      <div className="table-cell rounded-br-[3px]">
       </div>
     </article>
   );
