@@ -20,7 +20,7 @@ function Impact({ impacts }) {
           : `before:bg-[url('./images/ovals-impact.svg')]`;
       const impactCardClass = `relative py-[40px] px-[15px] min-h-[433px] w-full bg-secondary-100 rounded-[3px] shadow 
     before:absolute before:top-[-22%] before:left-[30%] before:w-full before:max-w-[40%] before:min-h-[143px] 
-    before:-z-[1] before:bg-contain before:bg-center before:bg-no-repeat`;
+    before:-z-[1] before:bg-contain before:bg-center before:bg-no-repeat sm:before:top-[-20%] xs:before:top-[-18%]`;
 
       return (
         <article
@@ -52,7 +52,8 @@ function Impact({ impacts }) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className=" mx-auto py-[120px] px-[34px] max-w-[1440px] flex flex-col items-center bg-secondary-200">
+      <div className=" mx-auto py-[120px] px-[34px] max-w-[1440px] flex flex-col items-center 
+        bg-secondary-200 lg:px-[20px] base:pt-[60px] base:pb-[0px] sm:px-[16px]">
         <SectionHeading align="center" color="primary">
           Impact
         </SectionHeading>

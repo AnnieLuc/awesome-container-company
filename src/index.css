@@ -3,52 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.sec-heading {
-  @apply text-xl font-normal leading-10;
-}
-
-.sec-para {
-  @apply text-base font-normal;
-}
-
-.sec-text-center {
-  @apply text-center;
-}
-
-.sec-text-left {
-  @apply text-left;
-}
-
-.sec-text-right {
-  @apply text-right;
-}
-
-.sec-text-primary {
-  @apply text-primary;
-}
-
-.sec-text-secondary {
-  @apply text-secondary-100;
-}
-
-.sec-text-leading-5 {
-  @apply leading-5;
-}
-
-.sec-text-leading-6 {
-  @apply leading-6;
-}
-
-.button {
-  @apply py-[16px] px-[28px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
-}
-
 .button-invalid {
   @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 opacity-50 transition-all text-secondary-100 text-lg leading-7;
-}
-
-.button-header {
-  @apply py-[13px] px-[24px] rounded-[10px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-sm leading-4;
 }
 
 .button-form {
