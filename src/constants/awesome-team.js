@@ -6,19 +6,19 @@ const awesomeTeam = [
 	{
 		name: 'Huang Lam',
 		title: 'Founder / CEO',
-		linkedIn: 'https://www.linkedin.com/in/huang-lam-b8a8b8a4/',
+		linkedIn: 'https://www.linkedin.com/in/hung-lam-85a502163/',
 		image: huangLam,
 	},
 	{
 		name: 'Edwin Phua',
 		title: 'Co-founder / COO',
-		linkedIn: 'https://www.linkedin.com/in/edwin-phua-a8a8b8a4/',
+		linkedIn: 'https://www.linkedin.com/in/edwin-phua/',
 		image: edwinPhua,
 	},
 	{
 		name: 'Guillaume Catella',
 		title: 'Co-founder / CTO',
-		linkedIn: 'https://www.linkedin.com/in/guillaume-catella-a8a8b8a4/',
+		linkedIn: 'https://www.linkedin.com/in/guillaumecatella/',
 		image: guillaumeCatella,
 	},
 ];

@@ -1,4 +1,6 @@
-import React from 'react';
+import React        from 'react';
+import PropTypes  	from 'prop-types';
+import './Button.css';
 
 /**
  * The **Button** component renders any button on the page.
@@ -15,5 +17,11 @@ function Button({children, isHeader, onButtonClick}) {
     </button>
   );
 }
+
+Button.propTypes = {
+  children:       PropTypes.any.isRequired,
+  isHeader:       PropTypes.string.isRequired,
+  onButtonClick:  PropTypes.func.isRequired,
+};
 
 export default Button;
