@@ -18,7 +18,7 @@ function HowItWorks({onButtonClick}){
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.3}}>
+      viewport={{ once: true, amount: 0.1 }}>
       <div className="mx-auto px-[80px] pt-[80px] pb-[100px] max-w-[1440px] base:px-[20px] sm:px-[16px] sm:py-[60px]">
         <SectionHeading align="left" color="primary">
           <span className="base:block base:text-center">
@@ -29,7 +29,7 @@ function HowItWorks({onButtonClick}){
           variants={howItWorksContainerVariants}
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.3}}
+          viewport={{ once: true }}
           className="mt-[40px] mb-[80px] grid grid-cols-5 gap-px base:my-[60px] base:grid-cols-1 base:gap-[40px]">
           <motion.div variants={howItWorksItemVariants} className="row-start-1 col-start-3 base:row-start-1 base:col-start-1 base:row-span-1">
             <figure className="flex flex-col items-center justify-center gap-y-[18px]">

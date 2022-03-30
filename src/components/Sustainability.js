@@ -2,7 +2,9 @@ import React                from 'react';
 import { motion }           from 'framer-motion';
 import SectionHeading       from './section-heading/SectionHeading';
 import SectionPara          from './section-para/SectionPara';
-import { sectionVariants }  from '../utils/animationVariants';
+import {
+  sectionVariants,
+  esgCareIconVariants }     from '../utils/animationVariants';
 import esgCareImg           from '../images/esg-care.svg';
 
 /**
@@ -41,7 +43,14 @@ function Sustainability() {
           </div>
         </div>
         <div className="max-w-[305.84px] lg:self-end md:self-center md:max-w-[173.62px]">
-          <img src={esgCareImg} alt="a sapling coming out of a container" className="object-contain" />
+          <motion.img
+            variants={esgCareIconVariants}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            src={esgCareImg}
+            alt="a sapling coming out of a container"
+            className="object-contain" />
         </div>
       </div>
     </motion.section>

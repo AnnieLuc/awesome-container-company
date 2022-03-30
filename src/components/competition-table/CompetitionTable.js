@@ -1,7 +1,10 @@
-import React  from 'react';
-import Logo   from '../Logo';
+import React      from 'react';
+import { motion } from 'framer-motion';
+import Logo       from '../Logo';
 import './CompetitionTable.css';
-
+import {
+  tableBulletVariants
+}                 from '../../utils/animationVariants';
 /**
  * The **CompetitionTable** component lays out the comparison between the company and its competitors.
  *
@@ -9,6 +12,18 @@ import './CompetitionTable.css';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function CompetitionTable() {
+  const renderBullet = (color = 'primary') => {
+    const bulletClass = `${(color === 'highlight') ? `bullet-highlight` : `bullet`}`;
+    return (
+      <motion.div
+        className={bulletClass}
+        initial="offscreen"
+        whileInView="onscreen"
+        variants={tableBulletVariants}
+        viewport={{ once: true }} />
+    );
+  }
+
   return (
     <article className="table">
       {/* Row # 1 */}
@@ -35,7 +50,7 @@ function CompetitionTable() {
         <p>Save over 50% on supply costs</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
@@ -50,10 +65,10 @@ function CompetitionTable() {
         <p>Save real estate storage costs</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       <div className="table-cell">
       </div>
@@ -66,7 +81,7 @@ function CompetitionTable() {
         <p>Inventory management</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
@@ -81,7 +96,7 @@ function CompetitionTable() {
         <p>Never reorder supplies</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
@@ -96,32 +111,32 @@ function CompetitionTable() {
         <p>Easy pickup and delivery</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       {/* Row # 7 */}
       <div className="table-left-header">
         <p>Sustainable products</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
       <div className="table-cell">
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       <div className="table-cell">
       </div>
@@ -130,12 +145,12 @@ function CompetitionTable() {
         <p>App for tracking and reporting</p>
       </div>
       <div className="table-cell">
-        <div className="bullet-highlight"></div>
+        {renderBullet('highlight')}
       </div>
       <div className="table-cell">
       </div>
       <div className="table-cell">
-        <div className="bullet"></div>
+        {renderBullet()}
       </div>
       <div className="table-cell">
       </div>

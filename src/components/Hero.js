@@ -32,7 +32,7 @@ function Hero({chatMessages, onButtonClick}) {
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.3}}>
+      viewport={{ once: true, amount: 0.1 }}>
       <div className={heroSectionContainerClass}>
         <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
           <h1 className={heroSectionHeadingClass}>

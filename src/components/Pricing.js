@@ -4,7 +4,9 @@ import { motion }           from 'framer-motion';
 import SectionHeading       from './section-heading/SectionHeading';
 import SectionPara          from './section-para/SectionPara';
 import Button               from './button/Button';
-import { sectionVariants }  from '../utils/animationVariants';
+import {
+  sectionVariants,
+  pricingCalloutVariants }  from '../utils/animationVariants';
 import pricingContainer     from '../images/pricing-section-container.svg';
 
 /**
@@ -42,11 +44,16 @@ function Pricing({onButtonClick}){
           <div className="w-full max-w-[195px] pt-[100px] md:pt-[26px] sm:max-w-[130px]">
             <img src={pricingContainer} className="object-cover object-center" alt="pricing container" />
           </div>
-          <div className={pricingCalloutClass}>
+          <motion.div
+            variants={pricingCalloutVariants}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            className={pricingCalloutClass}>
             <p className={pricingCalloutTextClass}>
               We calculate our prices according to the amount of containers and deliveries made by your business monthly.
             </p>
-          </div>
+          </motion.div>
         </div>
         <Button isHeader="false" onButtonClick={onButtonClick}>Work with us</Button>
         <div className="mt-[32px] max-w-[618px]">
