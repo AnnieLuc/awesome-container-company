@@ -1,3 +1,43 @@
+export const pageLoadContainerVariants = {
+  offscreen: {
+    opacity: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 2
+    }
+  },
+  exit: {
+    opacity: 0
+  }
+}
+
+export const pageLoadLogoVariants = {
+  offscreen: {
+    opacity: 0,
+    scale: 0,
+  },
+  onscreen: {
+    opacity: 1,
+    scale: 1,
+    rotate: [0, 10, 0],
+    transition: {
+      type: "spring",
+      delay: 0.2,
+      duration: 2
+    }
+  },
+  exit: {
+    opacity: 0,
+    scale: 0,
+    transition: {
+      duration: 0.8
+    }
+  }
+}
+
 export const sectionVariants = {
   offscreen: {
     opacity: 0,
@@ -23,7 +63,7 @@ export const textVariants = {
     transition: {
       type: "spring",
       delay: 0.2,
-      duration: 2 
+      duration: 5
     },
   },
 };

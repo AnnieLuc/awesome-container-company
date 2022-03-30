@@ -1,5 +1,6 @@
 import React                            from 'react';
 import { Helmet, HelmetProvider } 			from 'react-helmet-async';
+import { AnimatePresence }  						from 'framer-motion';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
@@ -13,6 +14,7 @@ import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
 import PopupWithForm 										from './PopupWithForm';
+import PageLoad													from './PageLoad';
 
 
 // Import constants
@@ -32,6 +34,7 @@ import chatMessages         						from '../constants/chat-messages';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function App() {
+	const [isPageLoading, setIsPageLoading]			= React.useState(true);
 	const [isPopupOpen, setPopupOpen] 					= React.useState(false);
 	const [isNavbarOpen, setIsNavbarOpen] 			= React.useState(true);
 	const [screenWidth, setScreenWidth] 				= React.useState(window.innerWidth);
@@ -45,6 +48,13 @@ function App() {
 	const handleButtonClick = () => {
 		setPopupOpen(true);
 	};
+
+	React.useEffect(() => {
+		const timer = setTimeout(() => {
+      setIsPageLoading(false)
+    }, 2500);
+    return () => clearTimeout(timer);
+	}, []);
 
 	React.useEffect(() => {
     const changeScreenWidth = () => {
@@ -99,29 +109,37 @@ function App() {
 					<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
 					<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
 				</Helmet>
-				<NavBar
-					onButtonClick={handleButtonClick}
-					isNavbarOpen={isNavbarOpen}
-					setIsNavbarOpen={setIsNavbarOpen}
-					screenWidth={screenWidth} />
-				<Hero chatMessages={chatMessages} onButtonClick={handleButtonClick} />
-				<main>
-					<BadEffects plasticsBadEffects={plasticsBadEffects} />
-					<SustainabilityDelivered features={features} />
-					<HowItWorks onButtonClick={handleButtonClick} />
-					<Impact impacts={impacts} />
-					<Competition />
-					<Sustainability />
-					<Pricing onButtonClick={handleButtonClick} />
-					<AwesomeTeam awesomeTeam={awesomeTeam} />
-					<AwesomePartners awesomePartners={awesomePartners} />
-				</main>
-				<PopupWithForm
-					onClose={closePopup}
-					isOpen={isPopupOpen}
-					isFormSubmitted={isFormSubmitted}
-					setFormSubmitted={setFormSubmitted} />
-				<Footer />
+				{/* <PageLoad /> */}
+				<AnimatePresence>
+				{(isPageLoading)
+				? <PageLoad key="loading" />
+				:
+				<>
+					<NavBar
+						onButtonClick={handleButtonClick}
+						isNavbarOpen={isNavbarOpen}
+						setIsNavbarOpen={setIsNavbarOpen}
+						screenWidth={screenWidth} />
+					<Hero chatMessages={chatMessages} onButtonClick={handleButtonClick} />
+					<main>
+						<BadEffects plasticsBadEffects={plasticsBadEffects} />
+						<SustainabilityDelivered features={features} />
+						<HowItWorks onButtonClick={handleButtonClick} />
+						<Impact impacts={impacts} />
+						<Competition />
+						<Sustainability />
+						<Pricing onButtonClick={handleButtonClick} />
+						<AwesomeTeam awesomeTeam={awesomeTeam} />
+						<AwesomePartners awesomePartners={awesomePartners} />
+					</main>
+					<PopupWithForm
+						onClose={closePopup}
+						isOpen={isPopupOpen}
+						isFormSubmitted={isFormSubmitted}
+						setFormSubmitted={setFormSubmitted} />
+					<Footer />
+				</>}
+				</AnimatePresence>
 			</div>
 		</HelmetProvider>
 	);

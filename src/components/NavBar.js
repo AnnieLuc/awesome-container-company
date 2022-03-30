@@ -1,6 +1,6 @@
 import React                   from 'react';
 import PropTypes              from 'prop-types';
-import { motion }             from "framer-motion";
+import { motion }             from 'framer-motion';
 import { Link }               from 'react-scroll';
 import Logo                   from './Logo';
 import Button                 from './button/Button';
