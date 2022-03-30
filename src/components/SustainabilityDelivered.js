@@ -58,7 +58,7 @@ function SustainabilityDelivered({ features }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 1 }}
+                transition={{ delay: 0.8, duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -77,7 +77,7 @@ function SustainabilityDelivered({ features }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 1.3 }}
+                transition={{ delay: 1.3, duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <img src={saveCostImage} alt="save cost" className={imgClass} />
@@ -95,7 +95,7 @@ function SustainabilityDelivered({ features }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 1.5 }}
+                transition={{ delay: 1.7, duration: 0.8 }}
                 viewport={{ once: true }}
               >
                 <img
