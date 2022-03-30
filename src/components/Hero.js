@@ -3,7 +3,9 @@ import PropTypes  					from 'prop-types';
 import { motion }           from 'framer-motion'
 import ImageCompareSlider   from './ImageCompareSlider';
 import Chat                 from './chat/Chat';
-import { sectionVariants }  from '../utils/animationVariants';
+import {
+  sectionVariants,
+  textVariants }            from '../utils/animationVariants';
 
 /**
  * The **Hero** component represents the main section of the page where the motto of the company is displayed.
@@ -11,7 +13,7 @@ import { sectionVariants }  from '../utils/animationVariants';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Hero({chatMessages}) {
+function Hero({chatMessages, onButtonClick}) {
 
   // Classes for JSX Elements
   const heroSectionContainerClass = `mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col 
@@ -34,8 +36,12 @@ function Hero({chatMessages}) {
       <div className={heroSectionContainerClass}>
         <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
           <h1 className={heroSectionHeadingClass}>
-            Help our environment by eliminating single-use plastics from your delivery with 
-            <span className="text-highlight-100"> Awesome Container Company</span>
+            Help our environment by eliminating single-use plastics from your delivery with {' '}
+            <motion.span
+              variants={textVariants}
+              initial="offscreen"
+              animate="onscreen"
+              className="text-highlight-100 inline-block">Awesome Container Company</motion.span>
           </h1>
         </div>
         <div className={heroSectionContentClass}>
@@ -48,7 +54,7 @@ function Hero({chatMessages}) {
           </div>
           <div className="max-w-[491px] w-full flex flex-col justify-end md:max-w-[492px] md:mt-[60px]">
             <div className="px-[50px] flex flex-col gap-[16px] md:min-h-[422px] md:justify-end">
-              <Chat chatMessages={chatMessages} />
+              <Chat chatMessages={chatMessages} onButtonClick={onButtonClick} />
               <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
               bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
             </div>

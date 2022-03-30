@@ -12,6 +12,22 @@ export const sectionVariants = {
   }
 }
 
+export const textVariants = {
+  offscreen: {
+    x: "-10%",
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      delay: 0.2,
+      duration: 2 
+    },
+  },
+};
+
 export const chatVariants = {
   offscreen: {
     opacity: 0,

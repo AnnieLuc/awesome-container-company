@@ -1,5 +1,5 @@
 import React                            from 'react';
-import { Helmet } 											from 'react-helmet';
+import { Helmet, HelmetProvider } 			from 'react-helmet-async';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
@@ -90,38 +90,40 @@ function App() {
 
 
 	return (
-		<div className='font-serif text-base font-normal leading-5'>
-			<Helmet>
-				<meta charSet="utf-8" />
-				<title>Awesome Container Company</title>
-				<meta name="description" content="Help our environment by eliminating single-use plastics from your delivery with Awesome Container Company" />
-				<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
-				<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
-			</Helmet>
-			<NavBar
-				onButtonClick={handleButtonClick}
-				isNavbarOpen={isNavbarOpen}
-				setIsNavbarOpen={setIsNavbarOpen}
-				screenWidth={screenWidth} />
-			<Hero chatMessages={chatMessages} />
-			<main>
-				<BadEffects plasticsBadEffects={plasticsBadEffects} />
-				<SustainabilityDelivered features={features} />
-				<HowItWorks onButtonClick={handleButtonClick} />
-				<Impact impacts={impacts} />
-				<Competition />
-				<Sustainability />
-				<Pricing onButtonClick={handleButtonClick} />
-				<AwesomeTeam awesomeTeam={awesomeTeam} />
-				<AwesomePartners awesomePartners={awesomePartners} />
-			</main>
-			<PopupWithForm
-				onClose={closePopup}
-				isOpen={isPopupOpen}
-				isFormSubmitted={isFormSubmitted}
-				setFormSubmitted={setFormSubmitted} />
-			<Footer />
-		</div>
+		<HelmetProvider>
+			<div className='font-serif text-base font-normal leading-5'>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>Awesome Container Company</title>
+					<meta name="description" content="Help our environment by eliminating single-use plastics from your delivery with Awesome Container Company" />
+					<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
+					<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
+				</Helmet>
+				<NavBar
+					onButtonClick={handleButtonClick}
+					isNavbarOpen={isNavbarOpen}
+					setIsNavbarOpen={setIsNavbarOpen}
+					screenWidth={screenWidth} />
+				<Hero chatMessages={chatMessages} onButtonClick={handleButtonClick} />
+				<main>
+					<BadEffects plasticsBadEffects={plasticsBadEffects} />
+					<SustainabilityDelivered features={features} />
+					<HowItWorks onButtonClick={handleButtonClick} />
+					<Impact impacts={impacts} />
+					<Competition />
+					<Sustainability />
+					<Pricing onButtonClick={handleButtonClick} />
+					<AwesomeTeam awesomeTeam={awesomeTeam} />
+					<AwesomePartners awesomePartners={awesomePartners} />
+				</main>
+				<PopupWithForm
+					onClose={closePopup}
+					isOpen={isPopupOpen}
+					isFormSubmitted={isFormSubmitted}
+					setFormSubmitted={setFormSubmitted} />
+				<Footer />
+			</div>
+		</HelmetProvider>
 	);
 }
 

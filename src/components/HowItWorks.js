@@ -52,7 +52,7 @@ function HowItWorks({onButtonClick}){
             </figure>
           </motion.div>
           <motion.div variants={howItWorksItemVariants} className="row-start-3 col-start-4 bg-[url('./images/how-it-works-arrow-23.svg')] bg-no-repeat 
-            bg-[center_top_80px] bg-[length:56px_56px] base:row-start-6 base:col-start-1 base:row-span-1 
+            bg-[center_top_80px] bg-[length:56px_56px] base:row-start-4 base:col-start-1 base:row-span-1 
             base:bg-[url('./images/how-it-works-down-arrow.svg')] base:bg-center base:bg-contain base:h-[33px]">
           </motion.div>
           <motion.div variants={howItWorksItemVariants} className="row-start-3 col-start-3 base:row-start-5 base:col-start-1 base:row-span-1">
@@ -64,7 +64,7 @@ function HowItWorks({onButtonClick}){
             </figure>
           </motion.div>
           <motion.div variants={howItWorksItemVariants} className="row-start-3 col-start-2 bg-[url('./images/how-it-works-arrow-34.svg')] bg-no-repeat 
-            bg-[center_top_80px] bg-[length:56px_56px] base:row-start-4 base:col-start-1 base:row-span-1 
+            bg-[center_top_80px] bg-[length:56px_56px] base:row-start-6 base:col-start-1 base:row-span-1 
             base:bg-[url('./images/how-it-works-down-arrow.svg')] base:bg-center base:bg-contain base:h-[33px]">
           </motion.div>
           <motion.div variants={howItWorksItemVariants} className="row-start-2 col-start-1 base:row-start-7 base:col-start-1 base:row-span-1">

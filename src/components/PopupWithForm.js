@@ -20,7 +20,7 @@ function PopupWithForm(props) {
 
   React.useEffect(() => {
     reset();
-  }, [isOpen]);
+  }, [isOpen, reset]);
 
   const onSubmit = (data) => {
     console.log(data);

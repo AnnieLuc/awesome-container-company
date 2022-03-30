@@ -16,7 +16,7 @@ import {
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-export function Chat({chatMessages}) {
+export function Chat({chatMessages, onButtonClick}) {
   const [messages, setMessages] = React.useState([]);
 
   useInterval(() => {
@@ -25,20 +25,35 @@ export function Chat({chatMessages}) {
     }
   }, 1500);
 
-  const renderChatBubble = (chat) => {
-    const { sender, color, message } = chat;
+  const renderChatMessage = (sender, color, message) => {
     const chatBubbleClass            = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
     const chatBubbleColorClass       = `chat-bubble-${color}`;
     return (
+      <div>
+        <span className={classnames(chatBubbleClass,chatBubbleColorClass)}>
+          {message}
+        </span>
+    </div>
+    );
+  }
+
+  const renderChatBubble = (chat) => {
+    const { sender, color, hasOnClickEvent, message } = chat;
+    const chatBubbleContainerClass = `flex flex-col space-y-2 text-sm leading-4 font-normal
+      max-w-[279px] mx-2 ${(sender === 'guest') ? `order-2 items-start` : `order-1 items-end`}`;
+
+    return (
       <div className={`flex items-end ${(sender === 'admin') && `justify-end`}`}>
-        <div className={`flex flex-col space-y-2 text-sm leading-4 font-normal
-        max-w-[279px] mx-2 ${(sender === 'guest') ? `order-2 items-start` : `order-1 items-end`}`}>
-          <div>
-            <span className={classnames(chatBubbleClass,chatBubbleColorClass)}>
-              {message}
-            </span>
-          </div>
-        </div>
+        {(hasOnClickEvent)
+          ? (
+          <button className={chatBubbleContainerClass} onClick={onButtonClick}>
+            {renderChatMessage(sender, color, message)}
+          </button>)
+          : (
+            <div className={chatBubbleContainerClass}>
+              {renderChatMessage(sender, color, message)}
+            </div>
+          )}
       </div>
     );
   }
