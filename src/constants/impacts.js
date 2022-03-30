@@ -1,5 +1,6 @@
 const impacts = [
   {
+    id: 1,
     cardHeader: "For Businesses",
     cardContent: [
       "Save at least 50% on supply cost",
@@ -9,6 +10,7 @@ const impacts = [
     ],
   },
   {
+    id: 2,
     cardHeader: "For Users",
     cardContent: [
       " Remove all chemicals going into food: plastics, BPA, PFAS and other 'forever chemicals' used to hold compostable packaging together",
