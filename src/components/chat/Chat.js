@@ -1,11 +1,12 @@
 import React                from 'react';
+import PropTypes  		      from 'prop-types';
 import classnames           from 'classnames';
 import {
   motion,
   AnimatePresence }         from 'framer-motion';
-import './Chat.css';
 import useInterval          from '../../hooks/useInterval';
 import { chatVariants }     from '../../utils/animationVariants';
+import './Chat.css';
 
 /**
  * The **Chat** component represents the chat between admin and guest.
@@ -93,5 +94,10 @@ export function Chat({chatMessages, onButtonClick}) {
     </AnimatePresence>
   );
 }
+
+Chat.propTypes = {
+  chatMessages:     PropTypes.array.isRequired,
+  onButtonClick:    PropTypes.func.isRequired,
+};
 
 export default Chat;

@@ -1,4 +1,5 @@
 import React                from 'react';
+import PropTypes  					from 'prop-types';
 import { motion }           from 'framer-motion';
 import SectionHeading       from './section-heading/SectionHeading';
 import Button               from './button/Button';
@@ -92,5 +93,9 @@ function HowItWorks({onButtonClick}){
     </motion.section>
   );
 }
+
+HowItWorks.propTypes = {
+  onButtonClick:   PropTypes.func.isRequired,
+};
 
 export default HowItWorks;

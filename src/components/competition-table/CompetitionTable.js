@@ -1,10 +1,8 @@
-import React      from 'react';
-import { motion } from 'framer-motion';
-import Logo       from '../Logo';
+import React                        from 'react';
+import { motion }                   from 'framer-motion';
+import Logo                         from '../Logo';
+import { tableBulletVariants }      from '../../utils/animationVariants';
 import './CompetitionTable.css';
-import {
-  tableBulletVariants
-}                 from '../../utils/animationVariants';
 /**
  * The **CompetitionTable** component lays out the comparison between the company and its competitors.
  *

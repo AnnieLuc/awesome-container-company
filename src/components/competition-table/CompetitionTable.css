@@ -1,3 +1,4 @@
+/* CSS Styles for CompetitionTable Component */
 .table {
   @apply w-full min-h-[656px] bg-gridLine shadow rounded-[3px] grid grid-cols-6 auto-rows-fr 
     gap-px base:w-[984px] base:max-h-[790px];

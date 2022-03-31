@@ -67,6 +67,7 @@ function Hero({chatMessages, onButtonClick}) {
 
 Hero.propTypes = {
   chatMessages:    PropTypes.array.isRequired,
+  onButtonClick:   PropTypes.func.isRequired,
 };
 
 export default Hero;

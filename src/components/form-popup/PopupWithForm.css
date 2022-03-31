@@ -1,31 +1,32 @@
+/* CSS Styles for PopupWithForm Component */
 .button-invalid {
     @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 opacity-50 transition-all text-secondary-100 text-lg leading-7 md:px-[15px] md:py-[10px] md:text-base;
   }
-  
-  .button-form {
-    @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
-  }
-  
-  .form-popup {
-    @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500;
-  }
-  
-  .form-open {
-    @apply opacity-100 z-[10000];
-  }
-  
-  .form-close {
-    @apply w-[16.5px] h-[16.5px] bg-[url('../../images/form-close.svg')] bg-no-repeat bg-center bg-contain border-none relative top-[24px] right-[-640px] cursor-pointer base:right-[-610px] base:top-[15px] md:right-[-500px] md:top-[4px];
-  }
-  
-  .labels {
-    @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px] md:mb-[30px] md:w-[490px];
-  }
-  
-  .labels-invalid {
-    @apply border-[1px] border-[#E30613] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px];
-  }
-  
-  .inputs {
-    @apply border-transparent outline-none w-full break-words;
-  }
+
+.button-form {
+  @apply py-[16px] px-[30px] rounded-[3px] bg-highlight-100 hover:bg-highlight-200 transition-all text-secondary-100 text-lg leading-7;
+}
+
+.form-popup {
+  @apply opacity-0 flex justify-center items-center fixed inset-0 bg-black bg-opacity-60 z-[-1000] ease-in-out duration-500;
+}
+
+.form-open {
+  @apply opacity-100 z-[10000];
+}
+
+.form-close {
+  @apply w-[16.5px] h-[16.5px] bg-[url('../../images/form-close.svg')] bg-no-repeat bg-center bg-contain border-none relative top-[24px] right-[-640px] cursor-pointer base:right-[-610px] base:top-[15px] md:right-[-500px] md:top-[4px];
+}
+
+.labels {
+  @apply border-[1px] border-[#1c383c] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px] md:mb-[30px] md:w-[490px];
+}
+
+.labels-invalid {
+  @apply border-[1px] border-[#E30613] w-[600px] rounded-[3px] mb-[40px] p-[20px] pt-[18px];
+}
+
+.inputs {
+  @apply border-transparent outline-none w-full break-words;
+}

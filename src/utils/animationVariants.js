@@ -88,7 +88,7 @@ export const textVariants = {
 export const chatVariants = {
   offscreen: {
     opacity: 0,
-    y: 300,
+    y: 100,
   },
   onscreen: {
     opacity: 1,

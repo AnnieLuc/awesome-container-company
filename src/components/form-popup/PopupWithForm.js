@@ -19,15 +19,6 @@ function PopupWithForm(props) {
     formState: { isValid, errors },
   } = useForm({ mode: "onChange", });
 
-  React.useEffect(() => {
-    reset();
-  }, [isOpen, reset]);
-
-  React.useEffect(() => {
-    const timer = setTimeout(onClose, 8000);
-    return () => clearTimeout(timer);
-  }, [isFormSubmitted]);
-
   const onSubmit = (data) => {
     console.log(data);
     axios.post('/email', data);
@@ -35,13 +26,19 @@ function PopupWithForm(props) {
   };
 
   React.useEffect(() => {
+    reset();
+  }, [isOpen, reset]);
+
+  React.useEffect(() => {
+    let timer;
     if (isFormSubmitted) {
-      setTimeout(() => {
+    timer = setTimeout(() => {
         setFormSubmitted(true);
         onClose();
       }, 8000);
     }
-  }, [isFormSubmitted]);
+    return () => clearTimeout(timer);
+  }, [isFormSubmitted, onClose, setFormSubmitted]);
 
   return (
     <section className={`form-popup ${isOpen ? "form-open" : ""}`}>
@@ -148,8 +145,10 @@ function PopupWithForm(props) {
 }
 
 PopupWithForm.propTypes = {
-	isOpen:		PropTypes.bool.isRequired,
-  onClose:  PropTypes.func.isRequired,
+	isOpen:		          PropTypes.bool.isRequired,
+  onClose:            PropTypes.func.isRequired,
+  isFormSubmitted:    PropTypes.bool.isRequired,
+  setFormSubmitted:   PropTypes.func.isRequired,
 };
 
 export default PopupWithForm;

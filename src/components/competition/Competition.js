@@ -1,9 +1,9 @@
 import React                from 'react';
 import { motion }           from 'framer-motion';
-import './Competition.css';
 import SectionHeading       from '../section-heading/SectionHeading';
 import CompetitionTable     from '../competition-table/CompetitionTable';
 import { sectionVariants }  from '../../utils/animationVariants';
+import './Competition.css';
 
 /**
  * The **Competition** component represents the competition details of the company.
