@@ -42,7 +42,7 @@ function PopupWithForm(props) {
     <section className={`form-popup ${isOpen ? "form-open" : ""}`}>
       {!isFormSubmitted && (
         <form
-          className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm base:w-[680px] base:px-[40px] base:h-[750px] md:w-[550px] md:px-[30px] md:h-[670px]"
+          className="form-container"
           noValidate
           method="POST"
           onSubmit={handleSubmit(onSubmit)}
@@ -52,7 +52,7 @@ function PopupWithForm(props) {
             onClick={onClose}
             className="form-close"
           ></button>
-          <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px] base:pt-[20px] md:text-base md:pt-[0] md:pb-[30px]">
+          <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px] base:pt-[20px] md:text-base md:pt-[0] md:pb-[30px] sm:text-sm sm:leading-5 sm:text-center sm:pb-[10px] sm:pt-[10px]">
             Leave your contact and request, and out manager will reach out to
             you to establish our further partnership!
           </h2>
@@ -105,11 +105,11 @@ function PopupWithForm(props) {
             <div className="text-sm pb-[11px] text-primary">
               Your request/interest
             </div>
-            <label name="message" className="labels h-[180px]">
+            <label name="message" className="textarea-label">
               <textarea
                 name="message"
                 type="text"
-                className="inputs h-[140px] resize-none"
+                className="textarea"
                 {...register("message", {
                   required: false,
                 })}
@@ -127,13 +127,13 @@ function PopupWithForm(props) {
         </form>
       )}
       {isFormSubmitted && (
-        <form className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm flex">
+        <form className="form-thankyou">
           <button
             type="button"
             onClick={onClose}
             className="form-close"
           ></button>
-          <h2 className="text-lg m-auto">
+          <h2 className="text-lg m-auto text-center">
             Thanks! We will get in touch with you soon!
           </h2>
         </form>
