@@ -39,7 +39,6 @@ function Carousel({features}) {
             {renderListItems(sizing)}
           </ul>
         </div>
-
       </article>
     );
 

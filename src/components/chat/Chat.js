@@ -1,14 +1,11 @@
-import React          from 'react';
-import classnames     from 'classnames';
+import React                from 'react';
+import classnames           from 'classnames';
 import {
   motion,
-  AnimatePresence
-}                     from 'framer-motion';
+  AnimatePresence }         from 'framer-motion';
 import './Chat.css';
-import useInterval    from '../../hooks/useInterval';
-import {
-  chatVariants
-}                     from '../../utils/animationVariants';
+import useInterval          from '../../hooks/useInterval';
+import { chatVariants }     from '../../utils/animationVariants';
 
 /**
  * The **Chat** component represents the chat between admin and guest.
@@ -26,8 +23,8 @@ export function Chat({chatMessages, onButtonClick}) {
   }, 1500);
 
   const renderChatMessage = (sender, color, message) => {
-    const chatBubbleClass            = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
-    const chatBubbleColorClass       = `chat-bubble-${color}`;
+    const chatBubbleClass        = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
+    const chatBubbleColorClass   = `chat-bubble-${color}`;
     return (
       <div>
         <span className={classnames(chatBubbleClass,chatBubbleColorClass)}>
@@ -70,7 +67,7 @@ export function Chat({chatMessages, onButtonClick}) {
               variants={chatVariants}
               layout>
                 <div className="w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')]
-                bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
+                  bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
                 <article className="chat-message">
                   {renderChatBubble(chat)}
                 </article>
