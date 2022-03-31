@@ -13,7 +13,7 @@ import Pricing                   				from './Pricing';
 import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
-import PopupWithForm 										from './PopupWithForm';
+import PopupWithForm 										from './form-popup/PopupWithForm';
 import PageLoad													from './PageLoad';
 
 

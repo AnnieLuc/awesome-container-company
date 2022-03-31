@@ -2,6 +2,7 @@ import React              from 'react';
 import PropTypes          from 'prop-types';
 import { useForm }        from 'react-hook-form';
 import axios              from 'axios';
+import "./PopupWithForm.css";
 
 function PopupWithForm(props) {
   const {
@@ -33,11 +34,20 @@ function PopupWithForm(props) {
     setFormSubmitted(true);
   };
 
+  React.useEffect(() => {
+    if (isFormSubmitted) {
+      setTimeout(() => {
+        setFormSubmitted(true);
+        onClose();
+      }, 8000);
+    }
+  }, [isFormSubmitted]);
+
   return (
     <section className={`form-popup ${isOpen ? "form-open" : ""}`}>
       {!isFormSubmitted && (
         <form
-          className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm"
+          className="w-[760px] h-[778px] bg-white px-[80px] rounded-[3px] shadow-sm base:w-[680px] base:px-[40px] base:h-[750px] md:w-[550px] md:px-[30px] md:h-[670px]"
           noValidate
           method="POST"
           onSubmit={handleSubmit(onSubmit)}
@@ -47,11 +57,11 @@ function PopupWithForm(props) {
             onClick={onClose}
             className="form-close"
           ></button>
-          <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px]">
+          <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px] base:pt-[20px] md:text-base md:pt-[0] md:pb-[30px]">
             Leave your contact and request, and out manager will reach out to
             you to establish our further partnership!
           </h2>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-[600px]">
             <div
               className={`text-sm pb-[11px] ${
                 errors.name ? "text-[#E30613]" : "text-primary"
