@@ -22,6 +22,11 @@ function PopupWithForm(props) {
     reset();
   }, [isOpen, reset]);
 
+  React.useEffect(() => {
+    const timer = setTimeout(onClose, 8000);
+    return () => clearTimeout(timer);
+  }, [isFormSubmitted]);
+
   const onSubmit = (data) => {
     console.log(data);
     axios.post('/email', data);
