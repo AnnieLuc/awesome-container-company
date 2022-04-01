@@ -1,6 +1,7 @@
 import React                            from 'react';
 import { Helmet, HelmetProvider } 			from 'react-helmet-async';
 import { AnimatePresence }  						from 'framer-motion';
+import PageLoad													from './PageLoad';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
@@ -14,16 +15,10 @@ import AwesomeTeam                      from './AwesomeTeam';
 import AwesomePartners                  from './AwesomePartners';
 import Footer                           from './Footer';
 import PopupWithForm 										from './form-popup/PopupWithForm';
-import PageLoad													from './PageLoad';
 
 
-// Import constants
-import awesomePartners 									from '../constants/awesome-partners';
-import awesomeTeam 											from '../constants/awesome-team';
-import plasticsBadEffects 							from '../constants/plastics-bad-effects';
-import features       									from '../constants/features';
-import impacts              						from '../constants/impacts';
-import chatMessages         						from '../constants/chat-messages';
+// Import data to pass on to the components
+import data     												from '../constants/data';
 
 /**
  * The main React **App** component.
@@ -40,6 +35,18 @@ function App() {
 	const [screenWidth, setScreenWidth] 				= React.useState(window.innerWidth);
 	const [isFormSubmitted, setFormSubmitted] 	= React.useState(false);
 
+	const {
+		pageLoad,
+		hero,
+		plasticsBadEffects,
+		sustainabilityDeliveredSlides,
+		howItWorks,
+		impacts,
+		competition,
+		awesomeTeam,
+		awesomePartners,
+	} = data;
+
 	const closePopup = () => {
 		setPopupOpen(false);
 		setFormSubmitted(false);
@@ -48,6 +55,10 @@ function App() {
 	const handleButtonClick = () => {
 		setPopupOpen(true);
 	};
+
+	// ********************************************************************************************* //
+	//                        			Handle initial page load						                             //
+	// ********************************************************************************************* //
 
 	React.useEffect(() => {
 		const timer = setTimeout(() => {
@@ -73,6 +84,10 @@ function App() {
 				setIsNavbarOpen(true);
 			}
 	}, [screenWidth]);
+
+	// ********************************************************************************************* //
+	//                        Handle mouse click or Esc key down event                               //
+	// ********************************************************************************************* //
 
 	React.useEffect(() => {
 		const closeByClick = e => {
@@ -109,36 +124,35 @@ function App() {
 					<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
 					<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
 				</Helmet>
-				{/* <PageLoad /> */}
 				<AnimatePresence>
-				{(isPageLoading)
-				? <PageLoad key="loading" />
-				:
-				<>
-					<NavBar
-						onButtonClick={handleButtonClick}
-						isNavbarOpen={isNavbarOpen}
-						setIsNavbarOpen={setIsNavbarOpen}
-						screenWidth={screenWidth} />
-					<Hero chatMessages={chatMessages} onButtonClick={handleButtonClick} />
-					<main>
-						<BadEffects plasticsBadEffects={plasticsBadEffects} />
-						<SustainabilityDelivered features={features} />
-						<HowItWorks onButtonClick={handleButtonClick} />
-						<Impact impacts={impacts} />
-						<Competition />
-						<Sustainability />
-						<Pricing onButtonClick={handleButtonClick} />
-						<AwesomeTeam awesomeTeam={awesomeTeam} />
-						<AwesomePartners awesomePartners={awesomePartners} />
-					</main>
-					<PopupWithForm
-						onClose={closePopup}
-						isOpen={isPopupOpen}
-						isFormSubmitted={isFormSubmitted}
-						setFormSubmitted={setFormSubmitted} />
-					<Footer />
-				</>}
+					{(isPageLoading)
+					? <PageLoad key="loading" data={pageLoad} />
+					:
+					<>
+						<NavBar
+							onButtonClick={handleButtonClick}
+							isNavbarOpen={isNavbarOpen}
+							setIsNavbarOpen={setIsNavbarOpen}
+							screenWidth={screenWidth} />
+						<Hero data={hero} onButtonClick={handleButtonClick} />
+						<main>
+							<BadEffects data={plasticsBadEffects} />
+							<SustainabilityDelivered data={sustainabilityDeliveredSlides} />
+							<HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
+							<Impact data={impacts} />
+							<Competition data={competition} />
+							<Sustainability />
+							<Pricing onButtonClick={handleButtonClick} />
+							<AwesomeTeam data={awesomeTeam} />
+							<AwesomePartners data={awesomePartners} />
+						</main>
+						<PopupWithForm
+							onClose={closePopup}
+							isOpen={isPopupOpen}
+							isFormSubmitted={isFormSubmitted}
+							setFormSubmitted={setFormSubmitted} />
+						<Footer />
+					</>}
 				</AnimatePresence>
 			</div>
 		</HelmetProvider>

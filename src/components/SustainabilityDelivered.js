@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { motion } from "framer-motion";
-import SectionHeading from "./section-heading/SectionHeading";
-import SectionPara from "./section-para/SectionPara";
-import Carousel from "./carousel/Carousel";
+import React                    from "react";
+import PropTypes                from "prop-types";
+import { motion }               from "framer-motion";
+import SectionHeading           from "./section-heading/SectionHeading";
+import SectionPara              from "./section-para/SectionPara";
+import Carousel                 from "./carousel/Carousel";
 import {
   sectionVariants,
   sustainabilityIconVariants,
@@ -18,7 +18,7 @@ import saveStorageImage from "../images/save-storage.png";
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SustainabilityDelivered({ features }) {
+function SustainabilityDelivered({ data }) {
   // Classes for JSX Elements
   const sustainabilityDelSectionContainerClass = `mx-auto py-[120px] px-[50px] max-w-[1440px] lg:px-[30px] sm:py-[80px] sm:px-[16px] xs:pt-[40px]`;
   const imgContainerClass = `w-full max-w-[152.73px]`;
@@ -49,7 +49,7 @@ function SustainabilityDelivered({ features }) {
             </SectionPara>
           </div>
         </div>
-        <Carousel features={features} />
+        <Carousel slides={data} />
         <div className="mt-[100px] px-[100px] lg:px-[40px] md:mt-[150px] sm:px-[10px]">
           <div className="flex md:justify-center">
             <div className="flex flex-col items-center md:max-w-[380px]">
@@ -117,7 +117,7 @@ function SustainabilityDelivered({ features }) {
 }
 
 SustainabilityDelivered.propTypes = {
-  features: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default SustainabilityDelivered;

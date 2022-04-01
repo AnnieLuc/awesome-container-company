@@ -1,5 +1,4 @@
 import React          from 'react';
-import PropTypes  	  from 'prop-types';
 import accLogo        from '../images/logo.svg';
 import accLogoTilted  from '../images/logoTilted.svg';
 
@@ -9,20 +8,11 @@ import accLogoTilted  from '../images/logoTilted.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Logo({isHeader}){
+function Logo(){
   const [logoImage, setLogoImage] = React.useState(accLogo);
 
-  const handleMouseEnter = () => {
-    if(isHeader){
-      setLogoImage(accLogoTilted);
-    }
-  }
-
-  const handleMouseLeave = () => {
-    if(isHeader){
-      setLogoImage(accLogo);
-    }
-  }
+  const handleMouseEnter = () => setLogoImage(accLogoTilted);
+  const handleMouseLeave = () => setLogoImage(accLogo);
 
   return (
     <div className="max-w-[92px] sm:max-w-[60px]">
@@ -35,9 +25,5 @@ function Logo({isHeader}){
     </div>
   );
 }
-
-Logo.propTypes = {
-  isHeader:    PropTypes.bool.isRequired,
-};
 
 export default Logo;

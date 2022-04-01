@@ -54,11 +54,11 @@ function PopupWithForm(props) {
             onClick={onClose}
             className="form-close"
           ></button>
-          <h2 className="text-lg text-primary pt-[40.5px] leading-8 pb-[50px] base:pt-[20px] md:text-base md:pt-[0] md:pb-[30px] sm:text-sm sm:leading-5 sm:text-center sm:pb-[10px] sm:pt-[10px]">
+          <h2 className="text-lg text-primary pt-[20px] leading-8 pb-[50px] base:pb-[30px] md:text-base md:pt-[0] sm:text-sm sm:leading-5 sm:text-center sm:pb-[10px] sm:pt-[10px]">
             Leave your contact and request, and out manager will reach out to
             you to establish our further partnership!
           </h2>
-          <div className="flex flex-col w-[600px]">
+          <div className="flex flex-col max-w-[600px]">
             <div
               className={`text-sm pb-[11px] ${
                 errors.name ? "text-[#E30613]" : "text-primary"
@@ -135,7 +135,7 @@ function PopupWithForm(props) {
             onClick={onClose}
             className="form-close"
           ></button>
-          <h2 className="text-lg m-auto text-center">
+          <h2 className="text-lg leading-[32px] m-auto text-center sm:text-base sm:leading-7">
             Thanks! We will get in touch with you soon!
           </h2>
         </form>

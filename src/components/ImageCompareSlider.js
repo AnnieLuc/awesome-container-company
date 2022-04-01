@@ -1,10 +1,9 @@
 import React            from 'react';
+import PropTypes  		  from 'prop-types';
 import {
   ReactCompareSlider,
   ReactCompareSliderImage
 }                       from 'react-compare-slider';
-import foodInContainer  from '../images/food-with-awesome-container.png';
-import foodWaste        from '../images/food-waste.png';
 
 /**
  * The **ImageCompareSlider** component represents a slider to compare two images.
@@ -12,7 +11,8 @@ import foodWaste        from '../images/food-waste.png';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function ImageCompareSlider() {
+function ImageCompareSlider({ imagesToCompare }) {
+  const { firstImg, secondImg } = imagesToCompare;
 
   // Classes for JSX Elements
   const imageCompareSliderHandleClass = `h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2
@@ -36,11 +36,15 @@ function ImageCompareSlider() {
       <ReactCompareSlider
         className={imageCompareSliderClass}
         handle={renderHandle()}
-        itemOne={<ReactCompareSliderImage src={foodWaste} style={{ maxHeight: "369px"}} alt="Food Waste" />}
-        itemTwo={<ReactCompareSliderImage src={foodInContainer} style={{ maxHeight: "369px"}} alt="Food in container" />}
+        itemOne={<ReactCompareSliderImage src={firstImg.url} style={{ maxHeight: "369px"}} alt={firstImg.description} />}
+        itemTwo={<ReactCompareSliderImage src={secondImg.url} style={{ maxHeight: "369px"}} alt={secondImg.description} />}
       />
     </div>
   );
 }
+
+ImageCompareSlider.propTypes = {
+  imagesToCompare:    PropTypes.object.isRequired,
+};
 
 export default ImageCompareSlider;

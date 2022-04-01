@@ -1,4 +1,5 @@
 import React                        from 'react';
+import PropTypes  					        from 'prop-types';
 import { motion }                   from 'framer-motion';
 import accLogo                      from '../images/logo.svg';
 import {
@@ -6,7 +7,8 @@ import {
   pageLoadLogoVariants,
   textVariants }                    from '../utils/animationVariants';
 
-function PageLoad(){
+function PageLoad({data}){
+  const { companyName } = data;
 
   return (
       <motion.div
@@ -30,10 +32,14 @@ function PageLoad(){
           exit={{x: "-10%", opacity: 0, transition: { duration: 0.8 }}}
           className="text-xl font-normal leading-9 text-highlight-100 text-center
           md:text-[42px] md:leading-[48px] sm:text-[28px] sm:leading-[34px] ">
-            Awesome Container Company
+            {companyName}
         </motion.h1>
     </motion.div>
   );
 }
+
+PageLoad.propTypes = {
+  data:  PropTypes.object.isRequired,
+};
 
 export default PageLoad;
