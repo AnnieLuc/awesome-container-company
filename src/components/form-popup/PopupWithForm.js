@@ -53,6 +53,7 @@ function PopupWithForm(props) {
             type="button"
             onClick={onClose}
             className="form-close"
+            aria-label="close form"
           ></button>
           <h2 className="text-lg text-primary pt-[20px] leading-8 pb-[50px] base:pb-[30px] md:text-base md:pt-[0] sm:text-sm sm:leading-5 sm:text-center sm:pb-[10px] sm:pt-[10px]">
             Leave your contact and request, and out manager will reach out to
@@ -76,6 +77,7 @@ function PopupWithForm(props) {
             >
               <input
                 type="text"
+                aria-label="Personal or company name"
                 className="inputs"
                 name="entry.1377521493"
                 {...register("name", { required: true })}
@@ -96,6 +98,7 @@ function PopupWithForm(props) {
             >
               <input
                 type="email"
+                aria-label="Email"
                 className="inputs"
                 name="entry.1586441139"
                 {...register("email", {
@@ -109,6 +112,7 @@ function PopupWithForm(props) {
             </div>
             <label name="message" className="textarea-label">
               <textarea
+                aria-label="Your request or interest"
                 name="message"
                 type="text"
                 className="textarea"
@@ -123,6 +127,7 @@ function PopupWithForm(props) {
             type="submit"
             className={`${!isValid ? "button-invalid" : "button-form"}`}
             disabled={!isValid}
+            aria-label="submit form"
           >
             Send
           </button>
@@ -134,6 +139,7 @@ function PopupWithForm(props) {
             type="button"
             onClick={onClose}
             className="form-close"
+            aria-label="close form"
           ></button>
           <h2 className="text-lg leading-[32px] m-auto text-center sm:text-base sm:leading-7">
             Thanks! We will get in touch with you soon!

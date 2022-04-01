@@ -19,6 +19,7 @@ function Competition({data}) {
     <motion.section
       id="competition"
       className=" bg-secondary-200"
+      aria-label="competition"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"

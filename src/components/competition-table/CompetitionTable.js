@@ -65,7 +65,7 @@ function CompetitionTable({table}) {
   }
 
   return (
-    <article className="table">
+    <article className="table" aria-label="competition table">
       {renderTable()}
     </article>
   );
