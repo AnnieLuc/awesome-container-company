@@ -1,24 +1,28 @@
-import React                            from 'react';
+import React, { lazy, Suspense }        from 'react';
 import { Helmet, HelmetProvider } 			from 'react-helmet-async';
 import { AnimatePresence }  						from 'framer-motion';
 import PageLoad													from './PageLoad';
+import Loader   												from './Loader';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
-import SustainabilityDelivered   				from './SustainabilityDelivered';
-import HowItWorks 											from './HowItWorks';
-import Impact														from './Impact';
-import Competition			                from './competition/Competition';
-import Sustainability            				from './Sustainability';
-import Pricing                   				from './Pricing';
-import AwesomeTeam                      from './AwesomeTeam';
-import AwesomePartners                  from './AwesomePartners';
-import Footer                           from './Footer';
-import PopupWithForm 										from './form-popup/PopupWithForm';
-
 
 // Import data to pass on to the components
 import data     												from '../constants/data';
+
+// Code-split on a component level using dynamic imports
+const SustainabilityDelivered 		= lazy(() => import('./SustainabilityDelivered'));  				;
+const HowItWorks 									= lazy(() => import('./HowItWorks'));
+const Impact 											= lazy(() => import('./Impact'));
+const Competition 								= lazy(() => import('./competition/Competition'));
+const Sustainability 							= lazy(() => import('./Sustainability'));
+const Pricing 										= lazy(() => import('./Pricing'));
+const AwesomeTeam 								= lazy(() => import( './AwesomeTeam'));
+const AwesomePartners 						= lazy(() => import('./AwesomePartners'));
+const Footer 											= lazy(() => import('./Footer'));
+const PopupWithForm 							= lazy(() => import('./form-popup/PopupWithForm'));
+
+const renderLoader = () => <Loader />;
 
 /**
  * The main React **App** component.
@@ -137,21 +141,25 @@ function App() {
 						<Hero data={hero} onButtonClick={handleButtonClick} />
 						<main>
 							<BadEffects data={plasticsBadEffects} />
-							<SustainabilityDelivered data={sustainabilityDeliveredSlides} />
-							<HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
-							<Impact data={impacts} />
-							<Competition data={competition} />
-							<Sustainability />
-							<Pricing onButtonClick={handleButtonClick} />
-							<AwesomeTeam data={awesomeTeam} />
-							<AwesomePartners data={awesomePartners} />
+							<Suspense fallback={renderLoader()}>
+								<SustainabilityDelivered data={sustainabilityDeliveredSlides} />
+								<HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
+								<Impact data={impacts} />
+								<Competition data={competition} />
+								<Sustainability />
+								<Pricing onButtonClick={handleButtonClick} />
+								<AwesomeTeam data={awesomeTeam} />
+								<AwesomePartners data={awesomePartners} />
+							</Suspense>
 						</main>
-						<PopupWithForm
-							onClose={closePopup}
-							isOpen={isPopupOpen}
-							isFormSubmitted={isFormSubmitted}
-							setFormSubmitted={setFormSubmitted} />
-						<Footer />
+						<Suspense fallback={renderLoader()}>
+							<PopupWithForm
+								onClose={closePopup}
+								isOpen={isPopupOpen}
+								isFormSubmitted={isFormSubmitted}
+								setFormSubmitted={setFormSubmitted} />
+							<Footer />
+						</Suspense>
 					</>}
 				</AnimatePresence>
 			</div>
