@@ -11,10 +11,12 @@ import linkedInImg 					from '../images/social-links/linkedin.svg';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomeTeam({awesomeTeam}) {
+function AwesomeTeam({data}) {
+	const { title, members } = data;
+
 	const renderImages = () => {
 		// Function to render the images of team members
-		return awesomeTeam.map(({ name, title, linkedIn, image }, index) => {
+		return members.map(({ name, title, linkedIn, image }, index) => {
 			return (
 				<figure className="max-w-[146px]" key={index}>
 					<img src={image} alt={image} className="object-cover" />
@@ -39,7 +41,7 @@ function AwesomeTeam({awesomeTeam}) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
       <SectionHeading align="center" color="primary">
-        An Awesome Team
+        {title}
       </SectionHeading>
 			<div className="mx-auto pt-[80px] max-w-[746px] md:pt-[44px]">
 				<div className="w-full flex justify-between md:flex-col md:items-center md:gap-y-[44px]">
@@ -51,7 +53,7 @@ function AwesomeTeam({awesomeTeam}) {
 }
 
 AwesomeTeam.propTypes = {
-  awesomeTeam:    PropTypes.array.isRequired,
+  data:    PropTypes.object.isRequired,
 };
 
 export default AwesomeTeam;

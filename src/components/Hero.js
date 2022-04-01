@@ -13,7 +13,8 @@ import {
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Hero({chatMessages, onButtonClick}) {
+function Hero({data, onButtonClick}) {
+  const { mainText, companyName, imagesToCompare, chatMessages } = data;
 
   // Classes for JSX Elements
   const heroSectionContainerClass = `mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col 
@@ -36,17 +37,17 @@ function Hero({chatMessages, onButtonClick}) {
       <div className={heroSectionContainerClass}>
         <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
           <h1 className={heroSectionHeadingClass}>
-            Help our environment by eliminating single-use plastics from your delivery with {' '}
+            {mainText} {' '}
             <motion.span
               variants={textVariants}
               initial="offscreen"
               animate="onscreen"
-              className="text-highlight-100 inline-block">Awesome Container Company</motion.span>
+              className="text-highlight-100 inline-block">{companyName}</motion.span>
           </h1>
         </div>
         <div className={heroSectionContentClass}>
           <div className={imageSliderContainerClass}>
-            <ImageCompareSlider />
+            <ImageCompareSlider imagesToCompare={imagesToCompare} />
             <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
                 <p>Now</p>
                 <p>With Awesome Containers</p>
@@ -66,7 +67,7 @@ function Hero({chatMessages, onButtonClick}) {
 }
 
 Hero.propTypes = {
-  chatMessages:    PropTypes.array.isRequired,
+  data:            PropTypes.object.isRequired,
   onButtonClick:   PropTypes.func.isRequired,
 };
 

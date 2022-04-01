@@ -10,7 +10,8 @@ import { sectionVariants }  from '../utils/animationVariants';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomePartners({awesomePartners}) {
+function AwesomePartners({data}) {
+	const { title, logos } = data;
 
 	// Classes for JSX Elements
 	const partnerImageClass 										= `object-contain flex items-center justify-between object-center`;
@@ -19,9 +20,9 @@ function AwesomePartners({awesomePartners}) {
 		flex items-center flex-col md:pt-[40px] md:pb-[60px]`;
 
 	// Function to render the images of partners
-	const renderImage = ({ image }, index) => {
+	const renderImage = ({ url }, index) => {
 		return (
-			<img key={index} src={image} alt="partner" className={partnerImageClass} />
+			<img key={index} src={url} alt="partner" className={partnerImageClass} />
 		);
 	};
 
@@ -34,14 +35,14 @@ function AwesomePartners({awesomePartners}) {
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2}}>
 			<SectionHeading align="center" color="primary">
-				And Awesome Partners
+				{title}
 			</SectionHeading>
 			<div className={awesomePartnersSectionContainerClass}>
 				<div className="flex justify-between w-full md:flex-col md:max-w-[200px] md:gap-y-[40px]">
-					{awesomePartners.filter((_, index) => index < 3).map(renderImage)}
+					{logos.filter((_, index) => index < 3).map(renderImage)}
 				</div>
 				<div className="flex justify-between w-[56%] md:w-auto md:flex-col md:max-w-[200px] md:gap-y-[40px]">
-					{awesomePartners
+					{logos
 						.filter((_, index) => index >= 3)
 						.map(renderImage)}
 				</div>
@@ -51,7 +52,7 @@ function AwesomePartners({awesomePartners}) {
 }
 
 AwesomePartners.propTypes = {
-  awesomePartners:    PropTypes.array.isRequired,
+  data:    PropTypes.object.isRequired,
 };
 
 export default AwesomePartners;

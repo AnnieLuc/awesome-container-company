@@ -47,7 +47,7 @@ function NavBar(props) {
       <div className={navSectionContainerClass}>
         <div className="w-auto relative flex justify-start base:justify-between base:items-center">
           <Link className={logoLinkContainerClass} onClick={handleLinkClick} to="hero" spy={true} smooth={true} offset={-70} duration={500}>
-            <Logo isHeader={true} />
+            <Logo />
             <p className="ml-[5px] sm:ml-[8px]">Awesome Container Company</p>
           </Link>
           <div className="flex gap-x-[30px]">

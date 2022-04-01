@@ -8,7 +8,7 @@ import './Carousel.css';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Carousel({features}) {
+function Carousel({slides}) {
   const renderListItems = (list) => (
     list.map((item, index) => (
       <li key={index} className="flex items-center gap-x-[10px]">
@@ -44,15 +44,15 @@ function Carousel({features}) {
 
   }
 
-  const renderSlides = () => (
-      features.map((slide, index) => {
+  const renderSlides = (slides) => (
+    slides.map((slide, index) => {
         // Return visible slide
         if (index === 0) {
           return (
             <div key={slide.id} className="carousel-item active float-left w-full">
               {renderCarouselSlide(slide)}
               <p className="hidden sm:block text-primary text-sm leading-[20px] absolute bottom-[-55px] left-[45%]">
-                {`${index + 1}/${features.length}`}
+                {`${index + 1}/${slides.length}`}
               </p>
             </div>
           );
@@ -63,7 +63,7 @@ function Carousel({features}) {
           <div key={slide.id} className="carousel-item float-left w-full">
             {renderCarouselSlide(slide)}
             <p className="hidden sm:block text-primary text-sm leading-[20px] absolute bottom-[-55px] left-[45%]">
-              {`${index + 1}/${features.length}`}
+              {`${index + 1}/${slides.length}`}
             </p>
           </div>
         );
@@ -74,7 +74,7 @@ function Carousel({features}) {
     <div id="carouselExampleControls" className="max-w-[1212px] mx-auto carousel slide relative shadow 
     rounded-[3px] xl:max-w-[928px] lg:max-w-[828px] md:max-w-[555px] sm:max-w-[355px]" data-bs-ride="carousel">
       <div className="carousel-inner w-full overflow-hidden">
-        {renderSlides(features)}
+        {renderSlides(slides)}
       </div>
       <button
         className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center 
@@ -103,7 +103,7 @@ function Carousel({features}) {
 }
 
 Carousel.propTypes = {
-  features:    PropTypes.array.isRequired,
+  slides:    PropTypes.array.isRequired,
 };
 
 export default Carousel;
