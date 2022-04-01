@@ -64,7 +64,7 @@ export const sectionVariants = {
     transition: {
       type: "spring",
       delay: 0.2,
-      duration: 3,
+      duration: 2,
     },
   },
 };
