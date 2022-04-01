@@ -20,6 +20,9 @@
 ## About the Project
 A landing page for Awesome Container Company (ACC), whose mission is to eliminate plastic and single use packaging in the food and beverage industry. For restaurants offering takeout, ACC offers recurring delivery of clean, reusable metal containers and pickup of used containers from customers, cutting packaging costs by 50% and eliminating millions of tons of single-use packaging.
 
+https://user-images.githubusercontent.com/27571141/161324457-fe6f0d73-9ab3-4fa9-9e87-1465ea2750cf.mp4
+
+
 ## Features
 1. A responsive webpage that brings about the motto of the company and encourages the visitors to give the service a try.
 2. The page has a beautiful chat animation to mimic the general enquiry conversation between the guest and the company.
