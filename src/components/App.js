@@ -1,26 +1,26 @@
-import React, { lazy, Suspense }        from 'react';
-import { Helmet, HelmetProvider } 			from 'react-helmet-async';
-import { AnimatePresence }  						from 'framer-motion';
-import PageLoad													from './PageLoad';
-import Loader   												from './Loader';
-import NavBar                           from './NavBar';
-import Hero                      				from './Hero';
-import BadEffects                				from './BadEffects';
+import React, { lazy, Suspense } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { AnimatePresence } from 'framer-motion';
+import PageLoad from './PageLoad';
+import Loader from './Loader';
+import NavBar from './NavBar';
+import Hero from './Hero';
+import BadEffects from './BadEffects';
 
 // Import data to pass on to the components
-import data     												from '../constants/data';
+import data from '../constants/data';
 
 // Code-split on a component level using dynamic imports
-const SustainabilityDelivered 		= lazy(() => import('./SustainabilityDelivered'));  				;
-const HowItWorks 									= lazy(() => import('./HowItWorks'));
-const Impact 											= lazy(() => import('./Impact'));
-const Competition 								= lazy(() => import('./competition/Competition'));
-const Sustainability 							= lazy(() => import('./Sustainability'));
-const Pricing 										= lazy(() => import('./Pricing'));
-const AwesomeTeam 								= lazy(() => import( './AwesomeTeam'));
-const AwesomePartners 						= lazy(() => import('./AwesomePartners'));
-const Footer 											= lazy(() => import('./Footer'));
-const PopupWithForm 							= lazy(() => import('./form-popup/PopupWithForm'));
+const SustainabilityDelivered = lazy(() => import('./SustainabilityDelivered'));;
+const HowItWorks = lazy(() => import('./HowItWorks'));
+const Impact = lazy(() => import('./Impact'));
+const Competition = lazy(() => import('./competition/Competition'));
+const Sustainability = lazy(() => import('./Sustainability'));
+const Pricing = lazy(() => import('./Pricing'));
+const AwesomeTeam = lazy(() => import('./AwesomeTeam'));
+const AwesomePartners = lazy(() => import('./AwesomePartners'));
+const Footer = lazy(() => import('./Footer'));
+const PopupWithForm = lazy(() => import('./form-popup/PopupWithForm'));
 
 const renderLoader = () => <Loader />;
 
@@ -33,11 +33,11 @@ const renderLoader = () => <Loader />;
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function App() {
-  const [isPageLoading, setIsPageLoading]			= React.useState(true);
-  const [isPopupOpen, setPopupOpen] 					= React.useState(false);
-  const [isNavbarOpen, setIsNavbarOpen] 			= React.useState(true);
-  const [screenWidth, setScreenWidth] 				= React.useState(window.innerWidth);
-  const [isFormSubmitted, setFormSubmitted] 	= React.useState(false);
+  const [isPageLoading, setIsPageLoading] = React.useState(true);
+  const [isPopupOpen, setPopupOpen] = React.useState(false);
+  const [isNavbarOpen, setIsNavbarOpen] = React.useState(true);
+  const [screenWidth, setScreenWidth] = React.useState(window.innerWidth);
+  const [isFormSubmitted, setFormSubmitted] = React.useState(false);
 
   const {
     pageLoad,
@@ -82,11 +82,11 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    if(screenWidth <= 930){
-        setIsNavbarOpen(false);
-      } else {
-        setIsNavbarOpen(true);
-      }
+    if (screenWidth <= 930) {
+      setIsNavbarOpen(false);
+    } else {
+      setIsNavbarOpen(true);
+    }
   }, [screenWidth]);
 
   // ********************************************************************************************* //
@@ -95,10 +95,10 @@ function App() {
 
   React.useEffect(() => {
     const closeByClick = e => {
-      if(e.target.classList.contains('form-open')) {
+      if (e.target.classList.contains('form-open')) {
         closePopup();
       }
-      if(screenWidth <= 930 && isNavbarOpen){
+      if (screenWidth <= 930 && isNavbarOpen) {
         setIsNavbarOpen(false);
       }
     }
@@ -130,37 +130,37 @@ function App() {
         </Helmet>
         <AnimatePresence>
           {(isPageLoading)
-          ? <PageLoad key="loading" data={pageLoad} />
-          :
-          <>
-            <NavBar
-              onButtonClick={handleButtonClick}
-              isNavbarOpen={isNavbarOpen}
-              setIsNavbarOpen={setIsNavbarOpen}
-              screenWidth={screenWidth} />
-            <Hero data={hero} onButtonClick={handleButtonClick} />
-            <main>
-              <BadEffects data={plasticsBadEffects} />
+            ? <PageLoad key="loading" data={pageLoad} />
+            :
+            <>
+              <NavBar
+                onButtonClick={handleButtonClick}
+                isNavbarOpen={isNavbarOpen}
+                setIsNavbarOpen={setIsNavbarOpen}
+                screenWidth={screenWidth} />
+              <Hero data={hero} onButtonClick={handleButtonClick} />
+              <main>
+                <BadEffects data={plasticsBadEffects} />
+                <Suspense fallback={renderLoader()}>
+                  <SustainabilityDelivered data={sustainabilityDeliveredSlides} />
+                  <HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
+                  <Impact data={impacts} />
+                  <Competition data={competition} />
+                  <Sustainability />
+                  <Pricing onButtonClick={handleButtonClick} />
+                  <AwesomeTeam data={awesomeTeam} />
+                  <AwesomePartners data={awesomePartners} />
+                </Suspense>
+              </main>
               <Suspense fallback={renderLoader()}>
-                <SustainabilityDelivered data={sustainabilityDeliveredSlides} />
-                <HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
-                <Impact data={impacts} />
-                <Competition data={competition} />
-                <Sustainability />
-                <Pricing onButtonClick={handleButtonClick} />
-                <AwesomeTeam data={awesomeTeam} />
-                <AwesomePartners data={awesomePartners} />
+                <PopupWithForm
+                  onClose={closePopup}
+                  isOpen={isPopupOpen}
+                  isFormSubmitted={isFormSubmitted}
+                  setFormSubmitted={setFormSubmitted} />
+                <Footer />
               </Suspense>
-            </main>
-            <Suspense fallback={renderLoader()}>
-              <PopupWithForm
-                onClose={closePopup}
-                isOpen={isPopupOpen}
-                isFormSubmitted={isFormSubmitted}
-                setFormSubmitted={setFormSubmitted} />
-              <Footer />
-            </Suspense>
-          </>}
+            </>}
         </AnimatePresence>
       </div>
     </HelmetProvider>
