@@ -19,7 +19,7 @@ function Logo(){
       <img
         src={logoImage}
         alt="awesome container company logo"
-        className="object-contain"
+        className="object-contain w-[92px] sm:w-[60px]"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave} />
     </div>

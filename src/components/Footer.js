@@ -47,8 +47,8 @@ function Footer() {
 								Follow us
 							</SectionHeading>
 						</div>
-						<a className="py-[40px] md:py-[30px] flex gap-x-[17px]" href="https://www.instagram.com">
-							<img className="" src={instagram} alt="instagram page of awesome container company" />
+						<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com">
+							<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of awesome container company" />
 							AwesomeContainers
 						</a>
 					</div>
