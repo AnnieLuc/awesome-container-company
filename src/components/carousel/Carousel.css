@@ -1,3 +1,4 @@
+/* CSS Styles for Carousel Component */
 .carousel-back-icon {
   @apply w-[24px] h-[24px] bg-[url('../../images/carousel-back.svg')] bg-no-repeat bg-center bg-contain;
 }

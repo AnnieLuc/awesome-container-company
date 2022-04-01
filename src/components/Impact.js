@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { motion } from "framer-motion";
-import classnames from "classnames";
-import SectionHeading from "./section-heading/SectionHeading";
-import { sectionVariants } from "../utils/animationVariants";
+import React                from "react";
+import PropTypes            from "prop-types";
+import { motion }           from "framer-motion";
+import classnames           from "classnames";
+import SectionHeading       from "./section-heading/SectionHeading";
+import { sectionVariants }  from "../utils/animationVariants";
 
 /**
  * The **Impact** component highlights the impacts for businesses and users.
@@ -11,9 +11,11 @@ import { sectionVariants } from "../utils/animationVariants";
  * @version 1.0.0
  * @author [Ekaterina Cratcha](https://github.com/cratcha)
  */
-function Impact({ impacts }) {
+function Impact({ data }) {
+  const { title, cards } = data;
+
   const renderCards = () => {
-    return impacts.map((cardData, index) => {
+    return cards.map((cardData, index) => {
       const imgUrlClass =
         index === 0
           ? `before:bg-[url('./images/rectangles-impact.svg')]`
@@ -47,15 +49,17 @@ function Impact({ impacts }) {
   return (
     <motion.section
       id="impact"
+      aria-label="impact"
+      className="bg-secondary-200"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className=" mx-auto py-[120px] px-[34px] max-w-[1440px] flex flex-col items-center 
-        bg-secondary-200 lg:px-[20px] base:pt-[60px] base:pb-[0px] sm:px-[16px]">
+        lg:px-[20px] base:pt-[60px] base:pb-[0px] sm:px-[16px]">
         <SectionHeading align="center" color="primary">
-          Impact
+          {title}
         </SectionHeading>
 
         <div className="w-full mt-[60px] grid grid-cols-2 gap-[40px] base:mt-[120px] base:grid-cols-1 base:gap-[117px] z-10">
@@ -67,7 +71,7 @@ function Impact({ impacts }) {
 }
 
 Impact.propTypes = {
-  impacts: PropTypes.array.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Impact;

@@ -1,5 +1,6 @@
 import express from "express";
 import aws from "aws-sdk";
+import emailToSend from "../constants/email.js";
 
 const router = express.Router();
 

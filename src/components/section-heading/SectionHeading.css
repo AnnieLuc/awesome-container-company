@@ -1,3 +1,4 @@
+/* CSS Styles for SectionHeading Component */
 .sec-heading {
   @apply text-xl font-normal leading-10 md:text-[38px] sm:text-[28px] sm:leading-[32px];
 }

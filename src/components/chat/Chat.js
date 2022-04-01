@@ -1,14 +1,12 @@
-import React          from 'react';
-import classnames     from 'classnames';
+import React                from 'react';
+import PropTypes  		      from 'prop-types';
+import classnames           from 'classnames';
 import {
   motion,
-  AnimatePresence
-}                     from 'framer-motion';
+  AnimatePresence }         from 'framer-motion';
+import useInterval          from '../../hooks/useInterval';
+import { chatVariants }     from '../../utils/animationVariants';
 import './Chat.css';
-import useInterval    from '../../hooks/useInterval';
-import {
-  chatVariants
-}                     from '../../utils/animationVariants';
 
 /**
  * The **Chat** component represents the chat between admin and guest.
@@ -16,7 +14,7 @@ import {
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-export function Chat({chatMessages}) {
+export function Chat({chatMessages, onButtonClick}) {
   const [messages, setMessages] = React.useState([]);
 
   useInterval(() => {
@@ -25,20 +23,35 @@ export function Chat({chatMessages}) {
     }
   }, 1500);
 
+  const renderChatMessage = (sender, color, message) => {
+    const chatBubbleClass        = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
+    const chatBubbleColorClass   = `chat-bubble-${color}`;
+    return (
+      <div>
+        <span className={classnames(chatBubbleClass,chatBubbleColorClass)}>
+          {message}
+        </span>
+    </div>
+    );
+  }
+
   const renderChatBubble = (chat) => {
-    const { sender, color, message } = chat;
-    const chatBubbleClass            = (sender === 'guest')? `chat-bubble-left` : `chat-bubble-right`;
-    const chatBubbleColorClass       = `chat-bubble-${color}`;
+    const { sender, color, hasOnClickEvent, message } = chat;
+    const chatBubbleContainerClass = `flex flex-col space-y-2 text-sm leading-4 font-normal
+      max-w-[279px] mx-2 ${(sender === 'guest') ? `order-2 items-start` : `order-1 items-end`}`;
+
     return (
       <div className={`flex items-end ${(sender === 'admin') && `justify-end`}`}>
-        <div className={`flex flex-col space-y-2 text-sm leading-4 font-normal
-        max-w-[279px] mx-2 ${(sender === 'guest') ? `order-2 items-start` : `order-1 items-end`}`}>
-          <div>
-            <span className={classnames(chatBubbleClass,chatBubbleColorClass)}>
-              {message}
-            </span>
-          </div>
-        </div>
+        {(hasOnClickEvent)
+          ? (
+          <button className={chatBubbleContainerClass} onClick={onButtonClick}>
+            {renderChatMessage(sender, color, message)}
+          </button>)
+          : (
+            <div className={chatBubbleContainerClass}>
+              {renderChatMessage(sender, color, message)}
+            </div>
+          )}
       </div>
     );
   }
@@ -55,7 +68,7 @@ export function Chat({chatMessages}) {
               variants={chatVariants}
               layout>
                 <div className="w-[38px] h-[38px] bg-[url('./images/chat-guest.svg')]
-                bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
+                  bg-no-repeat bg-center bg-contain relative -left-[40px] top-[10px]"></div>
                 <article className="chat-message">
                   {renderChatBubble(chat)}
                 </article>
@@ -81,5 +94,10 @@ export function Chat({chatMessages}) {
     </AnimatePresence>
   );
 }
+
+Chat.propTypes = {
+  chatMessages:     PropTypes.array.isRequired,
+  onButtonClick:    PropTypes.func.isRequired,
+};
 
 export default Chat;

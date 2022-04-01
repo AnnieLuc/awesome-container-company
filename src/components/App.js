@@ -1,26 +1,28 @@
-import React                            from 'react';
+import React, { lazy, Suspense }        from 'react';
+import { Helmet, HelmetProvider } 			from 'react-helmet-async';
+import { AnimatePresence }  						from 'framer-motion';
+import PageLoad													from './PageLoad';
+import Loader   												from './Loader';
 import NavBar                           from './NavBar';
 import Hero                      				from './Hero';
 import BadEffects                				from './BadEffects';
-import SustainabilityDelivered   				from './SustainabilityDelivered';
-import HowItWorks 											from './HowItWorks';
-import Impact														from './Impact';
-import Competition			                from './competition/Competition';
-import Sustainability            				from './Sustainability';
-import Pricing                   				from './Pricing';
-import AwesomeTeam                      from './AwesomeTeam';
-import AwesomePartners                  from './AwesomePartners';
-import Footer                           from './Footer';
-import PopupWithForm 					from './PopupWithForm';
 
+// Import data to pass on to the components
+import data     												from '../constants/data';
 
-// Import constants
-import awesomePartners 									from '../constants/awesome-partners';
-import awesomeTeam 											from '../constants/awesome-team';
-import plasticsBadEffects 							from '../constants/plastics-bad-effects';
-import features       									from '../constants/features';
-import impacts              						from '../constants/impacts';
-import chatMessages         						from '../constants/chat-messages';
+// Code-split on a component level using dynamic imports
+const SustainabilityDelivered 		= lazy(() => import('./SustainabilityDelivered'));  				;
+const HowItWorks 									= lazy(() => import('./HowItWorks'));
+const Impact 											= lazy(() => import('./Impact'));
+const Competition 								= lazy(() => import('./competition/Competition'));
+const Sustainability 							= lazy(() => import('./Sustainability'));
+const Pricing 										= lazy(() => import('./Pricing'));
+const AwesomeTeam 								= lazy(() => import( './AwesomeTeam'));
+const AwesomePartners 						= lazy(() => import('./AwesomePartners'));
+const Footer 											= lazy(() => import('./Footer'));
+const PopupWithForm 							= lazy(() => import('./form-popup/PopupWithForm'));
+
+const renderLoader = () => <Loader />;
 
 /**
  * The main React **App** component.
@@ -31,10 +33,23 @@ import chatMessages         						from '../constants/chat-messages';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 function App() {
+	const [isPageLoading, setIsPageLoading]			= React.useState(true);
 	const [isPopupOpen, setPopupOpen] 					= React.useState(false);
 	const [isNavbarOpen, setIsNavbarOpen] 			= React.useState(true);
 	const [screenWidth, setScreenWidth] 				= React.useState(window.innerWidth);
 	const [isFormSubmitted, setFormSubmitted] 	= React.useState(false);
+
+	const {
+		pageLoad,
+		hero,
+		plasticsBadEffects,
+		sustainabilityDeliveredSlides,
+		howItWorks,
+		impacts,
+		competition,
+		awesomeTeam,
+		awesomePartners,
+	} = data;
 
 	const closePopup = () => {
 		setPopupOpen(false);
@@ -44,6 +59,17 @@ function App() {
 	const handleButtonClick = () => {
 		setPopupOpen(true);
 	};
+
+	// ********************************************************************************************* //
+	//                        			Handle initial page load						                             //
+	// ********************************************************************************************* //
+
+	React.useEffect(() => {
+		const timer = setTimeout(() => {
+      setIsPageLoading(false)
+    }, 2500);
+    return () => clearTimeout(timer);
+	}, []);
 
 	React.useEffect(() => {
     const changeScreenWidth = () => {
@@ -62,6 +88,10 @@ function App() {
 				setIsNavbarOpen(true);
 			}
 	}, [screenWidth]);
+
+	// ********************************************************************************************* //
+	//                        Handle mouse click or Esc key down event                               //
+	// ********************************************************************************************* //
 
 	React.useEffect(() => {
 		const closeByClick = e => {
@@ -89,31 +119,51 @@ function App() {
 
 
 	return (
-		<div className='font-serif text-base font-normal leading-5'>
-			<NavBar
-				onButtonClick={handleButtonClick}
-				isNavbarOpen={isNavbarOpen}
-				setIsNavbarOpen={setIsNavbarOpen}
-				screenWidth={screenWidth} />
-			<Hero chatMessages={chatMessages} />
-			<main>
-				<BadEffects plasticsBadEffects={plasticsBadEffects} />
-				<SustainabilityDelivered features={features} />
-				<HowItWorks onButtonClick={handleButtonClick} />
-				<Impact impacts={impacts} />
-				<Competition />
-				<Sustainability />
-				<Pricing onButtonClick={handleButtonClick} />
-				<AwesomeTeam awesomeTeam={awesomeTeam} />
-				<AwesomePartners awesomePartners={awesomePartners} />
-			</main>
-			<PopupWithForm
-				onClose={closePopup}
-				isOpen={isPopupOpen}
-				isFormSubmitted={isFormSubmitted}
-				setFormSubmitted={setFormSubmitted} />
-			<Footer />
-		</div>
+		<HelmetProvider>
+			<div className='font-serif text-base font-normal leading-5'>
+				<Helmet>
+					<meta charSet="utf-8" />
+					<title>Awesome Container Company</title>
+					<meta name="description" content="Help our environment by eliminating single-use plastics from your delivery with Awesome Container Company" />
+					<meta name="keywords" content="acc, awesome container company, container, singapore, save environment" />
+					<meta name="author" content="Alec Drosu, Ekaterina Cratcha, Shraddha" />
+				</Helmet>
+				<AnimatePresence>
+					{(isPageLoading)
+					? <PageLoad key="loading" data={pageLoad} />
+					:
+					<>
+						<NavBar
+							onButtonClick={handleButtonClick}
+							isNavbarOpen={isNavbarOpen}
+							setIsNavbarOpen={setIsNavbarOpen}
+							screenWidth={screenWidth} />
+						<Hero data={hero} onButtonClick={handleButtonClick} />
+						<main>
+							<BadEffects data={plasticsBadEffects} />
+							<Suspense fallback={renderLoader()}>
+								<SustainabilityDelivered data={sustainabilityDeliveredSlides} />
+								<HowItWorks data={howItWorks} onButtonClick={handleButtonClick} />
+								<Impact data={impacts} />
+								<Competition data={competition} />
+								<Sustainability />
+								<Pricing onButtonClick={handleButtonClick} />
+								<AwesomeTeam data={awesomeTeam} />
+								<AwesomePartners data={awesomePartners} />
+							</Suspense>
+						</main>
+						<Suspense fallback={renderLoader()}>
+							<PopupWithForm
+								onClose={closePopup}
+								isOpen={isPopupOpen}
+								isFormSubmitted={isFormSubmitted}
+								setFormSubmitted={setFormSubmitted} />
+							<Footer />
+						</Suspense>
+					</>}
+				</AnimatePresence>
+			</div>
+		</HelmetProvider>
 	);
 }
 

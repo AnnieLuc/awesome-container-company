@@ -1,3 +1,4 @@
+/* CSS Styles for Chat Component */
 .chat-bubble-left {
   @apply px-[12px] py-[10px] rounded-[10px] inline-block rounded-tl-none;
 }

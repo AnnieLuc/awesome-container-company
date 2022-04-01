@@ -3,7 +3,9 @@ import PropTypes  					from 'prop-types';
 import { motion }           from 'framer-motion'
 import ImageCompareSlider   from './ImageCompareSlider';
 import Chat                 from './chat/Chat';
-import { sectionVariants }  from '../utils/animationVariants';
+import {
+  sectionVariants,
+  textVariants }            from '../utils/animationVariants';
 
 /**
  * The **Hero** component represents the main section of the page where the motto of the company is displayed.
@@ -11,7 +13,8 @@ import { sectionVariants }  from '../utils/animationVariants';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Hero({chatMessages}) {
+function Hero({data, onButtonClick}) {
+  const { mainText, companyName, imagesToCompare, chatMessages } = data;
 
   // Classes for JSX Elements
   const heroSectionContainerClass = `mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col 
@@ -30,17 +33,21 @@ function Hero({chatMessages}) {
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.3}}>
+      viewport={{ once: true, amount: 0.1 }}>
       <div className={heroSectionContainerClass}>
         <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
           <h1 className={heroSectionHeadingClass}>
-            Help our environment by eliminating single-use plastics from your delivery with 
-            <span className="text-highlight-100"> Awesome Container Company</span>
+            {mainText} {' '}
+            <motion.span
+              variants={textVariants}
+              initial="offscreen"
+              animate="onscreen"
+              className="text-highlight-100 inline-block">{companyName}</motion.span>
           </h1>
         </div>
         <div className={heroSectionContentClass}>
           <div className={imageSliderContainerClass}>
-            <ImageCompareSlider />
+            <ImageCompareSlider imagesToCompare={imagesToCompare} />
             <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
                 <p>Now</p>
                 <p>With Awesome Containers</p>
@@ -48,7 +55,7 @@ function Hero({chatMessages}) {
           </div>
           <div className="max-w-[491px] w-full flex flex-col justify-end md:max-w-[492px] md:mt-[60px]">
             <div className="px-[50px] flex flex-col gap-[16px] md:min-h-[422px] md:justify-end">
-              <Chat chatMessages={chatMessages} />
+              <Chat chatMessages={chatMessages} onButtonClick={onButtonClick} />
               <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
               bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
             </div>
@@ -60,7 +67,8 @@ function Hero({chatMessages}) {
 }
 
 Hero.propTypes = {
-  chatMessages:    PropTypes.array.isRequired,
+  data:            PropTypes.object.isRequired,
+  onButtonClick:   PropTypes.func.isRequired,
 };
 
 export default Hero;

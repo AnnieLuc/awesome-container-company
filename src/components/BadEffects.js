@@ -12,7 +12,8 @@ import chart                from '../images/single-use-plastics-chart.png';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function BadEffects({plasticsBadEffects}) {
+function BadEffects({data}) {
+
   // Classes for JSX Elements
   const BadEffectsContainerClass = `mx-auto px-[140px] py-[120px] max-w-[1440px] flex flex-col 
     items-center lg:px-[20px] md:py-[80px] sm:px-[16px] sm:pt-[40px]`;
@@ -20,7 +21,7 @@ function BadEffects({plasticsBadEffects}) {
   // Function to render the images
   const renderImages = () => {
     return (
-      plasticsBadEffects.map(({caption, image}, index) => {
+      data.map(({caption, image}, index) => {
         return (
           <figure className="max-w-[346.47px] lg:max-w-[314px] md:max-w-[229px]" key={index}>
             <img src={image} alt={image} className="object-cover rounded-[3px]" />
@@ -36,11 +37,12 @@ function BadEffects({plasticsBadEffects}) {
   return (
     <motion.section
       id="bad-effects"
+      aria-label="bad effects"
       className="bg-primary"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.4}}>
+      viewport={{ once: true, amount: 0.1 }}>
       <div className={BadEffectsContainerClass}>
         <div className="w-full flex gap-x-[73px] md:flex-col-reverse md:gap-y-[40px]">
           <div className="max-w-[347px] rounded-[3px] md:self-center md:max-w-[229px]">
@@ -74,7 +76,7 @@ function BadEffects({plasticsBadEffects}) {
 }
 
 BadEffects.propTypes = {
-  plasticsBadEffects:    PropTypes.array.isRequired,
+  data:    PropTypes.array.isRequired,
 };
 
 export default BadEffects;
