@@ -1,7 +1,7 @@
-import React              from 'react';
-import PropTypes          from 'prop-types';
-import { useForm }        from 'react-hook-form';
-import axios              from 'axios';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import "./PopupWithForm.css";
 
 function PopupWithForm(props) {
@@ -32,7 +32,7 @@ function PopupWithForm(props) {
   React.useEffect(() => {
     let timer;
     if (isFormSubmitted) {
-    timer = setTimeout(() => {
+      timer = setTimeout(() => {
         setFormSubmitted(true);
         onClose();
       }, 8000);
@@ -61,9 +61,8 @@ function PopupWithForm(props) {
           </h2>
           <div className="flex flex-col max-w-[600px]">
             <div
-              className={`text-sm pb-[11px] ${
-                errors.name ? "text-[#E30613]" : "text-primary"
-              }`}
+              className={`text-sm pb-[11px] ${errors.name ? "text-[#E30613]" : "text-primary"
+                }`}
             >
               {errors.name
                 ? "Personal or company name * (This field is required)"
@@ -71,9 +70,8 @@ function PopupWithForm(props) {
             </div>
             <label
               name="entry.1377521493"
-              className={`h-[60px] ${
-                errors.name ? "labels-invalid" : "labels"
-              }`}
+              className={`h-[60px] ${errors.name ? "labels-invalid" : "labels"
+                }`}
             >
               <input
                 type="text"
@@ -84,17 +82,15 @@ function PopupWithForm(props) {
               />
             </label>
             <div
-              className={`text-sm pb-[11px] ${
-                errors.email ? "text-[#E30613]" : "text-primary"
-              }`}
+              className={`text-sm pb-[11px] ${errors.email ? "text-[#E30613]" : "text-primary"
+                }`}
             >
               {errors.email ? "Email * (This field is required)" : "Email *"}
             </div>
             <label
               name="entry.1586441139"
-              className={`h-[60px] ${
-                errors.email ? "labels-invalid" : "labels"
-              }`}
+              className={`h-[60px] ${errors.email ? "labels-invalid" : "labels"
+                }`}
             >
               <input
                 type="email"
@@ -151,10 +147,10 @@ function PopupWithForm(props) {
 }
 
 PopupWithForm.propTypes = {
-	isOpen:		          PropTypes.bool.isRequired,
-  onClose:            PropTypes.func.isRequired,
-  isFormSubmitted:    PropTypes.bool.isRequired,
-  setFormSubmitted:   PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  isFormSubmitted: PropTypes.bool.isRequired,
+  setFormSubmitted: PropTypes.func.isRequired,
 };
 
 export default PopupWithForm;

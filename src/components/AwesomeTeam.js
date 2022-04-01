@@ -1,9 +1,9 @@
-import React 								from 'react';
-import PropTypes  					from 'prop-types';
-import { motion }       		from 'framer-motion';
-import SectionHeading 			from './section-heading/SectionHeading';
-import { sectionVariants }  from '../utils/animationVariants';
-import linkedInImg 					from '../images/social-links/linkedin.svg';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from './section-heading/SectionHeading';
+import { sectionVariants } from '../utils/animationVariants';
+import linkedInImg from '../images/social-links/linkedin.svg';
 
 /**
  * The **AwesomeTeam** component representing the list of team members of the company.
@@ -11,7 +11,7 @@ import linkedInImg 					from '../images/social-links/linkedin.svg';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomeTeam({data}) {
+function AwesomeTeam({ data }) {
 	const { title, members } = data;
 
 	const renderImages = () => {
@@ -38,12 +38,12 @@ function AwesomeTeam({data}) {
 			aria-label="team"
 			className="pt-[180px] md:pt-[120px] sm:px-[16px]"
 			variants={sectionVariants}
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2}}>
-      <SectionHeading align="center" color="primary">
-        {title}
-      </SectionHeading>
+			initial="offscreen"
+			whileInView="onscreen"
+			viewport={{ once: true, amount: 0.2 }}>
+			<SectionHeading align="center" color="primary">
+				{title}
+			</SectionHeading>
 			<div className="mx-auto pt-[80px] max-w-[746px] md:pt-[44px]">
 				<div className="w-full flex justify-between md:flex-col md:items-center md:gap-y-[44px]">
 					{renderImages()}
@@ -54,7 +54,7 @@ function AwesomeTeam({data}) {
 }
 
 AwesomeTeam.propTypes = {
-  data:    PropTypes.object.isRequired,
+	data: PropTypes.object.isRequired,
 };
 
 export default AwesomeTeam;

@@ -1,9 +1,9 @@
-import React            from 'react';
-import PropTypes  		  from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   ReactCompareSlider,
   ReactCompareSliderImage
-}                       from 'react-compare-slider';
+} from 'react-compare-slider';
 
 /**
  * The **ImageCompareSlider** component represents a slider to compare two images.
@@ -17,7 +17,7 @@ function ImageCompareSlider({ imagesToCompare }) {
   // Classes for JSX Elements
   const imageCompareSliderHandleClass = `h-[28px] w-[28px] -ml-[14px] -mt-[14px] rounded-full bg-highlight-100 absolute top-1/2
     bg-[url('./images/slider-handler.svg')] bg-no-repeat bg-center bg-contain`;
-  const imageCompareSliderClass       = `w-full max-w-[626px] max-h-[369px] border border-primary rounded-[3px] md:max-w-[492px] 
+  const imageCompareSliderClass = `w-full max-w-[626px] max-h-[369px] border border-primary rounded-[3px] md:max-w-[492px] 
     md:max-h-[289px] sm:max-w-[342px] sm:max-h-[220px]`;
 
   // Function to render the handle of the Image Compare Slider
@@ -36,15 +36,15 @@ function ImageCompareSlider({ imagesToCompare }) {
       <ReactCompareSlider
         className={imageCompareSliderClass}
         handle={renderHandle()}
-        itemOne={<ReactCompareSliderImage src={firstImg.url} style={{ maxHeight: "369px"}} alt={firstImg.description} />}
-        itemTwo={<ReactCompareSliderImage src={secondImg.url} style={{ maxHeight: "369px"}} alt={secondImg.description} />}
+        itemOne={<ReactCompareSliderImage src={firstImg.url} style={{ maxHeight: "369px" }} alt={firstImg.description} />}
+        itemTwo={<ReactCompareSliderImage src={secondImg.url} style={{ maxHeight: "369px" }} alt={secondImg.description} />}
       />
     </div>
   );
 }
 
 ImageCompareSlider.propTypes = {
-  imagesToCompare:    PropTypes.object.isRequired,
+  imagesToCompare: PropTypes.object.isRequired,
 };
 
 export default ImageCompareSlider;

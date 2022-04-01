@@ -1,5 +1,5 @@
-import React        from 'react';
-import PropTypes  	from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './Button.css';
 
 /**
@@ -9,7 +9,7 @@ import './Button.css';
  * @author [Shraddha](https://github.com/5hraddha)
  */
 
-function Button({children, isHeader, onButtonClick}) {
+function Button({ children, isHeader, onButtonClick }) {
   const buttonClass = (isHeader === 'true') ? 'button-header' : 'button';
   return (
     <button className={buttonClass} onClick={onButtonClick} aria-label="contact awesome container company">
@@ -19,9 +19,9 @@ function Button({children, isHeader, onButtonClick}) {
 }
 
 Button.propTypes = {
-  children:       PropTypes.any.isRequired,
-  isHeader:       PropTypes.string.isRequired,
-  onButtonClick:  PropTypes.func.isRequired,
+  children: PropTypes.any.isRequired,
+  isHeader: PropTypes.string.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
 };
 
 export default Button;

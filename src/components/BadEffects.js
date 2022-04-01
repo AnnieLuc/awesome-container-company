@@ -1,10 +1,10 @@
-import React                from 'react';
-import PropTypes  			    from 'prop-types';
-import { motion }           from 'framer-motion';
-import SectionHeading       from './section-heading/SectionHeading';
-import SectionPara          from './section-para/SectionPara';
-import { sectionVariants }  from '../utils/animationVariants';
-import chart                from '../images/single-use-plastics-chart.png';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from './section-heading/SectionHeading';
+import SectionPara from './section-para/SectionPara';
+import { sectionVariants } from '../utils/animationVariants';
+import chart from '../images/single-use-plastics-chart.png';
 
 /**
  * The **BadEffects** component highlights the bad effects of single-use packaging.
@@ -12,7 +12,7 @@ import chart                from '../images/single-use-plastics-chart.png';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function BadEffects({data}) {
+function BadEffects({ data }) {
 
   // Classes for JSX Elements
   const BadEffectsContainerClass = `mx-auto px-[140px] py-[120px] max-w-[1440px] flex flex-col 
@@ -21,7 +21,7 @@ function BadEffects({data}) {
   // Function to render the images
   const renderImages = () => {
     return (
-      data.map(({caption, image}, index) => {
+      data.map(({ caption, image }, index) => {
         return (
           <figure className="max-w-[346.47px] lg:max-w-[314px] md:max-w-[229px]" key={index}>
             <img src={image} alt={image} className="object-cover rounded-[3px]" />
@@ -76,7 +76,7 @@ function BadEffects({data}) {
 }
 
 BadEffects.propTypes = {
-  data:    PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
 };
 
 export default BadEffects;

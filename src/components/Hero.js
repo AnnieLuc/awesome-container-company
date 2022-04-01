@@ -1,11 +1,12 @@
-import React                from 'react';
-import PropTypes  					from 'prop-types';
-import { motion }           from 'framer-motion'
-import ImageCompareSlider   from './ImageCompareSlider';
-import Chat                 from './chat/Chat';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion'
+import ImageCompareSlider from './ImageCompareSlider';
+import Chat from './chat/Chat';
 import {
   sectionVariants,
-  textVariants }            from '../utils/animationVariants';
+  textVariants
+} from '../utils/animationVariants';
 
 /**
  * The **Hero** component represents the main section of the page where the motto of the company is displayed.
@@ -13,15 +14,15 @@ import {
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Hero({data, onButtonClick}) {
+function Hero({ data, onButtonClick }) {
   const { mainText, companyName, imagesToCompare, chatMessages } = data;
 
   // Classes for JSX Elements
   const heroSectionContainerClass = `mx-auto px-[40px] pt-[154px] pb-[40px] max-w-[1440px] flex flex-col 
     lg:px-[20px] sm:px-[16px] sm:pt-[100px]`;
-  const heroSectionHeadingClass   = `text-xl font-normal leading-9 text-left text-primary 
+  const heroSectionHeadingClass = `text-xl font-normal leading-9 text-left text-primary 
     md:text-[42px] md:leading-[48px] sm:text-[28px] sm:leading-[34px] sm:text-center`;
-  const heroSectionContentClass   = `mt-[85px] w-full flex justify-between md:flex-col md:items-center 
+  const heroSectionContentClass = `mt-[85px] w-full flex justify-between md:flex-col md:items-center 
     md:mt-[80px] sm:mt-[40px]`;
   const imageSliderContainerClass = `max-w-[626px] w-full object-cover md:max-w-[492px] md:max-h-[289px] 
     sm:max-w-[342px] sm:max-h-[220px]`;
@@ -49,8 +50,8 @@ function Hero({data, onButtonClick}) {
           <div className={imageSliderContainerClass}>
             <ImageCompareSlider imagesToCompare={imagesToCompare} />
             <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
-                <p>Now</p>
-                <p>With Awesome Containers</p>
+              <p>Now</p>
+              <p>With Awesome Containers</p>
             </div>
           </div>
           <div className="max-w-[491px] w-full flex flex-col justify-end md:max-w-[492px] md:mt-[60px]">
@@ -67,8 +68,8 @@ function Hero({data, onButtonClick}) {
 }
 
 Hero.propTypes = {
-  data:            PropTypes.object.isRequired,
-  onButtonClick:   PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
 };
 
 export default Hero;

@@ -1,9 +1,9 @@
-import React                from "react";
-import PropTypes            from "prop-types";
-import { motion }           from "framer-motion";
-import classnames           from "classnames";
-import SectionHeading       from "./section-heading/SectionHeading";
-import { sectionVariants }  from "../utils/animationVariants";
+import React from "react";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import classnames from "classnames";
+import SectionHeading from "./section-heading/SectionHeading";
+import { sectionVariants } from "../utils/animationVariants";
 
 /**
  * The **Impact** component highlights the impacts for businesses and users.
