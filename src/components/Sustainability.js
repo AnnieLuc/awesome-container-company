@@ -22,6 +22,7 @@ function Sustainability() {
   return (
     <motion.section
       id="sustainability"
+      aria-label="sustainability"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"

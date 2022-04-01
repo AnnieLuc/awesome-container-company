@@ -23,7 +23,7 @@ function Carousel({slides}) {
   const renderCarouselSlide = (slide) => {
     const { image, features, sizing } = slide;
     return (
-      <article className="w-full w-max-[1212px] min-h-[600px] pt-[45px] pb-[35px] bg-secondary-100 
+      <article aria-label="image carousel" className="w-full w-max-[1212px] min-h-[600px] pt-[45px] pb-[35px] bg-secondary-100 
         flex rounded-[3px] lg:max-w-[828px] lg:min-h-[650px] md:flex-col md:items-center md:max-w-[555px] md:min-h-[910px] 
         sm:max-w-[355px] sm:max-h-[891px]">
         <div className="w-full max-w-[520px] flex justify-center items-center md:max-w-[339px]">

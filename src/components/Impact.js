@@ -49,6 +49,7 @@ function Impact({ data }) {
   return (
     <motion.section
       id="impact"
+      aria-label="impact"
       className="bg-secondary-200"
       variants={sectionVariants}
       initial="offscreen"

@@ -15,6 +15,7 @@ function HowItWorks({data, onButtonClick}){
   return (
     <motion.section
       id="how-it-works"
+      aria-label="how it works"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"

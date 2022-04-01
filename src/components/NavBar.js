@@ -51,7 +51,7 @@ function NavBar(props) {
             <p className="ml-[5px] sm:ml-[8px]">Awesome Container Company</p>
           </Link>
           <div className="flex gap-x-[30px]">
-            <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} />
+            <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} aria-label="hamburger menu" />
             <div className="hidden base:block sm:hidden">
               <Button isHeader="true" onButtonClick={onButtonClick}>
                 Work with us

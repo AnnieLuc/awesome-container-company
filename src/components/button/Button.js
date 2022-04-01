@@ -12,7 +12,7 @@ import './Button.css';
 function Button({children, isHeader, onButtonClick}) {
   const buttonClass = (isHeader === 'true') ? 'button-header' : 'button';
   return (
-    <button className={buttonClass} onClick={onButtonClick}>
+    <button className={buttonClass} onClick={onButtonClick} aria-label="contact awesome container company">
       {children}
     </button>
   );

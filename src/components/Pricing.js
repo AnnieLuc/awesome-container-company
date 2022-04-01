@@ -30,6 +30,7 @@ function Pricing({onButtonClick}){
   return (
     <motion.section
       id="pricing"
+      aria-label="pricing"
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"

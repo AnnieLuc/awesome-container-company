@@ -37,6 +37,7 @@ function BadEffects({data}) {
   return (
     <motion.section
       id="bad-effects"
+      aria-label="bad effects"
       className="bg-primary"
       variants={sectionVariants}
       initial="offscreen"

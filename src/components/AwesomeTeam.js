@@ -19,7 +19,7 @@ function AwesomeTeam({data}) {
 		return members.map(({ name, title, linkedIn, image }, index) => {
 			return (
 				<figure className="max-w-[146px]" key={index}>
-					<img src={image} alt={image} className="object-cover" />
+					<img src={image} alt={image} className="object-cover w-[146px] h-[146px]" />
 					<figcaption className="pt-[15px] text-2xl sec-text-primary leading-7 text-center">
 						{name}
 						<span className="block whitespace-nowrap">{title}</span>
@@ -35,6 +35,7 @@ function AwesomeTeam({data}) {
 	return (
 		<motion.section
 			id="awesome-team"
+			aria-label="team"
 			className="pt-[180px] md:pt-[120px] sm:px-[16px]"
 			variants={sectionVariants}
       initial="offscreen"

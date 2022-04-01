@@ -25,7 +25,7 @@ function ImageCompareSlider({ imagesToCompare }) {
     return (
       <div className="relative h-full">
         <div className="absolute inset-y-0 bg-highlight-100 w-[3px] -ml-[1.5px]">
-          <button className={imageCompareSliderHandleClass} />
+          <button className={imageCompareSliderHandleClass} aria-label="image compare slider handle" />
         </div>
       </div>
     );

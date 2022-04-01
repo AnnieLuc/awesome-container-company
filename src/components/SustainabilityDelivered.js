@@ -28,6 +28,7 @@ function SustainabilityDelivered({ data }) {
   return (
     <motion.section
       id="sustainability-delivered"
+      aria-label="sustainability delivered"
       className="bg-secondary-200"
       variants={sectionVariants}
       initial="offscreen"
@@ -58,7 +59,7 @@ function SustainabilityDelivered({ data }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 0.4, duration: 0.8 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <img
@@ -77,7 +78,7 @@ function SustainabilityDelivered({ data }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 0.8, duration: 0.8 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <img src={saveCostImage} alt="save cost" className={imgClass} />
@@ -95,7 +96,7 @@ function SustainabilityDelivered({ data }) {
                 initial="hidden"
                 whileInView="visible"
                 variants={sustainabilityIconVariants}
-                transition={{ delay: 1.2, duration: 0.8 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
                 viewport={{ once: true }}
               >
                 <img
