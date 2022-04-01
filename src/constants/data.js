@@ -24,11 +24,11 @@ import edwinPhua                      from '../images/founders/edwin-phua.png';
 import guillaumeCatella               from '../images/founders/guillaume-catella.png';
 
 // Logos of all the partners used in AwesomePartners section
-import chefAtWork                     from '../images/partners/chef-at-work.svg';
-import creatella                      from '../images/partners/creatella.svg';
-import goaGoa                         from '../images/partners/goa-goa.svg';
-import ninjaVan                       from '../images/partners/ninja-van.svg';
-import stewardsSolution               from '../images/partners/stewards-solution.svg';
+import chefAtWork                     from '../images/partners/chef-at-work.png';
+import creatella                      from '../images/partners/creatella.png';
+import goaGoa                         from '../images/partners/goa-goa.png';
+import ninjaVan                       from '../images/partners/ninja-van.png';
+import stewardsSolution               from '../images/partners/stewards-solution.png';
 
 const data = {
   pageLoad: {
