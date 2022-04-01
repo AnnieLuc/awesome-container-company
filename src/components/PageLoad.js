@@ -7,6 +7,12 @@ import {
   pageLoadLogoVariants,
   textVariants }                    from '../utils/animationVariants';
 
+/**
+ * The **PageLoad** component represents welcome screen when the app first loads.
+ *
+ * @version 1.0.0
+ * @author [Shraddha](https://github.com/5hraddha)
+ */
 function PageLoad({data}){
   const { companyName } = data;
 
