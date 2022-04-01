@@ -10,7 +10,7 @@ import {
 } from "../utils/animationVariants";
 import logisticsSupportImage from "../images/backend-logistics-support.svg";
 import saveCostImage from "../images/save-costs.svg";
-import saveStorageImage from "../images/save-storage.svg";
+import saveStorageImage from "../images/save-storage.png";
 
 /**
  * The **SustainabilityDelivered** component discusses replaces how the company replaces single-use packaging with reusable stainless steel containers.
