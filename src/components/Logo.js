@@ -1,6 +1,6 @@
-import React          from 'react';
-import accLogo        from '../images/logo.svg';
-import accLogoTilted  from '../images/logoTilted.svg';
+import React from 'react';
+import accLogo from '../images/logo.svg';
+import accLogoTilted from '../images/logoTilted.svg';
 
 /**
  * The **Logo** component represents the logo of the page.
@@ -8,7 +8,7 @@ import accLogoTilted  from '../images/logoTilted.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Logo(){
+function Logo() {
   const [logoImage, setLogoImage] = React.useState(accLogo);
 
   const handleMouseEnter = () => setLogoImage(accLogoTilted);

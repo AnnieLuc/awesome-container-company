@@ -1,9 +1,9 @@
-import React                from 'react';
-import PropTypes  					from 'prop-types';
-import { motion }           from 'framer-motion';
-import SectionHeading       from '../section-heading/SectionHeading';
-import CompetitionTable     from '../competition-table/CompetitionTable';
-import { sectionVariants }  from '../../utils/animationVariants';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from '../section-heading/SectionHeading';
+import CompetitionTable from '../competition-table/CompetitionTable';
+import { sectionVariants } from '../../utils/animationVariants';
 import './Competition.css';
 
 /**
@@ -12,8 +12,8 @@ import './Competition.css';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Competition({data}) {
-  const {title, table} = data;
+function Competition({ data }) {
+  const { title, table } = data;
 
   return (
     <motion.section
@@ -23,7 +23,7 @@ function Competition({data}) {
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2}}>
+      viewport={{ once: true, amount: 0.2 }}>
       <div className="mx-auto px-[100px] py-[120px] max-w-[1440px] flex flex-col items-center 
         lg:px-[20px] sm:pt-[80px] sm:pb-[100px] sm:px-[16px]">
         <SectionHeading align="center" color="primary">{title}</SectionHeading>
@@ -36,7 +36,7 @@ function Competition({data}) {
 }
 
 Competition.propTypes = {
-  data:  PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Competition;

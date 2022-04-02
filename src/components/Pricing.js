@@ -1,13 +1,14 @@
-import React                from 'react';
-import PropTypes            from 'prop-types';
-import { motion }           from 'framer-motion';
-import SectionHeading       from './section-heading/SectionHeading';
-import SectionPara          from './section-para/SectionPara';
-import Button               from './button/Button';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from './section-heading/SectionHeading';
+import SectionPara from './section-para/SectionPara';
+import Button from './button/Button';
 import {
   sectionVariants,
-  pricingCalloutVariants }  from '../utils/animationVariants';
-import pricingContainer     from '../images/pricing-section-container.svg';
+  pricingCalloutVariants
+} from '../utils/animationVariants';
+import pricingContainer from '../images/pricing-section-container.svg';
 
 /**
  * The **Pricing** component represents the section where the company pricing details have been discussed.
@@ -15,16 +16,16 @@ import pricingContainer     from '../images/pricing-section-container.svg';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Pricing({onButtonClick}){
+function Pricing({ onButtonClick }) {
 
   // Classes for JSX Elements
   const pricingSectionContainerClass = `mx-auto px-[82px] max-w-[1440px] flex flex-col items-center 
     lg:px-[40px] md:px-[20px] sm:px-[16px]`;
-  const pricingCalloutClass          = `ml-[31px] px-[42px] py-[37px] w-full min-h-[158px] 
+  const pricingCalloutClass = `ml-[31px] px-[42px] py-[37px] w-full min-h-[158px] 
     bg-[url('./images/pricing-section-callout.svg')] bg-no-repeat bg-center bg-contain 
     flex justify-center items-center md:ml-[0px] md:bg-[url('./images/pricing-section-callout-tablet.svg')] 
     md:min-h-[350px] sm:min-h-[192px]`;
-  const pricingCalloutTextClass      = `text-[20px] font-normal leading-[23.7px] text-center 
+  const pricingCalloutTextClass = `text-[20px] font-normal leading-[23.7px] text-center 
     md:max-w-[344px] sm:text-base sm:leading-[21.33px] sm:max-w-[244px]`;
 
   return (
@@ -34,7 +35,7 @@ function Pricing({onButtonClick}){
       variants={sectionVariants}
       initial="offscreen"
       whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2}}>
+      viewport={{ once: true, amount: 0.2 }}>
       <div className={pricingSectionContainerClass}>
         <div className="mx-auto w-full max-w-[800px]">
           <SectionHeading align="center" color="primary">
@@ -68,7 +69,7 @@ function Pricing({onButtonClick}){
 }
 
 Pricing.propTypes = {
-  onButtonClick:  PropTypes.func.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
 };
 
 export default Pricing;

@@ -1,41 +1,28 @@
 <!-- omit in toc -->
-# Awesome Container Company
-- [Team Members](#team-members)
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Technologies and Standards Used](#technologies-and-standards-used)
-  - [!ReactJS](#)
-  - [!Tailwind CSS](#-1)
-  - [!Framer Motion](#-2)
-  - [!NodeJS](#-3)
-  - [!ExpressJS](#-4)
-  - [!AWS SES](#-5)
-- [Product Design Specification](#product-design-specification)
-- [Live Demo](#live-demo)
-
+# <img src="src/imgeas/../images/logo.svg" width=92 /> Awesome Container Company
 ## Team Members  
 1. [Alec Drosu](https://github.com/AlecDrosu) | Web Developer
 2. [Ekaterina Cratcha](https://github.com/cratcha) | Web Developer
 3. [Shraddha](https://github.com/5hraddha) | Web Developer
 ## About the Project
-A landing page for Awesome Container Company (ACC), whose mission is to eliminate plastic and single use packaging in the food and beverage industry. For restaurants offering takeout, ACC offers recurring delivery of clean, reusable metal containers and pickup of used containers from customers, cutting packaging costs by 50% and eliminating millions of tons of single-use packaging.
+A landing page for **Awesome Container Company** (ACC), whose mission is *to eliminate plastic and single use packaging in the food and beverage industry*. For restaurants offering takeout, ACC offers recurring delivery of clean, reusable metal containers and pickup of used containers from customers, cutting packaging costs by 50% and eliminating millions of tons of single-use packaging.
 
 https://user-images.githubusercontent.com/27571141/161324457-fe6f0d73-9ab3-4fa9-9e87-1465ea2750cf.mp4
 
 
 ## Features
-1. A responsive webpage that brings about the motto of the company and encourages the visitors to give the service a try.
-2. The page has a beautiful chat animation to mimic the general enquiry conversation between the guest and the company.
-3. The page lists out the problem we are facing today because of single-use packaging.
-4. The page shows the features, sizing and pictures of the containers that the company offers, to solve the problem.
-5. The page illustrates the circular work flow of the company in a step by step process.
-6. We outline the benefits for the businesses and the users clearly on the page.
-7. We have illustrated a table that brings about how the competition is in the market to give a clear picture of how ACC beats them all.
-8. The webpage has beautifully animated welcome screen with the ACC logo.
-9. The page responds with subtle animations as the user scroll through it.
-10. All the data on the page is populated dynamically from a single file, that could be edited if required to change the texts on the webpage.
-11. The webpage has accessibility score of 97 and SEO score of 91 in Google Lighthouse's Web performance Audit result.
-12. The webpage also gives an option for users to contact the company, if they are interested in the service via a contact form. On the submission of the form, a mail is triggered via AWS SES.
+1. A *responsive webpage* that brings about the motto of the company and encourages the visitors to give the service a try.
+2. The page has a beautiful *chat animation* to mimic the general enquiry conversation between the guest and the company.
+3. The page *lists out the problem* we are facing today because of single-use packaging.
+4. The page shows the *features, sizing and pictures of the containers* that the company offers, to solve the problem.
+5. The page illustrates the *circular work flow of the company* in a step by step process.
+6. We outline the *benefits for the businesses and the users* clearly on the page.
+7. We have illustrated *a table that brings about how the competition is in the market* to give a clear picture of how ACC beats them all.
+8. The webpage has beautifully *animated welcome screen* with the ACC logo.
+9. The page responds with *subtle animations as the user scroll* through it.
+10. All the *data on the page is populated dynamically from a single file*, that could be edited if required to change the texts on the webpage.
+11. The webpage has *accessibility score of 97 and SEO score of 91* in Google Lighthouse's Web performance Audit result.
+12. The webpage also gives an *option for users to contact the company*, if they are interested in the service via a contact form. On the submission of the form, a mail is triggered via AWS SES.
 
 ## Technologies and Standards Used
 **The technologies that have been used are:**
@@ -48,15 +35,15 @@ https://user-images.githubusercontent.com/27571141/161324457-fe6f0d73-9ab3-4fa9-
 6. AWS Simple Email Service (SES)
 
 ### ![ReactJS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-- React. js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications.
+- **ReactJS** is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications.
 - It's used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components.
 
 ### ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-- Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. 
+- **Tailwind CSS** is a utility-first CSS framework for rapidly building custom user interfaces. 
 - It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
 
 ### ![Framer Motion](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)
-- Framer Motion is production-ready animation library for React on the web that makes creating animations easy. 
+- **Framer Motion** is production-ready animation library for React on the web that makes creating animations easy. 
 - Its simplified API helps us abstract the complexities behind animations and allows us to create animations with ease.
 
 ### ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
@@ -73,7 +60,7 @@ https://user-images.githubusercontent.com/27571141/161324457-fe6f0d73-9ab3-4fa9-
   - Add additional request processing "middleware" at any point within the request handling pipeline.
 
 ### ![AWS SES](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
-- Amazon Simple Email Service (SES) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
+- **Amazon Simple Email Service** (SES) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
 - You can configure Amazon SES quickly to support several email use cases, including transactional, marketing, or mass email communications.
 
 ## Product Design Specification
