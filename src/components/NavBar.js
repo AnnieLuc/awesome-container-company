@@ -46,7 +46,7 @@ function NavBar(props) {
     <nav className={navSectionClass}>
       <div className={navSectionContainerClass}>
         <div className="w-auto relative flex justify-start base:justify-between base:items-center">
-          <Link className={logoLinkContainerClass} onClick={handleLinkClick} to="hero" spy={true} smooth={true} offset={-70} duration={500}>
+          <Link className={logoLinkContainerClass} onClick={handleLinkClick} to="hero" aria-label="navigate to hero section" spy={true} smooth={true} offset={-70} duration={500}>
             <Logo />
             <p className="ml-[5px] sm:ml-[8px]">Awesome Container Company</p>
           </Link>
@@ -67,32 +67,32 @@ function NavBar(props) {
             variants={navBarVariants}
             className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px] base:pb-[60px]">
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="bad-effects" spy={true} smooth={true} offset={-70} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="bad-effects" aria-label="navigate to problem section" spy={true} smooth={true} offset={-70} duration={500}>
                 The Problem
               </Link>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="sustainability-delivered" spy={true} smooth={true} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="sustainability-delivered" aria-label="navigate to solution section" spy={true} smooth={true} duration={500}>
                 Sustainable Solution
               </Link>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="impact" spy={true} smooth={true} offset={-30} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="impact" aria-label="navigate to impact section" spy={true} smooth={true} offset={-30} duration={500}>
                 Impact
               </Link>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="pricing" spy={true} smooth={true} offset={-130} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="pricing" aria-label="navigate to pricing section" spy={true} smooth={true} offset={-130} duration={500}>
                 Pricing
               </Link>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="awesome-team" spy={true} smooth={true} offset={-30} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="awesome-team" aria-label="navigate to team section" spy={true} smooth={true} offset={-30} duration={500}>
                 Team
               </Link>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="footer" spy={true} smooth={true} duration={500}>
+              <Link className={navLinkClass} onClick={handleLinkClick} to="footer" aria-label="navigate to footer contacts section" spy={true} smooth={true} duration={500}>
                 Contacts
               </Link>
             </li>
