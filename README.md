@@ -1,9 +1,18 @@
-<!-- omit in toc -->
-# <img src="src/imgeas/../images/logo.svg" width=92 /> Awesome Container Company
-## Team Members  
-1. [Alec Drosu](https://github.com/AlecDrosu) | Web Developer
-2. [Ekaterina Cratcha](https://github.com/cratcha) | Web Developer
-3. [Shraddha](https://github.com/5hraddha) | Web Developer
+
+<p align="center">
+  <a href="https://5hraddha.github.io/awesome-container-company/" target="_blank">
+    <img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/acc-logo.png" width=600 alt="awesome container company logo" />
+  </a>
+  <p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" height=20 alt="react">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" height=20 alt="tailwind css">
+    <img src="https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue" height=20  alt="framer motion">
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" height=20  alt="node js">
+    <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" height=20  alt="express">
+    <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" height=20  alt="aws ses">
+  </p>
+</p>
+
 ## About the Project
 A landing page for **Awesome Container Company** (ACC), whose mission is *to eliminate plastic and single use packaging in the food and beverage industry*. For restaurants offering takeout, ACC offers recurring delivery of clean, reusable metal containers and pickup of used containers from customers, cutting packaging costs by 50% and eliminating millions of tons of single-use packaging.
 
@@ -65,5 +74,10 @@ https://user-images.githubusercontent.com/27571141/161324457-fe6f0d73-9ab3-4fa9-
 
 ## Product Design Specification
 You can view the product specification document [here](https://www.figma.com/file/MVxWrCBVC2rsfgSAsA7IsY/Awesome-Container-Company?node-id=1730%3A2009)
-## Live Demo
 
+## Team Members  
+1. [Alec Drosu](https://github.com/AlecDrosu) | Web Developer
+2. [Ekaterina Cratcha](https://github.com/cratcha) | Web Developer
+3. [Shraddha](https://github.com/5hraddha) | Web Developer
+## Live Demo
+Checkout the live URL - [here](https://5hraddha.github.io/awesome-container-company/)
