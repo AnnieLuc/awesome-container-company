@@ -1,10 +1,10 @@
-import React                   from 'react';
-import PropTypes              from 'prop-types';
-import { motion }             from 'framer-motion';
-import { Link }               from 'react-scroll';
-import Logo                   from './Logo';
-import Button                 from './button/Button';
-import { navBarVariants }     from  '../utils/animationVariants'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+import Logo from './Logo';
+import Button from './button/Button';
+import { navBarVariants } from '../utils/animationVariants'
 
 /**
  * The **NavBar** component represents the main menu of the page.
@@ -20,15 +20,15 @@ function NavBar(props) {
     screenWidth } = props;
 
   // Classes for JSX Elements
-  const navSectionClass          = `box-border py-[5px] bg-secondary-100 flex flex-wrap items-center 
+  const navSectionClass = `box-border py-[5px] bg-secondary-100 flex flex-wrap items-center 
     justify-between mb-3 fixed top-0 right-0 left-0 z-50 ${(isNavbarOpen) && `base:shadow-sm`}`;
   const navSectionContainerClass = `w-full max-w-[1440px] pl-[24px] pr-[40px] mx-auto flex flex-wrap 
     items-center justify-between lg:px-[20px] base:flex-col base:items-stretch sm:px-[16px]`;
-  const logoLinkContainerClass   = `flex items-center text-sm font-bold leading-4 text-primary mr-4 py-2 
+  const logoLinkContainerClass = `flex items-center text-sm font-bold leading-4 text-primary mr-4 py-2 
     whitespace-nowrap hover:cursor-pointer sm:text-xs sm:leading-3`;
-  const navLinkClass             = `flex items-center text-sm font-normal leading-4 text-primary 
+  const navLinkClass = `flex items-center text-sm font-normal leading-4 text-primary 
     hover:opacity-75 hover:cursor-pointer base:p-[8px] base:m-[-8px] base:text-[20px] base:leading-[23.7px]`;
-  const hamburgerButtonClass     = `w-[44px] h-[44px] 
+  const hamburgerButtonClass = `w-[44px] h-[44px] 
     ${(isNavbarOpen) ? `bg-[url('./images/hamburger-close.svg')]` : `bg-[url('./images/hamburger-bars.svg')]`}
     bg-no-repeat bg-center bg-contain border-none hidden base:block`;
 
@@ -37,7 +37,7 @@ function NavBar(props) {
   }
 
   const handleLinkClick = () => {
-    if(screenWidth <= 930){
+    if (screenWidth <= 930) {
       setIsNavbarOpen(false);
     }
   }
@@ -109,10 +109,10 @@ function NavBar(props) {
 }
 
 NavBar.propTypes = {
-  onButtonClick:    PropTypes.func.isRequired,
-  isNavbarOpen:     PropTypes.bool.isRequired,
-  setIsNavbarOpen:  PropTypes.func.isRequired,
-  screenWidth:      PropTypes.number.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
+  isNavbarOpen: PropTypes.bool.isRequired,
+  setIsNavbarOpen: PropTypes.func.isRequired,
+  screenWidth: PropTypes.number.isRequired,
 };
 
 export default NavBar;

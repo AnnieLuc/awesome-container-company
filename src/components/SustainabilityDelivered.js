@@ -1,9 +1,9 @@
-import React                    from "react";
-import PropTypes                from "prop-types";
-import { motion }               from "framer-motion";
-import SectionHeading           from "./section-heading/SectionHeading";
-import SectionPara              from "./section-para/SectionPara";
-import Carousel                 from "./carousel/Carousel";
+import React from "react";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import SectionHeading from "./section-heading/SectionHeading";
+import SectionPara from "./section-para/SectionPara";
+import Carousel from "./carousel/Carousel";
 import {
   sectionVariants,
   sustainabilityIconVariants,

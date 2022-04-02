@@ -1,14 +1,15 @@
-import React                from 'react';
-import PropTypes  					from 'prop-types';
-import { motion }           from 'framer-motion';
-import SectionHeading       from './section-heading/SectionHeading';
-import Button               from './button/Button';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from './section-heading/SectionHeading';
+import Button from './button/Button';
 import {
   sectionVariants,
   howItWorksContainerVariants,
-  howItWorksItemVariants }  from '../utils/animationVariants';
+  howItWorksItemVariants
+} from '../utils/animationVariants';
 
-function HowItWorks({data, onButtonClick}){
+function HowItWorks({ data, onButtonClick }) {
   const { title, circularEcosystem } = data;
   const { step1, step2, step3, step4 } = circularEcosystem;
 
@@ -36,7 +37,7 @@ function HowItWorks({data, onButtonClick}){
             <figure className="flex flex-col items-center justify-center gap-y-[18px]">
               <img className="w-full max-w-[121px]" src={step1.image.url} alt={step1.image.description} />
               <figcaption className="text-primary text-lg leading-7 text-center">
-                {step1.stepNo}.<br/>{step1.caption}
+                {step1.stepNo}.<br />{step1.caption}
               </figcaption>
             </figure>
           </motion.div>
@@ -48,7 +49,7 @@ function HowItWorks({data, onButtonClick}){
             <figure className="flex flex-col items-center justify-center gap-y-[18px]">
               <img className="w-full max-w-[123.5px]" src={step2.image.url} alt={step2.image.description} />
               <figcaption className="text-primary text-lg leading-7 text-center">
-                {step2.stepNo}.<br/>{step2.caption}
+                {step2.stepNo}.<br />{step2.caption}
               </figcaption>
             </figure>
           </motion.div>
@@ -60,7 +61,7 @@ function HowItWorks({data, onButtonClick}){
             <figure className="flex flex-col items-center justify-center gap-y-[18px]">
               <img className="w-full max-w-[123.5px]" src={step3.image.url} alt={step3.image.description} />
               <figcaption className="text-primary text-lg leading-7 text-center">
-                03.<br/>Pick up used containers from users via app
+                03.<br />Pick up used containers from users via app
               </figcaption>
             </figure>
           </motion.div>
@@ -72,7 +73,7 @@ function HowItWorks({data, onButtonClick}){
             <figure className="flex flex-col items-center justify-center gap-y-[18px]">
               <img className="w-full max-w-[114px]" src={step4.image.url} alt={step4.image.description} />
               <figcaption className="text-primary text-lg leading-7 text-center">
-                04.<br/>Wash containers at commercial facility
+                04.<br />Wash containers at commercial facility
               </figcaption>
             </figure>
           </motion.div>
@@ -95,8 +96,8 @@ function HowItWorks({data, onButtonClick}){
 }
 
 HowItWorks.propTypes = {
-  data:             PropTypes.object.isRequired,
-  onButtonClick:    PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+  onButtonClick: PropTypes.func.isRequired,
 };
 
 export default HowItWorks;

@@ -1,5 +1,5 @@
-import React          from 'react';
-import PropTypes  		from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './Carousel.css';
 
 /**
@@ -8,7 +8,7 @@ import './Carousel.css';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function Carousel({slides}) {
+function Carousel({ slides }) {
   const renderListItems = (list) => (
     list.map((item, index) => (
       <li key={index} className="flex items-center gap-x-[10px]">
@@ -46,29 +46,29 @@ function Carousel({slides}) {
 
   const renderSlides = (slides) => (
     slides.map((slide, index) => {
-        // Return visible slide
-        if (index === 0) {
-          return (
-            <div key={slide.id} className="carousel-item active float-left w-full">
-              {renderCarouselSlide(slide)}
-              <p className="hidden sm:block text-primary text-sm leading-[20px] absolute bottom-[-55px] left-[45%]">
-                {`${index + 1}/${slides.length}`}
-              </p>
-            </div>
-          );
-        }
-
-        // Return hidden slides
+      // Return visible slide
+      if (index === 0) {
         return (
-          <div key={slide.id} className="carousel-item float-left w-full">
+          <div key={slide.id} className="carousel-item active float-left w-full">
             {renderCarouselSlide(slide)}
             <p className="hidden sm:block text-primary text-sm leading-[20px] absolute bottom-[-55px] left-[45%]">
               {`${index + 1}/${slides.length}`}
             </p>
           </div>
         );
-      })
-    );
+      }
+
+      // Return hidden slides
+      return (
+        <div key={slide.id} className="carousel-item float-left w-full">
+          {renderCarouselSlide(slide)}
+          <p className="hidden sm:block text-primary text-sm leading-[20px] absolute bottom-[-55px] left-[45%]">
+            {`${index + 1}/${slides.length}`}
+          </p>
+        </div>
+      );
+    })
+  );
 
   return (
     <div id="carouselExampleControls" className="max-w-[1212px] mx-auto carousel slide relative shadow 
@@ -103,7 +103,7 @@ function Carousel({slides}) {
 }
 
 Carousel.propTypes = {
-  slides:    PropTypes.array.isRequired,
+  slides: PropTypes.array.isRequired,
 };
 
 export default Carousel;

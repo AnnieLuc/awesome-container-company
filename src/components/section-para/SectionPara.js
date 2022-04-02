@@ -1,6 +1,6 @@
-import React                from 'react';
-import PropTypes            from 'prop-types';
-import classnames           from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './SectionPara.css';
 
 /**
@@ -9,11 +9,11 @@ import './SectionPara.css';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function SectionPara(props){
+function SectionPara(props) {
   const { children, align, color, lineHeight } = props;
-  const textAlignClass             = `sec-text-${align}`;
-  const textColorClass             = `sec-text-${color}`;
-  const lineHeightClass            = `sec-text-leading-${lineHeight}`;
+  const textAlignClass = `sec-text-${align}`;
+  const textColorClass = `sec-text-${color}`;
+  const lineHeightClass = `sec-text-leading-${lineHeight}`;
 
   return (
     <p className={classnames("sec-para", textAlignClass, textColorClass, lineHeightClass)}>
@@ -23,9 +23,9 @@ function SectionPara(props){
 }
 
 SectionPara.propTypes = {
-  children:   PropTypes.any.isRequired,
-  align:      PropTypes.oneOf(['center', 'left', 'right']),
-  color:      PropTypes.oneOf(['primary', 'secondary']),
+  children: PropTypes.any.isRequired,
+  align: PropTypes.oneOf(['center', 'left', 'right']),
+  color: PropTypes.oneOf(['primary', 'secondary']),
   lineHeight: PropTypes.oneOf(['5', '6']),
 };
 

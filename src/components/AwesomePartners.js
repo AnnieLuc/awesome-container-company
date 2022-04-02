@@ -1,8 +1,8 @@
-import React 								from 'react';
-import PropTypes  					from 'prop-types';
-import { motion }       		from 'framer-motion';
-import SectionHeading 			from './section-heading/SectionHeading';
-import { sectionVariants }  from '../utils/animationVariants';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import SectionHeading from './section-heading/SectionHeading';
+import { sectionVariants } from '../utils/animationVariants';
 
 /**
  * The **AwesomePartners** component representing the list of partners of the company.
@@ -10,13 +10,13 @@ import { sectionVariants }  from '../utils/animationVariants';
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function AwesomePartners({data}) {
+function AwesomePartners({ data }) {
 	const { title, logos } = data;
 
 	// Classes for JSX Elements
-	const partnerImageClass 										= `object-contain flex items-center justify-between object-center`;
-	const awesomePartnersSectionClass 					= `pt-[120px] md:pt-[100px] sm:px-[16px]`;
-	const awesomePartnersSectionContainerClass 	= `mx-auto pt-[100px] pb-[130px] max-w-[772px] 
+	const partnerImageClass = `object-contain flex items-center justify-between object-center`;
+	const awesomePartnersSectionClass = `pt-[120px] md:pt-[100px] sm:px-[16px]`;
+	const awesomePartnersSectionContainerClass = `mx-auto pt-[100px] pb-[130px] max-w-[772px] 
 		flex items-center flex-col md:pt-[40px] md:pb-[60px]`;
 
 	// Function to render the images of partners
@@ -32,9 +32,9 @@ function AwesomePartners({data}) {
 			aria-label="partners"
 			className={awesomePartnersSectionClass}
 			variants={sectionVariants}
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.2}}>
+			initial="offscreen"
+			whileInView="onscreen"
+			viewport={{ once: true, amount: 0.2 }}>
 			<SectionHeading align="center" color="primary">
 				{title}
 			</SectionHeading>
@@ -53,7 +53,7 @@ function AwesomePartners({data}) {
 }
 
 AwesomePartners.propTypes = {
-  data:    PropTypes.object.isRequired,
+	data: PropTypes.object.isRequired,
 };
 
 export default AwesomePartners;

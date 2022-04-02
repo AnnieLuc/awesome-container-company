@@ -1,7 +1,7 @@
-import React                        from 'react';
-import PropTypes  					        from 'prop-types';
-import { motion }                   from 'framer-motion';
-import { tableBulletVariants }      from '../../utils/animationVariants';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
+import { tableBulletVariants } from '../../utils/animationVariants';
 import './CompetitionTable.css';
 /**
  * The **CompetitionTable** component lays out the comparison between the company and its competitors.
@@ -9,7 +9,7 @@ import './CompetitionTable.css';
  * @version 1.0.0
  * @author [Shraddha](https://github.com/5hraddha)
  */
-function CompetitionTable({table}) {
+function CompetitionTable({ table }) {
   const renderText = (text, color = 'primary') => {
     const textClass = `${(color === 'highlight') ? `text-highlight-100` : ``}`;
     return (
@@ -30,10 +30,10 @@ function CompetitionTable({table}) {
   }
 
   const renderCell = (cell, colNumber) => {
-    if(cell === false || cell === ''){
+    if (cell === false || cell === '') {
       return ``;
     }
-    if(cell === true){
+    if (cell === true) {
       return (colNumber === 1) ? renderBullet('highlight') : renderBullet();
     }
 
@@ -44,9 +44,9 @@ function CompetitionTable({table}) {
     return (
       row.map((cell, index) => {
         let cellClass;
-        if(rowNumber === 0){
+        if (rowNumber === 0) {
           cellClass = `table-top-header ${(index === 0) && `rounded-tl-[3px]`} ${(index === row.length - 1) && `rounded-tr-[3px]`}`;
-        } else if(rowNumber === table.length - 1){
+        } else if (rowNumber === table.length - 1) {
           cellClass = `table-cell ${(index === 0) && `table-left-header rounded-bl-[3px]`} ${(index === row.length - 1) && `rounded-br-[3px]`}`;
         } else {
           cellClass = `${(index === 0) ? `table-left-header` : `table-cell`}`;
@@ -57,7 +57,7 @@ function CompetitionTable({table}) {
           </div>
         );
       }
-    ));
+      ));
   }
 
   const renderTable = () => {
@@ -72,7 +72,7 @@ function CompetitionTable({table}) {
 }
 
 CompetitionTable.propTypes = {
-  table:  PropTypes.array.isRequired,
+  table: PropTypes.array.isRequired,
 };
 
 export default CompetitionTable;
