@@ -2,4 +2,8 @@ const emailToSend = {
   email: "alecdrosu@yahoo.com",
 };
 
-export default emailToSend;
+const emailSource = {
+  email: "drosualec@gmail.com",
+};
+
+export { emailToSend, emailSource };

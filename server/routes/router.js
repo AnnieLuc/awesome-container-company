@@ -1,6 +1,6 @@
 import express from "express";
 import aws from "aws-sdk";
-import emailToSend from "../constants/email.js";
+import {emailToSend, emailSource} from "../constants/email.js";
 
 const router = express.Router();
 
@@ -34,7 +34,7 @@ function sesTest(emailTo, emailFrom, message, name) {
         Data: "For Awesome Container Company: " + emailFrom,
       },
     },
-    Source: "drosualec@gmail.com",
+    Source: emailSource.email,
   };
   return ses.sendEmail(params).promise();
 }
