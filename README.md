@@ -29,7 +29,8 @@ The webpage is responsive from desktop screen sizes to the mobile (minimum - 375
 <details><summary><b>Chat Animation to mimic the enquiry</b></summary>
 
 The page has a beautiful chat animation to mimic the general enquiry conversation between the guest and the company.
-<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/chat-animation.png" width=400>
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/chat-animation.png" width=600>
 
 </details>
 
@@ -37,23 +38,31 @@ The page has a beautiful chat animation to mimic the general enquiry conversatio
 
 The page lists out the problem we are facing today because of single-use packaging.
 
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/problems.png" width=600>
+
 </details>
 
 <details><summary><b>Features, Sizing and Pictures of the containers</b></summary>
 
-The page shows the features, sizing and pictures of the containers that the company offers, to solve the problem.
+The page has a slider that shows the features, sizing and pictures of the containers that the company offers, to solve the problems.
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/sustainable-soln.png" width=600>
 
 </details>
 
 <details><summary><b>Circular work flow of the company</b></summary>
 
-The page illustrates the circular work flow of the company in a step by step process.
+The page illustrates the circular work flow of the company in a step by step process. 
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/how-it-works.png" width=600>
 
 </details>
 
 <details><summary><b>Benefits for the businesses and the user</b></summary>
 
-The page illustrates the circular work flow of the company in a step by step process.
+The page lists down the benefits that the businesses and users can have from the service.
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/impact.png" width=600>
 
 </details>
 
@@ -61,11 +70,15 @@ The page illustrates the circular work flow of the company in a step by step pro
 
 We have illustrated a table that brings about how the competition is in the market to give a clear picture of how ACC beats them all.
 
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/competition.png" width=600>
+
 </details>
 
 <details><summary><b>Animated welcome screen</b></summary>
 
-The webpage has beautifully animated welcome screen with the ACC logo.
+The webpage has beautifully animated welcome screen with the ACC logo. 
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/pageLoadAnimation.png" width=600>
 
 </details>
 
@@ -77,65 +90,45 @@ The page responds with subtle animations as the user scroll through it.
 
 <details><summary><b>Editable data file as a single source of truth</b></summary>
 
-All the data on the page is populated dynamically from a single file, that could be edited if required to change the texts on the webpage.
+- All the data on the page is populated dynamically from a single file, that could be edited if required to change the texts on the webpage.
+- The file is located at - `src/constants/data.js`
 
 </details>
 
 <details><summary><b>Webpage has accessibility and SEO score</b></summary>
 
-The webpage has *\accessibility score of 97 and SEO score of 91 in Google Lighthouse's Web performance Audit result.
+The webpage has accessibility score of 97 and SEO score of 90 in Google Lighthouse's Web performance Audit result. 
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/lighthouse-report.png" width=600>
 
 </details>
 
 <details><summary><b>A contact form for users to enquire the company</b></summary>
 
-The webpage also gives an *option for users to contact the company, if they are interested in the service via a contact form. On the submission of the form, a mail is triggered via AWS SES.
+The webpage also gives an *option for users to contact the company, if they are interested in the service via a contact form. On the submission of the form, a mail is triggered via AWS SES. 
+
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/contact-form.png" width=600>
 
 </details>
 
 ## Technologies and Standards Used
-**The technologies that have been used are:**
-
-1. ReactJS
-2. Tailwind CSS
-3. Framer Motion
-4. Node.js
-5. Express Framework (for development)
-6. AWS Simple Email Service (SES)
-
-### ReactJS
-- **ReactJS** is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications.
-- It's used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components.
-
-### Tailwind CSS
-- **Tailwind CSS** is a utility-first CSS framework for rapidly building custom user interfaces. 
-- It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.
-
-### Framer Motion
-- **Framer Motion** is production-ready animation library for React on the web that makes creating animations easy. 
-- Its simplified API helps us abstract the complexities behind animations and allows us to create animations with ease.
-
-### NodeJS
-- **Node** (or more formally *Node.js*) is an *open-source*, *cross-platform* runtime environment that allows developers to create all kinds of server-side tools and applications in JavaScript. 
-- *Node. js* is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. 
-- It's used for traditional web sites and back-end API services.
-
-### Express
-- **Express** is the most popular Node web framework, and is the underlying library for a number of other popular Node web frameworks. 
-- It provides mechanisms to:
-  - Write handlers for requests with different HTTP verbs at different URL paths (routes).
-  - Integrate with "view" rendering engines in order to generate responses by inserting data into templates.
-  - Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
-  - Add additional request processing "middleware" at any point within the request handling pipeline.
-
-### AWS SES
-- **Amazon Simple Email Service** (SES) is a cost-effective, flexible, and scalable email service that enables developers to send mail from within any application.
-- You can configure Amazon SES quickly to support several email use cases, including transactional, marketing, or mass email communications.
+The technologies that have been used are:  
+| Technology | Description |
+|---|---|
+| ReactJS | An open-source JavaScript library that is used for building user interfaces specifically for single-page applications |
+| Tailwind CSS | A utility-first CSS framework for rapidly building custom user interfaces |
+| Framer Motion | Production-ready animation library for React on the web that makes creating animations easy |
+| NodeJS | An open-source runtime environment that allows developers to create all kinds of server-side tools and applications in JavaScript |
+| Express | The most popular Node web framework, and is the underlying library for a number of other popular Node web frameworks. |
+| AWS Simple Email Service (SES) | A cost-effective, flexible, and scalable email service from AWS that enables developers to send mail from within any application |
 
 ## Product Design Specification
 You can view the product specification document [here](https://www.figma.com/file/MVxWrCBVC2rsfgSAsA7IsY/Awesome-Container-Company?node-id=1730%3A2009)
 
-## How to setup AWS SES
+## Steps to setup AWS SES
+
+
+## Other options for sending Email
 
 
 ## Team Members  
