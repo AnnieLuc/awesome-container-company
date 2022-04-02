@@ -21,7 +21,7 @@ function PopupWithForm(props) {
 
   const onSubmit = (data) => {
     console.log(data);
-    axios.post('/email', data);
+    axios.post('/email', data); // https://awesome-container-company.herokuapp.com/email
     setFormSubmitted(true);
   };
 
