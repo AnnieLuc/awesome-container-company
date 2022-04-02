@@ -27,5 +27,3 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// host page on s3 or github pages
-// host backend on heroku or elatic beanstalk

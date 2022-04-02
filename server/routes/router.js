@@ -10,7 +10,7 @@ const ses = new aws.SES({
 
 router.post("/email", (req, res) => {
   const { email, message, name } = req.body;
-  sesTest("alecdrosu@yahoo.com", email, message, name)
+  sesTest(emailToSend.email, email, message, name)
     .then(() => {
       res.status(200).send("Email sent");
     })
