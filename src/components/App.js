@@ -49,6 +49,7 @@ function App() {
     competition,
     awesomeTeam,
     awesomePartners,
+    footer,
   } = data;
 
   const closePopup = () => {
@@ -158,7 +159,7 @@ function App() {
                   isOpen={isPopupOpen}
                   isFormSubmitted={isFormSubmitted}
                   setFormSubmitted={setFormSubmitted} />
-                <Footer />
+                <Footer data={footer} />
               </Suspense>
             </>}
         </AnimatePresence>

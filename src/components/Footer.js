@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import SectionHeading from "./section-heading/SectionHeading";
 import { sectionVariants } from '../utils/animationVariants';
@@ -10,7 +11,8 @@ import instagram from "../images/social-links/instagram.svg";
  * @version 1.0.0
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
-function Footer() {
+function Footer({ data }) {
+	const { email, address, social, activeInCountries, planningToBeActiveInCountries } = data;
 
 	// Classes for JSX Elements
 	const footerSectionClass = `bg-primary text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]`;
@@ -34,10 +36,10 @@ function Footer() {
 						Let's get in touch
 					</SectionHeading>
 					<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
-						Hello@AwesomeContaners.com
+						{email}
 					</p>
 					<address className="text-sm not-italic leading-4">
-						Address: 71 UBI Road 1, #08-42,<br /> Oxley Bizhub, Singapore 408732
+						Address: {address.line1}<br/>{address.line2} {address.country} {address.postcode}
 					</address>
 				</div>
 				<div className="min-w-full min-h-full pl-[50px] xl:pl-[0px] xl:pt-[80px] 
@@ -49,7 +51,7 @@ function Footer() {
 					</div>
 					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com">
 						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of awesome container company" />
-						AwesomeContainers
+						{social.instagram}
 					</a>
 				</div>
 				<div className="min-w-full min-h-full row-span-2 xl:row-start-1 xl:col-start-2 
@@ -58,11 +60,11 @@ function Footer() {
 						Where we work
 					</SectionHeading>
 					<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
-						We currently operate in:<br />Singapore
+						We currently operate in:<br />{activeInCountries}
 					</p>
 					<p className="max-w-[386px]">
 						Planning to launch in 2022:<br />
-						UK, EU, OSEAN, China, Vietnam, Malaysia, Taiwan
+						{planningToBeActiveInCountries}
 					</p>
 				</div>
 				<div className="min-w-full min-h-full col-span-2 flex items-end md:row-start-4 
@@ -76,5 +78,9 @@ function Footer() {
 		</motion.footer>
 	);
 }
+
+Footer.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Footer;

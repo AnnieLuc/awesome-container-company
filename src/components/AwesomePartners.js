@@ -20,9 +20,11 @@ function AwesomePartners({ data }) {
 		flex items-center flex-col md:pt-[40px] md:pb-[60px]`;
 
 	// Function to render the images of partners
-	const renderImage = ({ url }, index) => {
+	const renderImage = ({ imgUrl, link }, index) => {
 		return (
-			<img key={index} src={url} alt="partner" className={partnerImageClass} />
+			<a className="hover:cursor-pointer" key={index} href={link}>
+				<img src={imgUrl} alt="partner" className={partnerImageClass} />
+			</a>
 		);
 	};
 

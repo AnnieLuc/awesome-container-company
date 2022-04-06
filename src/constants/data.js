@@ -254,21 +254,40 @@ const data = {
     title: 'And Awesome Partners',
     logos: [
       {
-        url: chefAtWork,
+        imgUrl: chefAtWork,
+        link: 'https://chefatwork.com.sg/',
       },
       {
-        url: stewardsSolution,
+        imgUrl: stewardsSolution,
+        link: 'https://www.stewardssolution.com/',
       },
       {
-        url: ninjaVan,
+        imgUrl: ninjaVan,
+        link: 'https://www.ninjavan.co/en-sg',
       },
       {
-        url: creatella,
+        imgUrl: creatella,
+        link: 'https://creatella.ventures/'
       },
       {
-        url: goaGoa,
+        imgUrl: goaGoa,
+        link: 'http://goaltd.com.hk/index.php/en/'
       },
     ],
+  },
+  footer: {
+    email: 'Hello@AwesomeContainers.com',
+    address: {
+      line1: '71 UBI Road 1, #08-42,',
+      line2: 'Oxley Bizhub,',
+      country: 'Singapore',
+      postcode: '408732',
+    },
+    social: {
+      instagram: 'AwesomeContainers',
+    },
+    activeInCountries: 'Singapore',
+    planningToBeActiveInCountries: 'UK, EU, OSEAN, China, Vietnam, Malaysia, Taiwan',
   }
 }
 
