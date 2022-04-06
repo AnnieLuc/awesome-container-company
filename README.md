@@ -95,11 +95,11 @@ The page responds with subtle animations as the user scroll through it.
 
 </details>
 
-<details><summary><b>Webpage has accessibility and SEO score</b></summary>
+<details><summary><b>Webpage is accessible and Search Engine Optimized</b></summary>
 
-The webpage has accessibility score of 97 and SEO score of 90 in Google Lighthouse's Web performance Audit result. 
+The webpage has accessibility score of 97 and SEO score of 100 in Google Lighthouse's Web performance Audit result. 
 
-<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/lighthouse-report.png" width=600>
+<img src="https://raw.githubusercontent.com/5hraddha/misc/master/images/lighthouse-audit-report.png" width=600>
 
 </details>
 
@@ -126,37 +126,37 @@ The technologies that have been used are:
 You can view the product specification document [here](https://www.figma.com/file/MVxWrCBVC2rsfgSAsA7IsY/Awesome-Container-Company?node-id=1730%3A2009)
 
 ## Steps to setup AWS SES
-### 1. setting up a free account:
-Click [here](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) to create an AWS free tier account. The free tier gives access up to 62,000 emails, so you might upgrade if you anticipate heavy user traffic.
-### 2. setting up AWS SES IAM User:
+### 1. Setting up a free account:
+Click [here](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) to create an AWS free tier account. The free tier gives access up to *62,000 emails*, so you might upgrade if you anticipate heavy user traffic.
+### 2. Setting up AWS SES IAM User:
 Once your account is completed, you will have access 
 to the "AWS Management Console", click the search bar at the top of the page and search for "IAM".
-1. click add user, enter any username (example: ses-user)
-2. select programmatic access only, then hit next
-3. select "attach existing policies directly", search SES, and select the AmazonSESFullAccess Policy. Click next
-4. Do not worry about adding tags, hit next again, then hit create user
+1. Click add user, enter any username (example: ses-user).
+2. Select programmatic access only, then hit next.
+3. Select "attach existing policies directly", search SES, and select the AmazonSESFullAccess Policy. Click next.
+4. Do not worry about adding tags, hit next again, then hit create user.
 5. You will get a message with "Success". **SAVE THE ACCESS KEY AND SECRET KEY SOMEWHERE**, these are extremely important and you only can see the secret key here. If you lose it, you need to generate another one. (generating another key is not difficult but you will need to change the access keys in the code as well)
 ### 3. Setting Up AWS SES:
 Search for SES or Simple Email Service in the search bar. Once there, select "verified identities" under configuration and create an identity. This is the email that has access to the service and will serve as the source. This is the email address that the email will be coming from. Inside the repository, go to:
 ```
 server/constants/email.js
 ```
-and change the emailToSend email to whatever email you want to have receive the emails, and change the emailSource email to whatever email you authorized on AWS.
+and change the `emailToSend` email to whatever email you want to have receive the emails, and change the `emailSource` email to whatever email you authorized on AWS.  
 Also go to:
 ```
 server/.env
 ```
-and put in you access key and secret access key. **MAKE SURE** not to just ctrl+C the codes, as the system will recognize ctrl+C as a keystroke, and you access key will be wrong. Finally, npm install aws-sdk and the form should work on your system with the addresses you inputted.
+and put in you access key and secret access key. **MAKE SURE** not to just ctrl+C the codes, as the system will recognize ctrl+C as a keystroke, and you access key will be wrong. Finally, run `npm install aws-sdk` and the form should work on your system with the addresses you inputted.
 ## Setting up Heroku
 If you would like to have heroku set up under a different account, follow these steps.
-1. go to [heroku](www.heroku.com) and create a free account. Enter your information, and under Primary development language, enter Node.js
-2. Go to your dashboard, and click "New" in the top right corner
-3. Name the app "awesome-container-company" or any other name the client would like
-4. Follow the instructions under deploy. You are finished once you use the following line of code in the terminal:
+1. Go to [heroku](www.heroku.com) and create a free account. Enter your information, and under Primary development language, enter *Node.js*
+2. Go to your dashboard, and click "New" in the top right corner.
+3. Name the app "awesome-container-company" or any other name of the client would like.
+4. Follow the instructions under deploy. Once you are finished, use the following line of code in the terminal:
 ```
 git push heroku main
 ```
-Now Heroku should be set up under your account
+Now Heroku should be set up under your account.
 
 
 ## Other options for sending Email
