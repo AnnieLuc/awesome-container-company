@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Logo from './Logo';
 import Button from './button/Button';
 import { navBarVariants } from '../utils/animationVariants'
@@ -46,10 +46,10 @@ function NavBar(props) {
     <nav className={navSectionClass}>
       <div className={navSectionContainerClass}>
         <div className="w-auto relative flex justify-start base:justify-between base:items-center">
-          <Link className={logoLinkContainerClass} onClick={handleLinkClick} to="hero" aria-label="navigate to hero section" spy={true} smooth={true} offset={-70} duration={500}>
+          <AnchorLink className={logoLinkContainerClass} onClick={handleLinkClick} href="#hero" aria-label="navigate to hero section">
             <Logo />
             <p className="ml-[5px] sm:ml-[8px]">Awesome Container Company</p>
-          </Link>
+          </AnchorLink>
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} aria-label="hamburger menu" />
             <div className="hidden base:block sm:hidden">
@@ -67,34 +67,34 @@ function NavBar(props) {
             variants={navBarVariants}
             className="ml-auto flex justify-between flex-grow list-none base:flex-col base:items-center base:pt-[111px] base:pb-[60px]">
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="bad-effects" aria-label="navigate to problem section" spy={true} smooth={true} offset={-70} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#bad-effects" aria-label="navigate to problem section">
                 The Problem
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="sustainability-delivered" aria-label="navigate to solution section" spy={true} smooth={true} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#sustainability-delivered" aria-label="navigate to solution section">
                 Sustainable Solution
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="impact" aria-label="navigate to impact section" spy={true} smooth={true} offset={-30} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#impact" aria-label="navigate to impact section">
                 Impact
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="pricing" aria-label="navigate to pricing section" spy={true} smooth={true} offset={-130} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#pricing" aria-label="navigate to pricing section">
                 Pricing
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="awesome-team" aria-label="navigate to team section" spy={true} smooth={true} offset={-30} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#awesome-team" aria-label="navigate to team section">
                 Team
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-              <Link className={navLinkClass} onClick={handleLinkClick} to="footer" aria-label="navigate to footer contacts section" spy={true} smooth={true} duration={500}>
+              <AnchorLink className={navLinkClass} onClick={handleLinkClick} href="#footer" aria-label="navigate to footer contacts section">
                 Contacts
-              </Link>
+              </AnchorLink>
             </li>
             <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
               <Button isHeader={`${(screenWidth <= 560) ? `false` : `true`}`} onButtonClick={onButtonClick}>
