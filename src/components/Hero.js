@@ -35,30 +35,32 @@ function Hero({ data, onButtonClick }) {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true }}>
-      <div className={heroSectionContainerClass}>
-        <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
-          <h1 className={heroSectionHeadingClass}>
-            {mainText} {' '}
-            <motion.span
-              variants={textVariants}
-              initial="offscreen"
-              animate="onscreen"
-              className="text-highlight-100 inline-block">{companyName}</motion.span>
-          </h1>
-        </div>
-        <div className={heroSectionContentClass}>
-          <div className={imageSliderContainerClass}>
-            <ImageCompareSlider imagesToCompare={imagesToCompare} />
-            <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
-              <p>Now</p>
-              <p>With Awesome Containers</p>
-            </div>
+      <div className="bg-secondary-200">
+        <div className={heroSectionContainerClass}>
+          <div className="max-w-[859px] text-[44px] md:max-w-[100%]">
+            <h1 className={heroSectionHeadingClass}>
+              {mainText} {' '}
+              <motion.span
+                variants={textVariants}
+                initial="offscreen"
+                animate="onscreen"
+                className="text-highlight-100 inline-block">{companyName}</motion.span>
+            </h1>
           </div>
-          <div className="max-w-[491px] w-full flex flex-col justify-end md:max-w-[492px] md:mt-[60px]">
-            <div className="px-[50px] flex flex-col gap-[16px] md:min-h-[422px] md:justify-end">
-              <Chat chatMessages={chatMessages} onButtonClick={onButtonClick} />
-              <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
-              bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
+          <div className={heroSectionContentClass}>
+            <div className={imageSliderContainerClass}>
+              <ImageCompareSlider imagesToCompare={imagesToCompare} />
+              <div className="mt-[13px] w-full flex justify-between text-sm font-normal leading-4 sm:mt-[11px]">
+                <p>Now</p>
+                <p>With Awesome Containers</p>
+              </div>
+            </div>
+            <div className="max-w-[491px] w-full flex flex-col justify-end md:max-w-[492px] md:mt-[60px]">
+              <div className="px-[50px] flex flex-col gap-[16px] md:min-h-[422px] md:justify-end">
+                <Chat chatMessages={chatMessages} onButtonClick={onButtonClick} />
+                <div className="w-[38px] h-[38px] bg-[url('./images/chat-admin.svg')]
+                bg-no-repeat bg-center bg-contain self-end relative -right-[40px] bottom-[20px]"></div>
+              </div>
             </div>
           </div>
         </div>

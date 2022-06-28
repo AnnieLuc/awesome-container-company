@@ -1,7 +1,7 @@
 /* CSS Styles for Competition Component */
 .competition {
   scrollbar-width: thin;
-  scrollbar-color: #1c383c #e1e1e1;
+  scrollbar-color: #83977C #e1e1e1;
 }
 
 .competition::-webkit-scrollbar {

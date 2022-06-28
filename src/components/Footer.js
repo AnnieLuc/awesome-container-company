@@ -15,7 +15,7 @@ function Footer({ data }) {
 	const { email, address, social, activeInCountries, planningToBeActiveInCountries } = data;
 
 	// Classes for JSX Elements
-	const footerSectionClass = `bg-primary text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]`;
+	const footerSectionClass = `bg-secondary-500 text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]`;
 	const footerSectionContainerClass = `box-border mx-auto max-w-[1440px] max-h-[512px] px-[80px] 
 		grid overflow-hidden grid-cols-3 grid-rows-2 gap-px 
 		xl:h-[662px] xl:grid-cols-2 xl:grid-rows-3 
@@ -36,7 +36,7 @@ function Footer({ data }) {
 						Let's get in touch
 					</SectionHeading>
 					<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
-						{email}
+						<a href={email}>{email}</a>
 					</p>
 					<address className="text-sm not-italic leading-4">
 						Address: {address.line1}<br/>{address.line2} {address.country} {address.postcode}

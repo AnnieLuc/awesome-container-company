@@ -1,9 +1,9 @@
 const emailToSend = {
-  email: "alecdrosu@yahoo.com",
+  email: "annieluc822@gmail.com",
 };
 
 const emailSource = {
-  email: "drosualec@gmail.com",
+  email: "annieluc822@gmail.com",
 };
 
 export { emailToSend, emailSource };

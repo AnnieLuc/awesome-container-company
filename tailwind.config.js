@@ -23,14 +23,16 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#1c383c",
+        primary: "#1C383C", /* dark navy */
         secondary: {
           100: "#ffffff",
-          200: "#f4f4f4",
-          300: "#e3e3e3",
+          200: "#FDF4EA", /* light cream*/
+          300: "#708371", /* dark sage green*/
+          400: "#DDCAB4", /* tan */
+          500: "#83977C", /* sage green */
         },
         highlight: {
-          100: "#ff9820",
+          100: "#EF8855", /* soft orange */
           200: "#e78819",
         },
         gridLine: "#b6b6b6",

@@ -8,11 +8,11 @@
 }
 
 .chat-bubble-default {
-  @apply bg-secondary-300 text-chat;
+  @apply bg-secondary-400 text-chat;
 }
 
 .chat-bubble-primary {
-  @apply bg-primary text-secondary-100;
+  @apply bg-secondary-500 text-secondary-100;
 }
 
 .chat-bubble-highlight {

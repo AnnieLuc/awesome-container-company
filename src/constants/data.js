@@ -276,7 +276,7 @@ const data = {
     ],
   },
   footer: {
-    email: 'Hello@AwesomeContainers.com',
+    email: 'Hello@AwesomeContainer.com',
     address: {
       line1: '71 UBI Road 1, #08-42,',
       line2: 'Oxley Bizhub,',
