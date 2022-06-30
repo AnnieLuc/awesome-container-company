@@ -5,6 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Logo from './Logo';
 import Button from './button/Button';
 import { navBarVariants } from '../utils/animationVariants'
+import pdflink from '../files/Awesome-Container-Company-Blockchain.pdf';
 
 /**
  * The **NavBar** component represents the main menu of the page.
@@ -96,10 +97,14 @@ function NavBar(props) {
                 Contacts
               </AnchorLink>
             </li>
+            <li className="flex items-center base:py-[12px]">
+               <a href={pdflink} className={navLinkClass} target="_blank">White Paper</a>
+            </li>
             <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
-              <Button isHeader={`${(screenWidth <= 560) ? `false` : `true`}`} onButtonClick={onButtonClick}>
+              <a href="https://calendly.com/awesomecontainers" isHeader={`${(screenWidth <= 500) ? `false` : `true`}`} class="button">
                 Work with us
-              </Button>
+              </a>
+
             </li>
           </motion.ul>
         </div>

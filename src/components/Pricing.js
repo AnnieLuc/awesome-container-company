@@ -57,7 +57,7 @@ function Pricing({ onButtonClick }) {
             </p>
           </motion.div>
         </div>
-        <Button isHeader="false" onButtonClick={onButtonClick}>Work with us</Button>
+        <a href="https://calendly.com/awesomecontainers" isHeader="false" class="button">Work with us</a>
         <div className="mt-[32px] max-w-[618px]">
           <SectionPara align="center" color="primary" lineHeight="5">
             Leave your contacts and request, and our manager will reach out to you to establish our further partnership!

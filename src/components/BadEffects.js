@@ -59,8 +59,8 @@ function BadEffects({ data }) {
             <div className="pt-[40px] max-w-[627px] md:max-w-[616px] sm:pt-[32px]">
               <SectionPara align="left" color="secondary" lineHeight="6">
                 <span className="md:inline-block md:text-center">
-                  Millions of tons of single-use packaging <span className="text-highlight-100">end up in landfills and oceans</span> while only
-                  <span className="text-highlight-100"> 9% of single-use waste gets recycled</span>. Meanwhile, single-use containers are expensive
+                  Millions of tons of single-use packaging <span className="text-primary">end up in landfills and oceans</span> while only
+                  <span className="text-primary"> 9% of single-use waste gets recycled</span>. Meanwhile, single-use containers are expensive
                   and restaurants need to track inventory / restock weekly.
                 </span>
               </SectionPara>

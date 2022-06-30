@@ -231,7 +231,7 @@ const data = {
     title: 'An Awesome Team',
     members: [
       {
-        name: 'Huang Lam',
+        name: 'Hung Lam',
         title: 'Founder / CEO',
         linkedIn: 'https://www.linkedin.com/in/hung-lam-85a502163/',
         image: huangLam,
@@ -276,7 +276,7 @@ const data = {
     ],
   },
   footer: {
-    email: 'Hello@AwesomeContainer.com',
+    contactlink: 'https://calendly.com/awesomecontainers',
     address: {
       line1: '71 UBI Road 1, #08-42,',
       line2: 'Oxley Bizhub,',

@@ -12,7 +12,7 @@ import instagram from "../images/social-links/instagram.svg";
  * @author [Alec Drosu](https://github.com/AlecDrosu)
  */
 function Footer({ data }) {
-	const { email, address, social, activeInCountries, planningToBeActiveInCountries } = data;
+	const { contactlink, address, social, activeInCountries, planningToBeActiveInCountries } = data;
 
 	// Classes for JSX Elements
 	const footerSectionClass = `bg-secondary-500 text-secondary-100 pt-[80px] pb-[60px] sm:pt-[60px]`;
@@ -36,7 +36,7 @@ function Footer({ data }) {
 						Let's get in touch
 					</SectionHeading>
 					<p className="py-[40px] md:pt-[30px] md:pb-[20px]">
-						<a href={email}>{email}</a>
+						<a href={contactlink}>hello@awesomecontainer.com</a>
 					</p>
 					<address className="text-sm not-italic leading-4">
 						Address: {address.line1}<br/>{address.line2} {address.country} {address.postcode}
@@ -49,7 +49,7 @@ function Footer({ data }) {
 							Follow us
 						</SectionHeading>
 					</div>
-					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com">
+					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com/awesomecontainers/">
 						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of awesome container company" />
 						{social.instagram}
 					</a>

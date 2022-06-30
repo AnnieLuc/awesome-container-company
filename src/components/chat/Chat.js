@@ -45,9 +45,9 @@ export function Chat({ chatMessages, onButtonClick }) {
       <div className={`flex items-end ${(sender === 'admin') && `justify-end`}`}>
         {(hasOnClickEvent)
           ? (
-            <button className={chatBubbleContainerClass} onClick={onButtonClick}>
+            <a href="https://calendly.com/awesomecontainers" className={chatBubbleContainerClass} >
               {renderChatMessage(sender, color, message)}
-            </button>)
+            </a>)
           : (
             <div className={chatBubbleContainerClass}>
               {renderChatMessage(sender, color, message)}
