@@ -41,10 +41,10 @@ function AwesomePartners({ data }) {
 				{title}
 			</SectionHeading>
 			<div className={awesomePartnersSectionContainerClass}>
-				<div className="flex justify-between w-full md:flex-col md:max-w-[200px] md:gap-y-[40px] md:mb-[40px]">
+				<div className="flex justify-between items-center w-full md:flex-col md:max-w-[200px] md:gap-y-[40px] md:mb-[40px]">
 					{logos.filter((_, index) => index < 3).map(renderImage)}
 				</div>
-				<div className="flex justify-between w-[56%] md:w-auto md:flex-col md:max-w-[135px] md:gap-y-[40px]">
+				<div className="flex justify-between items-center w-[100%] md:w-auto md:flex-col md:max-w-[135px] md:gap-y-[40px]">
 					{logos
 						.filter((_, index) => index >= 3)
 						.map(renderImage)}

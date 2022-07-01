@@ -29,6 +29,8 @@ import creatella                      from '../images/partners/creatella.png';
 import goaGoa                         from '../images/partners/goa-goa.png';
 import ninjaVan                       from '../images/partners/ninja-van.png';
 import stewardsSolution               from '../images/partners/stewards-solution.png';
+import constellation               from '../images/partners/constellation.png';
+import greatSolutions               from '../images/partners/greatsolutions.png';
 
 const data = {
   pageLoad: {
@@ -266,13 +268,22 @@ const data = {
         link: 'https://www.ninjavan.co/en-sg',
       },
       {
+        imgUrl: constellation,
+        link: 'https://constellationnetwork.io/'
+      },
+      {
+        imgUrl: greatSolutions,
+        link: 'https://greatsolutions.com.sg/'
+      },        
+      {
         imgUrl: creatella,
         link: 'https://creatella.ventures/'
       },
       {
         imgUrl: goaGoa,
         link: 'http://goaltd.com.hk/index.php/en/'
-      },
+      },    
+
     ],
   },
   footer: {
