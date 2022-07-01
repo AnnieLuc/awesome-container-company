@@ -38,7 +38,7 @@ function NavBar(props) {
   }
 
   const handleLinkClick = () => {
-    if (screenWidth <= 930) {
+    if (screenWidth <= 1000) {
       setIsNavbarOpen(false);
     }
   }
@@ -101,7 +101,7 @@ function NavBar(props) {
                <a href={pdflink} className={navLinkClass} target="_blank">White Paper</a>
             </li>
             <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
-              <a href="https://calendly.com/awesomecontainers" isHeader={`${(screenWidth <= 500) ? `false` : `true`}`} class="button">
+              <a href="https://calendly.com/awesomecontainers" isHeader={`${(screenWidth <= 500) ? `false` : `true`}`} className="button">
                 Work with us
               </a>
 

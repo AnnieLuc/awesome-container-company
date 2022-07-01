@@ -88,7 +88,7 @@ function HowItWorks({ data, onButtonClick }) {
 
         </motion.div>
         <div className="flex justify-center">
-          <a href="https://calendly.com/awesomecontainers" isHeader="false" class="button">Work with us</a>
+          <a href="https://calendly.com/awesomecontainers" isHeader="false" className="button">Work with us</a>
         </div>
       </div>
     </motion.section>
