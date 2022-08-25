@@ -28,7 +28,6 @@ import chefAtWork                     from '../images/partners/chef-at-work.png'
 import creatella                      from '../images/partners/creatella.png';
 import goaGoa                         from '../images/partners/goa-goa.png';
 import ninjaVan                       from '../images/partners/ninja-van.png';
-import stewardsSolution               from '../images/partners/stewards-solution.png';
 import constellation               from '../images/partners/constellation.png';
 import greatSolutions               from '../images/partners/greatsolutions.png';
 
@@ -260,21 +259,17 @@ const data = {
         link: 'https://chefatwork.com.sg/',
       },
       {
-        imgUrl: stewardsSolution,
-        link: 'https://www.stewardssolution.com/',
-      },
-      {
         imgUrl: ninjaVan,
         link: 'https://www.ninjavan.co/en-sg',
       },
       {
+        imgUrl: greatSolutions,
+        link: 'https://greatsolutions.com.sg/'
+      },  
+      {
         imgUrl: constellation,
         link: 'https://constellationnetwork.io/'
       },
-      {
-        imgUrl: greatSolutions,
-        link: 'https://greatsolutions.com.sg/'
-      },        
       {
         imgUrl: creatella,
         link: 'https://creatella.ventures/'
@@ -295,7 +290,7 @@ const data = {
       postcode: '408732',
     },
     social: {
-      instagram: 'AwesomeContainers',
+      twitter: '@Awesome_Venture',
     },
     activeInCountries: 'Singapore',
     planningToBeActiveInCountries: 'UK, EU, OSEAN, China, Vietnam, Malaysia, Taiwan',

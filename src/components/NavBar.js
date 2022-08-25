@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Logo from './Logo';
-import Button from './button/Button';
 import { navBarVariants } from '../utils/animationVariants'
 import pdflink from '../files/Awesome-Container-Company-Blockchain.pdf';
-
+import Button from './button/Button';
 /**
  * The **NavBar** component represents the main menu of the page.
  *
@@ -15,7 +14,6 @@ import pdflink from '../files/Awesome-Container-Company-Blockchain.pdf';
  */
 function NavBar(props) {
   const {
-    onButtonClick,
     isNavbarOpen,
     setIsNavbarOpen,
     screenWidth } = props;
@@ -54,9 +52,9 @@ function NavBar(props) {
           <div className="flex gap-x-[30px]">
             <button className={hamburgerButtonClass} type="button" onClick={handleHamburgerClick} aria-label="hamburger menu" />
             <div className="hidden base:block sm:hidden">
-              <Button isHeader="true" onButtonClick={onButtonClick}>
-                Work with us
-              </Button>
+              <a href="https://community.awesomecontainer.com/public" isheader={`${(screenWidth <= 500) ? `false` : `true`}`} className="button">
+                Invest
+              </a>
             </div>
           </div>
         </div>
@@ -98,11 +96,11 @@ function NavBar(props) {
               </AnchorLink>
             </li>
             <li className="flex items-center base:py-[12px]">
-               <a href={pdflink} className={navLinkClass} target="_blank">White Paper</a>
+               <a href={pdflink} className={navLinkClass} target="_blank" rel="noreferrer">White Paper</a>
             </li>
             <li className="flex items-center ml-[40px] lg:ml-[20px] base:hidden sm:block sm:ml-[0px] sm:pt-[111px]">
-              <a href="https://calendly.com/awesomecontainers" isHeader={`${(screenWidth <= 500) ? `false` : `true`}`} className="button">
-                Work with us
+              <a href="https://community.awesomecontainer.com/public" isheader={`${(screenWidth <= 500) ? `false` : `true`}`} className="button">
+                Invest
               </a>
 
             </li>
@@ -114,7 +112,6 @@ function NavBar(props) {
 }
 
 NavBar.propTypes = {
-  onButtonClick: PropTypes.func.isRequired,
   isNavbarOpen: PropTypes.bool.isRequired,
   setIsNavbarOpen: PropTypes.func.isRequired,
   screenWidth: PropTypes.number.isRequired,

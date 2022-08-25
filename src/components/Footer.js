@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import SectionHeading from "./section-heading/SectionHeading";
 import { sectionVariants } from '../utils/animationVariants';
-import instagram from "../images/social-links/instagram.svg";
+import twitter from "../images/social-links/twitter.svg";
 
 /**
  * The **Footer** component representing the footer socials links and contacts.
@@ -41,18 +41,34 @@ function Footer({ data }) {
 					<address className="text-sm not-italic leading-4">
 						Address: {address.line1}<br/>{address.line2} {address.country} {address.postcode}
 					</address>
+
+					<a className="py-[30px] flex items-center gap-x-[17px]" href="https://twitter.com/Awesome_Venture">
+						<img className="w-[24px] h-[24px]" src={twitter} alt="Twitter page of awesome container company" />
+						{social.twitter}
+					</a>
+
 				</div>
 				<div className="min-w-full min-h-full pl-[50px] xl:pl-[0px] xl:pt-[80px] 
 						xl:row-start-2 xl:col-start-1 md:row-start-3 md:pt-[0px]">
+
+
+
 					<div className="md:pt-[50px]">
 						<SectionHeading align="left" color="secondary">
-							Follow us
+							Invest in ACC
 						</SectionHeading>
 					</div>
-					<a className="py-[40px] md:py-[30px] flex items-center gap-x-[17px]" href="https://www.instagram.com/awesomecontainers/">
-						<img className="w-[24px] h-[24px]" src={instagram} alt="instagram page of awesome container company" />
-						{social.instagram}
-					</a>
+					<p className="py-[20px]">FireHustle explains ACC:</p>
+					<a href="https://www.youtube.com/watch?app=desktop&v=CMbCdVBNA6E" className="button">
+            Watch now on YouTube
+          </a>
+          <div className="py-[30px]">
+					<a href="https://community.awesomecontainer.com/public" className="button">
+            Invest
+          </a>
+          </div>		
+		
+
 				</div>
 				<div className="min-w-full min-h-full row-span-2 xl:row-start-1 xl:col-start-2 
 						md:row-start-2 md:col-start-1 md:row-span-1">

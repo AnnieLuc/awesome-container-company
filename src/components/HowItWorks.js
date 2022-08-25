@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import SectionHeading from './section-heading/SectionHeading';
-import Button from './button/Button';
 import {
   sectionVariants,
   howItWorksContainerVariants,
